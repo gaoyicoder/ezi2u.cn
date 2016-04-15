@@ -1,0 +1,10 @@
+[20-Nov-2015 22:27:25 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:27:25 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:27:27 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:27:27 Hongkong] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ezi2u224/public_html/include/common.fun.php:364) in /home/ezi2u224/public_html/include/common.fun.php on line 396
+[20-Nov-2015 22:27:48 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:27:48 Hongkong] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ezi2u224/public_html/include/common.fun.php:364) in /home/ezi2u224/public_html/include/common.fun.php on line 396
+[20-Nov-2015 22:27:58 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:27:58 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:28:00 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[20-Nov-2015 22:28:00 Hongkong] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ezi2u224/public_html/include/common.fun.php:364) in /home/ezi2u224/public_html/include/common.fun.php on line 396

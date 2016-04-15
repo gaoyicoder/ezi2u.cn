@@ -1,0 +1,4 @@
+function CommentCheckForm(){if(document.CommentForm.content.value==""){alert('Please fill in your comments.');document.CommentForm.content.focus();return false;}
+if(document.CommentForm.checkcode.value==""){alert('Please fill in the verification code!');document.CommentForm.checkcode.focus();return false;}
+document.CommentForm.mymps.disabled=true;document.CommentForm.mymps.value="Just a moment, please.";return true;}
+function ifnonmember(){if(document.CommentForm.nonmember.checked==true){document.CommentForm.userid.disabled=true;document.CommentForm.userpwd.disabled=true;document.CommentForm.userid.value='游客';document.CommentForm.userpwd.value='123456';}else{document.CommentForm.userid.disabled=false;document.CommentForm.userpwd.disabled=false;document.CommentForm.userid.value='';document.CommentForm.userpwd.value='';}}

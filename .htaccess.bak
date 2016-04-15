@@ -1,0 +1,38 @@
+
+RewriteEngine on
+
+RewriteOptions inherit
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^whiteapple\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=47$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^yoonghengfurniture\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=59$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^aaorganicshop\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=58$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^chongfatt\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=52$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^jshomez\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=65$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^ezi2u\.com\.my$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ezi2u\.com\.my$
+RewriteRule ^umeshop\/?(.*)$ "http\:\/\/www\.ezi2u\.com\.my\/store\.php\?uid\=48$1" [R=301,L]
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 46.165.222.56
+
+AddHandler application/x-httpd-php53 .php .php5 .php4 .php3

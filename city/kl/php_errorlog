@@ -1,0 +1,15 @@
+[20-Nov-2015 22:01:24 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:12 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:15 Hongkong] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ezi2u224/public_html/index.php:1) in /home/ezi2u224/public_html/include/common.fun.php on line 146
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364
+[16-Feb-2016 03:08:17 Hongkong] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/ezi2u224/public_html/include/common.fun.php on line 364

@@ -1,0 +1,5 @@
+[20-Nov-2015 21:41:16 Hongkong] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ezi2u224/public_html/index.php:1) in /home/ezi2u224/public_html/include/common.fun.php on line 146
+[01-Dec-2015 14:18:12 Hongkong] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Unable to save result set in /home/ezi2u224/public_html/include/db.class.php on line 52
+[01-Dec-2015 14:18:12 Hongkong] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Unable to save result set in /home/ezi2u224/public_html/include/db.class.php on line 52
+[01-Dec-2015 14:18:13 Hongkong] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Unable to save result set in /home/ezi2u224/public_html/include/db.class.php on line 52
+[01-Dec-2015 14:18:13 Hongkong] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Unable to save result set in /home/ezi2u224/public_html/include/db.class.php on line 52
