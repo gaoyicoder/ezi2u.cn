@@ -60,7 +60,7 @@ $m != 'index' && chk_member_purview('purview_'.$m);
 
 
 if($alert){
-	/*»ý·Ö±ä»¯ÌáÐÑ*/
+	/*ï¿½ï¿½Ö±ä»¯ï¿½ï¿½ï¿½ï¿½*/
 	$score_change = get_credit_score();
 	if($alert == 1){
 		$score_changer = $score_change['score']['rank']['login'];

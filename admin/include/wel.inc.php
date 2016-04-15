@@ -26,7 +26,7 @@ if(!$latestbackup){
 
 $message .= ',<a href="database.php?part=backup" style="text-decoration:underline">Click to back-up system data.</a>';
 
-$welcome['Usual Operations'] = '<div><span><input value="Post Information" onclick="window.open(\'../'.$mymps_global[cfg_postfile].'\'); target=\'_blank\'" type="button" class="gray large"></span><span><input value="Clear Cache" onclick="location.href=\'config.php?part=cache_sys&return_url='.urlencode("index.php?do=manage&part=right").'\'" type="button" class="gray large"></span><span><input value="Optimize System" onclick="location.href=\'optimise.php\'" type="button" class="gray large"></span></div>';
+$welcome['Usual Operations'] = '<div><!--<span><input value="Post Information" onclick="window.open(\'../'.$mymps_global[cfg_postfile].'\'); target=\'_blank\'" type="button" class="gray large"></span>--><span><input value="Clear Cache" onclick="location.href=\'config.php?part=cache_sys&return_url='.urlencode("index.php?do=manage&part=right").'\'" type="button" class="gray large"></span><span><input value="Optimize System" onclick="location.href=\'optimise.php\'" type="button" class="gray large"></span></div>';
 
 $welcome['Statistics'] = $mymps_count_str;
 

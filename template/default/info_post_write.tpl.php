@@ -184,7 +184,7 @@ function geocodeAddress(geocoder, resultsMap) {
 			<div class="publish-detail-item">
 				<?=$v[value]?> <span id="<?=$v[title]?>"></span>
 			</div>
-		</div>
+		</div> ß
 		<? }?>
 		<? if($post[upload_img]){?>
 		<div class="p-line">

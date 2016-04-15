@@ -4,6 +4,8 @@ error_reporting(E_ALL ^ E_NOTICE);
 $do   = isset($_GET['do']) ? htmlspecialchars(trim($_GET['do'])) : 'login';
 $go   = isset($_GET['go']) ? htmlspecialchars(trim($_GET['go'])) : 'mymps_right';
 $part = isset($_GET['part']) ? htmlspecialchars(trim($_GET['part'])) : 'default';
+$postinfo = isset($_GET['postinfo']) ? htmlspecialchars(trim($_GET['postinfo'])) : '0';
+$postvoucher = isset($_GET['postvoucher']) ? htmlspecialchars(trim($_GET['postvoucher'])) : '0';
 
 if($do == 'login'){
 	define('IN_MYMPS', true);
@@ -115,9 +117,22 @@ if($do == 'login'){
 }elseif($do == 'power'){
 	require_once dirname(__FILE__)."/global.php";
 	require_once MYMPS_INC."/member.class.php";
+    require_once MYMPS_INC."/db.class.php";
 	$s_uid = trim($_GET['userid']);
 	$s_pwd = trim($_GET['password']);
-	$member_log -> in($s_uid,$s_pwd,'off',$url);
+    if($postinfo == 1) {
+        $row = '';
+        $where = 'WHERE userid = \''.$s_uid.'\'';
+        $row = $db -> getRow("SELECT * FROM `{$db_mymps}member` $where");
+        $cityid		= $row['cityid'];
+        $url = $mymps_global['SiteUrl'].'/'.$mymps_global['cfg_postfile'].'?cityid='.$cityid;
+        $member_log -> in($s_uid,$s_pwd,'off',$url);
+    } elseif($postvoucher == 1) {
+        $url = $mymps_global['SiteUrl'].'/member/index.php?m=goods&ac=detail&type=corp';
+        $member_log -> in($s_uid,$s_pwd,'off',$url);
+    } else {
+        $member_log -> in($s_uid,$s_pwd,'off',$url);
+    }
 }else{
 	define('IN_MYMPS', true);
 	write_msg('Unknown error, please re-log into the system background to operate.','index.php?do=login&part=out');

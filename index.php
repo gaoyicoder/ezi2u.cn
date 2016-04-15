@@ -1,4 +1,4 @@
-﻿<?php 
+﻿<?php
 /*
  * this is not a freeware, use is subject to license terms
  * ============================================================================

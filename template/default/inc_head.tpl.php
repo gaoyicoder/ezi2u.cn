@@ -306,9 +306,9 @@ function checkCookieBeforeClose() {
 </div>
 <div class="clear"></div>
 <div class="logosearchtel">
-	<!--¶¥²¿ºá·ù¹ã¸æ¿ªÊ¼-->
+	<!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¿ªÊ¼-->
 	<div id="ad_topbanner"></div>
-	<!--¶¥²¿ºá·ù¹ã¸æ½áÊø-->
+	<!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
 			
 
     <!--<div class="weblogo"><a href="<?=$city[domain]?>" onclick="javascript:getLocation('<?=$city[cityname]?>')"><img src="<?=$mymps_global[SiteUrl]?><?=$mymps_global[SiteLogo]?>" title="<?=$mymps_global[SiteName]?>" border="0"/></a></div>-->
@@ -316,8 +316,8 @@ function checkCookieBeforeClose() {
     <div class="weblogo"><a href="<?=$city[domain]?>"><img src="<?=$mymps_global[SiteUrl]?><?=$mymps_global[SiteLogo]?>" title="<?=$mymps_global[SiteName]?>" border="0"/></a></div>
         
 	<div class="postedit">
-	    
-	    <a href="<?=$mymps_global[SiteUrl]?>/<?=$mymps_global[cfg_postfile]?>?cityid=<?=$cityid?>" class="post" rel="nofollow">Free Post</a>
+	    &nbsp;
+	    <!-- <a href="<?=$mymps_global[SiteUrl]?>/<?=$mymps_global[cfg_postfile]?>?cityid=<?=$cityid?>" class="post" rel="nofollow">Free Post</a> -->
 	</div>
 	<div class="websearch">
 		<div class="sch_t_frm">
@@ -352,7 +352,7 @@ function checkCookieBeforeClose() {
 </div>
 <? }?>
 <div class="clearfix"></div>
-<!--Í·²¿Í¨À¸¹ã¸æ¿ªÊ¼-->
+<!--Í·ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½æ¿ªÊ¼-->
 <div id="ad_header"></div>
-<!--Í·²¿Í¨À¸¹ã¸æ½áÊø-->
+<!--Í·ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
 <div class="clearfix"></div>
