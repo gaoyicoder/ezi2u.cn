@@ -48,5 +48,5 @@ function wrapscreen(){
 <div class="clear"></div>
 <div style="margin-left:10px; margin-top:5px;margin-right:10px;">
 <?php 
-mylicense('ezi2u.cn');
+mylicense('gaoyicoder.com');
 ?>
