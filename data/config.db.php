@@ -8,7 +8,7 @@ $dbcharset = "utf8";
 
 //Character Set Code For Database 
 
-$db_host    = "localhost";
+$db_host    = "127.0.0.1";
 
 //Address of database server, usually localhost
 
