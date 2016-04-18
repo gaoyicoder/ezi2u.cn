@@ -78,7 +78,7 @@ function down_file($sql,$filename){
 	ob_end_clean();
 }
 
-mylicense('gaoyicoder.cn');
+mylicense('ezi2u.cn');
 
 function writeable($dir){	
 	if(!is_dir($dir)){
