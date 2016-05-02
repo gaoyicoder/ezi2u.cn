@@ -26,7 +26,7 @@
         <form method="post" action="?m=<?=$m?>&ac=<?=$ac?>&page=<?=$page?>">
         <div class="datatablewrap">
             <table class="datatable">
-                    <tr>"m
+                    <tr>
                 <thead>
                         <td width="100">Customer ID</td>
                         <td>Voucher Name</td>
