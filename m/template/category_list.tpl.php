@@ -413,8 +413,6 @@ function sortLocation() {
                                 echo '<span class="coupon-tag-gray hui"></span>';
                                 echo '<span class="coupon-tag-gray tuan"></span>';
                             }
-                        } else {
-                            echo 'None';
                         }
 //                        foreach($v['goods_list'] as $key=>$good) {
 //                            print_r($v['goods_list']);

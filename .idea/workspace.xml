@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffefc0c-b048-46c9-a1ee-5797e3e53839" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/info.tpl.php" afterPath="$PROJECT_DIR$/m/template/info.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/category_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/category_list.tpl.php" />
     </list>
     <ignored path="ezi2u.cn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,22 +113,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.tpl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="info.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/m/template/info.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33472803">
-              <caret line="268" column="14" selection-start-line="268" selection-start-column="14" selection-end-line="268" selection-end-column="14" />
+            <state vertical-scroll-proportion="-16.666666">
+              <caret line="276" column="4" selection-start-line="276" selection-start-column="4" selection-end-line="276" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/member/template/css/new.common.css">
+      <file leaf-file-name="inc_category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6666666">
-              <caret line="0" column="557" selection-start-line="0" selection-start-column="557" selection-end-line="0" selection-end-column="557" />
-              <folding />
+            <state vertical-scroll-proportion="88.125">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+              <folding>
+                <marker date="1461294475000" expanded="true" signature="2766:2848" placeholder="SELECT COUNT..." />
+                <marker date="1461294475000" expanded="true" signature="2984:3059" placeholder="SELECT a.id ..." />
+                <marker date="1461294475000" expanded="true" signature="3173:3233" placeholder="SELECT a.* F..." />
+                <marker date="1461294475000" expanded="true" signature="3986:4206" placeholder="select g.* f..." />
+                <marker date="1461294475000" expanded="true" signature="4446:4514" placeholder="SELECT a.* F..." />
+                <marker date="1461294475000" expanded="true" signature="4874:4930" placeholder="SELECT * FRO..." />
+                <marker date="1461294475000" expanded="true" signature="5022:5080" placeholder="SELECT * FRO..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category_list.tpl.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/m/template/category_list.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6966527">
+              <caret line="415" column="25" selection-start-line="415" selection-start-column="25" selection-end-line="415" selection-end-column="25" />
+              <folding>
+                <marker date="1462181972000" expanded="true" signature="11977:12020" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,7 +180,6 @@
         <option value="$PROJECT_DIR$/m/template/css/list.css" />
         <option value="$PROJECT_DIR$/m/include/inc_category.php" />
         <option value="$PROJECT_DIR$/m/include/inc_information.php" />
-        <option value="$PROJECT_DIR$/m/template/category_list.tpl.php" />
         <option value="$PROJECT_DIR$/member/template/goods_detail.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/header_search.tpl.php" />
         <option value="$PROJECT_DIR$/include/common.fun.php" />
@@ -192,6 +211,7 @@
         <option value="$PROJECT_DIR$/m/template/test.php" />
         <option value="$PROJECT_DIR$/member/template/order_records.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/info.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/category_list.tpl.php" />
       </list>
     </option>
   </component>
@@ -510,21 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/include/inc_category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4164265">
-          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/category_list.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328336">
-          <caret line="403" column="67" selection-start-line="403" selection-start-column="64" selection-end-line="403" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/template/member.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.235294">
@@ -801,9 +806,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/m/template/info.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33472803">
-          <caret line="268" column="14" selection-start-line="268" selection-start-column="14" selection-end-line="268" selection-end-column="14" />
+        <state vertical-scroll-proportion="-16.666666">
+          <caret line="276" column="4" selection-start-line="276" selection-start-column="4" selection-end-line="276" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="88.125">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <marker date="1461294475000" expanded="true" signature="2766:2848" placeholder="SELECT COUNT..." />
+            <marker date="1461294475000" expanded="true" signature="2984:3059" placeholder="SELECT a.id ..." />
+            <marker date="1461294475000" expanded="true" signature="3173:3233" placeholder="SELECT a.* F..." />
+            <marker date="1461294475000" expanded="true" signature="3986:4206" placeholder="select g.* f..." />
+            <marker date="1461294475000" expanded="true" signature="4446:4514" placeholder="SELECT a.* F..." />
+            <marker date="1461294475000" expanded="true" signature="4874:4930" placeholder="SELECT * FRO..." />
+            <marker date="1461294475000" expanded="true" signature="5022:5080" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/category_list.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6966527">
+          <caret line="415" column="25" selection-start-line="415" selection-start-column="25" selection-end-line="415" selection-end-column="25" />
+          <folding>
+            <marker date="1462181972000" expanded="true" signature="11977:12020" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
