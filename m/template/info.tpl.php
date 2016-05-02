@@ -266,7 +266,7 @@ function showError(error) {
                 echo '<span class="coupon-tag-gray hui"></span>';
                 echo '<span class="coupon-tag-gray tuan"></span>';
             }
-            ?>m/template/category_list.tpl.php:378
+            ?>
         </div>
         <? } ?>
 		<div class="detail-tit">Detailed Description</div>
