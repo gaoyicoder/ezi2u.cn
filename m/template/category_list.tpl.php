@@ -363,7 +363,7 @@ function sortLocation() {
 
 	<div class="infolst_w">
 		<ul class="list-info">
-		<?php 
+		<?php
 			if(empty($info_list)) echo '<div style="margin:30px 0; text-align:center;color:#999"">Sorry, on '.$cat[catname].' we currently do not have any posts found! <a href="index.php?mod=category&catid='.$parent['catid'].'">Return</a></div>';
 			foreach((array)$info_list as $k => $v){ 
 			$v['upgrade_type']	= !$cat['parentid'] ? ($v['upgrade_time'] >= $timestamp ? $v['upgrade_type'] : 1):($v['upgrade_time_list'] >= $timestamp ? $v['upgrade_type_list'] : 1);
@@ -383,17 +383,44 @@ function sortLocation() {
                         if(is_array($v['extra'])){
                             foreach($v['extra'] as $u => $w){
 								echo '<span>';
-                                if($w) echo in_array($w,array('0Ôª£¨ÖÐ¹úÔªËØ£©','0ÍòÔª£¨ÖÐ¹úÔªËØ£©','0Ôª/ÔÂ£¨ÖÐ¹úÔªËØ£©')) ? ' Discuss Face to Face ' : $w;
+                                if($w) echo in_array($w,array('0Ôªï¿½ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½','0ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½','0Ôª/ï¿½Â£ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½')) ? ' Discuss Face to Face ' : $w;
 								echo '</span>';
                             }
                         }
                         ?></font>
 						<span class="lvzi" id=<?php echo $v['id'] + 1000; ?>><font color="#5E5F61" size="1"><?php echo get_format_time($v['begintime']); ?></font></span>
-						<span id=<?php echo $v['id'] + 7000; ?>><font color = "#5E5F61" size="1">Views: <?php echo $v['hit']; ?></font></span>
+						<!--<span id=<?php echo $v['id'] + 7000; ?>><font color = "#5E5F61" size="1">Views: <?php echo $v['hit']; ?></font></span>-->
 						
 						<img src="template/images/noimg.gif" onload="loadImage(<?php echo $v['id']; ?>, '<?php echo $v['web_address']; ?>', '<?php echo get_format_time($v['begintime']); ?>', '<?=cutstr(clear_html($v['content']),0)?>', '<?=$v['img_count']?>', 'index.php?mod=information&id=<?php echo $v['id']; ?>', '<?php echo $v['img_path']; ?>', '<?php echo $v['title']; ?>', '<?php echo $v['hit']; ?>')" width="1" height="1" type="hidden">
 						<small class='pull-right' id=<?php echo $v['id']; ?>></small>
 					</dd>
+                    <dd class="attr">
+                        <?
+                        if($v['userid'] != '') {
+                            if($v['goods_list']) {
+                                $set_hui = 0;
+                                $set_tuan = 0;
+                                foreach($v['goods_list'] as $key=>$good) {
+                                    if($good['type']==0 && $set_hui == 0) {
+                                        $set_hui = 1;
+                                        echo '<span class="coupon-tag hui"></span>';
+                                    } else if($good['type']==1  && $set_tuan == 0) {
+                                        $set_tuan = 1;
+                                        echo '<span class="coupon-tag tuan"></span>';
+                                    }
+                                }
+                            } else {
+                                echo '<span class="coupon-tag-gray hui"></span>';
+                                echo '<span class="coupon-tag-gray tuan"></span>';
+                            }
+                        } else {
+                            echo 'None';
+                        }
+//                        foreach($v['goods_list'] as $key=>$good) {
+//                            print_r($v['goods_list']);
+//                        }
+                        ?>
+                    </dd>
 				</dl>
 				
                 </a>

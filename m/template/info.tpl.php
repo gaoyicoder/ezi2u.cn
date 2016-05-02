@@ -201,8 +201,8 @@ function showError(error) {
 		<ul class="attr_info" style="margin-top:0;">
 			<?php foreach($row['extra'] as $k => $v){?>
 			<li>
-				<span class="attrName2"  style="<?php if($v[title] == 'Rent'|| $v[title] ==  'Price'|| $v[title] ==  'Real Estate Prices'|| $v[title] ==  'Contact Phone Number') echo 'color:#ff7800;'?>"><?=$v[title]?>£º</span>
-				<span class="attrVal"  style="<?php if($v[title] == 'Rent'|| $v[title] ==  'Price'|| $v[title] ==  'Real Estate Prices'|| $v[title] ==  'Contact Phone Number') echo 'color:#ff7800;font-weight:bold;font-size:20px;'?>"><?php if($v[value] == '0Ôª/ÔÂ£¨ÖÐ¹úÔªËØ£©' || $v[value] == 'Discuss Face to Face Ôª/ÔÂ£¨ÖÐ¹úÔªËØ£©'|| $v[value] == '0ÍòÔª£¨ÖÐ¹úÔªËØ£©'|| $v[value] == '0ÍòÔª/Äê£¨ÖÐ¹úÔªËØ£©') {?>Discuss Face to Face<?php }else{ ?><?=$v[value]?><?php }?></span>
+				<span class="attrName2"  style="<?php if($v[title] == 'Rent'|| $v[title] ==  'Price'|| $v[title] ==  'Real Estate Prices'|| $v[title] ==  'Contact Phone Number') echo 'color:#ff7800;'?>"><?=$v[title]?>ï¿½ï¿½</span>
+				<span class="attrVal"  style="<?php if($v[title] == 'Rent'|| $v[title] ==  'Price'|| $v[title] ==  'Real Estate Prices'|| $v[title] ==  'Contact Phone Number') echo 'color:#ff7800;font-weight:bold;font-size:20px;'?>"><?php if($v[value] == '0Ôª/ï¿½Â£ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½' || $v[value] == 'Discuss Face to Face Ôª/ï¿½Â£ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½'|| $v[value] == '0ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½'|| $v[value] == '0ï¿½ï¿½Ôª/ï¿½ê£¨ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½') {?>Discuss Face to Face<?php }else{ ?><?=$v[value]?><?php }?></span>
 			</li>
 			<?php }?>
 		</ul>
@@ -212,7 +212,7 @@ function showError(error) {
 			<span class="attrVal mfico">
 				<?php if(!empty($row['qq'])){?>
 				<!--<li>
-					<span class="attrName">ÁªÏµ Q Q£¨ÖÐ¹úÔªËØ£©£º</span>
+					<span class="attrName">ï¿½ï¿½Ïµ Q Qï¿½ï¿½ï¿½Ð¹ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½</span>
 					<span class="attrVal"> <?=$row[qq]?></span>
 				</li>-->
 				<?php }?> 
@@ -243,12 +243,32 @@ function showError(error) {
 		  <br />
 		  <input type="submit" value="Start Navigation" class="inputtextSubmit"/>
 		 <!-- <br />
-		  <br />
+		  <br />background-size
 		  <div class="relative" id="mapholder"></div>-->
 	</form>	
 			</span>
 		</ul>
-	
+        <? if($row['userid'] != '') { ?>
+
+        <div class="detail-tit">ä»˜æ¬¾</div>
+        <div class="detail_txt_che">
+            <?
+            if($row['goods_list']) {
+                foreach($row['goods_list'] as $key=>$good) {
+                    if($good['type']==0) {
+                        echo '<a href="index.php?mod=hui&id='.$row['id'].'&good='.$good['goodsid'].'"><span class="coupon-tag hui"></span>'.$good['goodsname'].'</a>';
+                    } else if($good['type']==1) {
+                        echo '<a href="index.php?mod=tuan&id='.$row['id'].'&good='.$good['goodsid'].'"><span class="coupon-tag tuan"></span>'.$good['goodsname'].'</a>';
+                    }
+                    echo "<br />";
+                }
+            } else {
+                echo '<span class="coupon-tag-gray hui"></span>';
+                echo '<span class="coupon-tag-gray tuan"></span>';
+            }
+            ?>m/template/category_list.tpl.php:378
+        </div>
+        <? } ?>
 		<div class="detail-tit">Detailed Description</div>
 		<div class="detail_txt_che">
 			<?=$row['content']?>

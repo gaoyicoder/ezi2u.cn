@@ -1,0 +1,1 @@
+ALTER TABLE `ezi2u`.`my_goods` ADD COLUMN `type` smallint(2) NOT NULL AFTER `streetid`;

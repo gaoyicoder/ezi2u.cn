@@ -41,6 +41,7 @@ if(submit_check('goods_submit')){
 	$gift = mhtmlspecialchars($_POST['gift']);
 	$goodsbh = date('Ymd').random(3);
 	$huoyuan = intval($_POST['huoyuan']);
+    $type = intval($_POST['type']);
 	
 	$picture = isset($_POST['picture_old']) ? mhtmlspecialchars($_POST['picture_old']) : '';
 	$pre_picture = isset($_POST['pre_picture_old']) ? mhtmlspecialchars($_POST['pre_picture_old']) : '';
@@ -60,7 +61,7 @@ if(submit_check('goods_submit')){
 	}
 	
 	if(empty($id)){
-		$db -> query("INSERT INTO `{$db_mymps}goods` (goodsname,goodsbh,cityid,catid,oicq,oldprice,nowprice,content,pre_picture,picture,userid,dateline,tuihuan,jiayi,weixiu,fahuo,cuxiao,baozhang,huoyuan,gift) VALUES ('$goodsname','$goodsbh','$cityid','$catid','$oicq','$oldprice','$nowprice','$content','$pre_picture','$picture','$s_uid','$timestamp','$tuihuan','$jiayi','$weixiu','$fahuo','$cuxiao','$baozhang','$huoyuan','$gift')");
+		$db -> query("INSERT INTO `{$db_mymps}goods` (goodsname,goodsbh,cityid,catid,oicq,oldprice,nowprice,content,pre_picture,picture,userid,dateline,tuihuan,jiayi,weixiu,fahuo,cuxiao,baozhang,huoyuan,gift,type) VALUES ('$goodsname','$goodsbh','$cityid','$catid','$oicq','$oldprice','$nowprice','$content','$pre_picture','$picture','$s_uid','$timestamp','$tuihuan','$jiayi','$weixiu','$fahuo','$cuxiao','$baozhang','$huoyuan','$gift','$type')");
 		$id = $db->insert_id();
 		/*积分变化*/
 		$score_change = get_credit_score();
@@ -69,7 +70,7 @@ if(submit_check('goods_submit')){
 		$score_change = $score_changer = NULL;
 		$url = '?m=goods&success=8&ac=detail&id='.$id.'&alert=4';
 	} else {
-		$db -> query("UPDATE `{$db_mymps}goods` SET cityid='$cityid',goodsname = '$goodsname',catid = '$catid',oicq='$oicq',oldprice = '$oldprice',nowprice = '$nowprice',content = '$content',pre_picture='$pre_picture',picture='$picture',dateline='$timestamp',tuihuan = '$tuihuan',jiayi = '$jiayi',weixiu='$weixiu',fahuo='$fahuo',cuxiao='$cuxiao',baozhang='$baozhang',huoyuan = '$huoyuan',gift='$gift' $where AND goodsid = '$id'");
+		$db -> query("UPDATE `{$db_mymps}goods` SET cityid='$cityid',goodsname = '$goodsname',catid = '$catid',oicq='$oicq',oldprice = '$oldprice',nowprice = '$nowprice',content = '$content',pre_picture='$pre_picture',picture='$picture',dateline='$timestamp',tuihuan = '$tuihuan',jiayi = '$jiayi',weixiu='$weixiu',fahuo='$fahuo',cuxiao='$cuxiao',baozhang='$baozhang',huoyuan = '$huoyuan',gift='$gift',type='$type' $where AND goodsid = '$id'");
 	}
 	
 	write_msg('',$url?$url:'?m=goods&success=8&ac=detail&id='.$id);
@@ -87,17 +88,22 @@ if(submit_check('goods_submit')){
 	@include_once MYMPS_DATA.'/moneytype.inc.php';
 	
 	if($ac == 'list') {
-	
-		$rows_num = mymps_count("goods",$where);
+        $where0 = "and type=0";
+        $where1 = "and type=1";
+		$rows_num0 = mymps_count("goods",$where.' '.$where0);
+        $rows_num1 = mymps_count("goods",$where.' '.$where1);
 		$param	  = setParam(array('m','ac'));
-		$goods    = page1("SELECT * FROM `{$db_mymps}goods` $where ORDER BY dateline DESC");
-	
+		$goods0    = page1("SELECT * FROM `{$db_mymps}goods` $where $where0 ORDER BY dateline DESC");
+        $goods1    = page1("SELECT * FROM `{$db_mymps}goods` $where $where1 ORDER BY dateline DESC");
 	} elseif ($ac == 'detail') {
 		
 		@require_once MYMPS_ROOT."/plugin/goods/include/functions.php";
-		
+        @require_once MYMPS_DATA."/config.inc.php";
+
 		if($id) $edit = $db -> getRow("SELECT * FROM `{$db_mymps}goods` WHERE goodsid = '$id'");
 		$acontent = get_editor('content','Member',$edit['content'],'90%','400px');
+
+        $cats = $db->getAll("SELECT * FROM {$db_mymps}goods_category");
 		
 	} elseif ($ac == 'order') {
 		

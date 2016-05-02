@@ -26,6 +26,34 @@ function insertunit(text) {
 	$('jstemplate').focus();
 	$('jstemplate').value=text;
 }
+
+function changeElementByClass(className, status)
+{
+    var element = document.getElementsByClassName(className);
+    for(var i=0; i < element.length; i++) {
+        element[i].style.display= status;
+    }
+}
+
+function hideElementByClass(className)
+{
+    changeElementByClass(className, "none");
+}
+
+function showElementByClass(className)
+{
+    changeElementByClass(className, "");
+}
+
+function change_type(type_id) {
+    if (type_id == 0) {
+        hideElementByClass("solid");
+        showElementByClass("loose");
+    } else if (type_id == 1) {
+        hideElementByClass("loose");
+        showElementByClass("solid");
+    }
+}
 </script>
 <div id="<?=MPS_SOFTNAME?>" style=" padding-bottom:0">
     <div class="mpstopic-category">
@@ -62,6 +90,13 @@ function insertunit(text) {
 </tr>
 <tbody id="menu_1">
 <tr bgcolor="white">
+    <td width="15%" bgcolor="#F1F5F8">Type:  </td>
+    <td><? foreach($mymps_mymps['cfg_voucher_types'] as $key => $value) {?>
+            <input <?=$key==$cat[type] ? "checked" : "" ?> id="type" type="radio" name="type" value="<?=$key ?>" onclick="change_type(<?=$key ?>)" /> <?=$value ?> &nbsp;&nbsp;
+        <? } ?>
+    </td>
+</tr>
+<tr bgcolor="white">
   <td width="15%" bgcolor="#F1F5F8">Category Name:  </td>
   <td><input name="catname" type="text" class="text" id="catname" value="<?=$cat[catname]?>" size="30"> 
   		<select name="fontcolor">
@@ -72,6 +107,25 @@ function insertunit(text) {
         </select>
   		<font color="red">*</font></td>
 </tr>
+<tr style="<?if($cat[type] == 0) echo 'display: none;';?>" class="solid" bgcolor="white">
+    <td width="15%" bgcolor="#F1F5F8">Cost:  </td>
+    <td><input name="cost" type="text" id="cost" value="<?=$cat[cost]?>" class="txt"></td>
+</tr>
+<tr style="<?if($cat[type] == 0) echo 'display: none;';?>" class="solid" bgcolor="white">
+    <td width="15%" bgcolor="#F1F5F8">Pay:  </td>
+    <td><input name="pay" type="text" id="pay" value="<?=$cat[pay]?>" class="txt"></td>
+</tr>
+
+<tr style="<?if($cat[type] == 1) echo 'display: none;';?>" class="loose" bgcolor="white">
+    <td width="15%" bgcolor="#F1F5F8">Discount:  </td>
+    <td><input name="discount" type="text" id="discount" value="<?=$cat[discount]?>" class="txt">% (0 ~ 100)</td>
+</tr>
+
+<tr style="<?if($cat[type] == 1) echo 'display: none;';?>" class="loose" bgcolor="white">
+    <td width="15%" bgcolor="#F1F5F8">ÊäòÊâ£Êù°‰ª∂:  </td>
+    <td><input name="greaterthan" type="text" id="greaterthan" value="<?=$cat[greaterthan]?>" class="txt"></td>
+</tr>
+<!--
 <tr bgcolor="white">
   <td bgcolor="#F1F5F8">From Category:  </td>
   <td><select name="parentid" id="parentid" >
@@ -79,6 +133,7 @@ function insertunit(text) {
 	<?=goods_cat_list(1,$cat[parentid],true,1)?>
   </select>  </td>
 </tr>
+-->
 <tr bgcolor="white">
   <td bgcolor="#F1F5F8">Category Sorting:  </td>
   <td><input name="catorder" type="text" class="txt" id="catorder" value="<?=$cat[catorder]?>" size="13"></td>
@@ -92,6 +147,7 @@ function insertunit(text) {
 </tbody>
 </table>
 </div>
+    <!--
 <div id="<?=MPS_SOFTNAME?>">
 <table cellpadding="0" cellspacing="0" class="vbm">
 <tr class="firstr">
@@ -114,14 +170,15 @@ click on <input name="radio" id="copy" class="radio" type="radio" onClick="do_co
   <td><input name="keywords" type="text" id="keywords" class="text" value="<?=$cat[keywords]?>" size="50">   (For multiple keywords, separate each of them with a comma; Use <font color="red">{city}</font> to replace the Sub-site Name.)</td>
 </tr>
 <tr bgcolor="white">
-  <td bgcolor="#F1F5F8">Description£∫ </td>
+  <td bgcolor="#F1F5F8">DescriptionÔøΩÔøΩ </td>
   <td><textarea name="description" cols="49" rows="5" id="description"><?=$cat[description]?></textarea> (Use <font color="red">{city}</font> to replace the Sub-site Name.)</td>
 </tr>
 </tbody>
 </table>
 </div>
+    -->
 <center>
-<input type="submit" name="<?=CURSCRIPT?>_submit" value="Save Changes" class="mymps mini" />°°
+<input type="submit" name="<?=CURSCRIPT?>_submit" value="Save Changes" class="mymps mini" />ÔøΩÔøΩ
 <input type="button" onClick=history.back() value="Return" class="mymps mini">
 </center>
 </form>

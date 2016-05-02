@@ -252,7 +252,6 @@ function goods_cat_options($spec_catid, $arr)
                         break;
                     }
                 }
-
                 $count = count($cat_id_array);
                 if ($count > 1){
                     $last_cat_id = array_pop($cat_id_array);
@@ -315,6 +314,25 @@ function goods_cat_options($spec_catid, $arr)
 
         return $spec_cat_id_array;
     }
+}
+
+function goods_cat_dropdown($type, $selected=0)
+{
+    $cats = $GLOBALS['db']->getAll("SELECT * FROM {$GLOBALS['db_mymps']}goods_category");
+    $select = '';
+    foreach($cats as $cat)
+    {
+        $style = "";
+        if($type != $cat['type']) {
+            $style = 'style="display:none;"';
+        }
+        if ($selected == $cat['catid']) {
+            $select .= '<option templabel="type" class="type_'.$cat['type'].'" '.$style.' selected value="'.$cat['catid'].'">'.$cat['catname'].'</option>';
+        } else {
+            $select .= '<option templabel="type" class="type_'.$cat['type'].'" '.$style.' value="'.$cat['catid'].'">'.$cat['catname'].'</option>';
+        }
+    }
+    return $select;
 }
 
 /*

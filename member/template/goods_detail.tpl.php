@@ -2,7 +2,9 @@
 <link rel="Stylesheet" type="text/css" href="template/css/new.dialog.css" />
 <link rel="stylesheet" type="text/css" href="template/css/new.my.css" />
 <script language="javascript" src="template/javascript.js"></script>
+<script language="javascript" src="template/jquery.172.min.js"></script>
 <script language="javascript">
+jQuery.noConflict();
 function check_sub(){
 	if (document.form1.goodsname.value=="") {
 		alert('Please enter product name');
@@ -15,6 +17,51 @@ function check_sub(){
 		return false;
 	}
 	return true;
+}
+
+function fast_add(category_selected)
+{
+    var catergory_list= new Array();
+    <?php
+    foreach($cats as $cat) {
+        $description = json_decode($cat['description'], true);
+    ?>
+    var category = new Array();
+    category['catname'] = <?="'".$cat['catname']."'" ?>;
+    category['cost'] = <?="'".$description['cost']."'" ?>;
+    category['pay'] = <?="'".$description['pay']."'" ?>;
+    category['discount'] = <?="'".$description['discount']."'" ?>;
+    category['greaterthan'] = <?="'".$description['greaterthan']."'" ?>;
+    catergory_list[<?=$cat['catid'] ?>] =  category;
+    <?php } ?>
+    jQuery("input[name='goodsname']").val(catergory_list[category_selected.value]['catname']);
+    if(jQuery('input:radio[name="type"]:checked').val() == 0) {
+        jQuery("input[name='oldprice']").val(catergory_list[category_selected.value]['greaterthan']);
+        jQuery("input[name='nowprice']").val(catergory_list[category_selected.value]['discount']);
+    } else {
+        jQuery("input[name='oldprice']").val(catergory_list[category_selected.value]['cost']);
+        jQuery("input[name='nowprice']").val(catergory_list[category_selected.value]['pay']);
+    }
+}
+
+function change_type(type_id)
+{
+    jQuery("option[templabel='type']:not(.type_"+type_id+")").hide();
+    jQuery("option[templabel='type']:.type_"+type_id).show();
+    jQuery("select[name='catid']").val("");
+    jQuery("input[name='goodsname']").val("");
+    jQuery("input[name='oldprice']").val("");
+    jQuery("input[name='nowprice']").val("");
+    if(type_id == 0) {
+        jQuery("#oldprice_libel").html('折扣条件<font color="red">*</font>');
+        jQuery("#nowprice_libel").html('Discount<font color="red">*</font>');
+        jQuery("#nowprice_libel_moneytype").html('% (0 ~ 100)');
+    } else {
+        jQuery("#oldprice_libel").html('Cost<font color="red">*</font>');
+        jQuery("#nowprice_libel").html('Pay<font color="red">*</font>');
+        jQuery("#nowprice_libel_moneytype").html('<?php echo $moneytype; ?>');
+
+    }
 }
 </script>
 </head>
@@ -45,14 +92,37 @@ function check_sub(){
                                         <input name="pre_picture_old" value="<?=$edit['pre_picture']?>" type="hidden">
                                     <?php }?>
                                     <div class="formgoods">
+
+                                        <div class="formrow">
+                                            <h3 class="label"><label>Type<font color="red">*</font></label></h3>
+                                            <div class="form-enter">
+                                                <? if($edit['type'] == "") {
+                                                    $edit['type'] = 0;
+                                                }
+                                                ?>
+                                                <? foreach($mymps_mymps['cfg_voucher_types'] as $key => $value) {?>
+                                                    <input <?=$key==$edit[type] ? "checked" : "" ?> id="type" type="radio" name="type" value="<?=$key ?>" onclick="change_type(<?=$key ?>)" /> <?=$value ?> &nbsp;&nbsp;
+                                                <? } ?>
+                                            </div>
+                                        </div>
+
+                                        <div class="formrow">
+                                            <h3 class="label">快速添加<font color="red">*</font></h3>
+                                            <div class="form-enter">
+                                                <select name="catid" onchange="fast_add(this)">
+                                                    <option value="">select</option>
+                                                    <?=goods_cat_dropdown($edit['type'], $edit['catid'])?>
+                                                </select>
+                                            </div>
+                                        </div>
+
                                         <div class="formrow">
                                             <h3 class="label"><label>Name<font color="red">*</font></label></h3>
                                             <div class="form-enter">
-                                                <input name="goodsname" type="text" class="text" value="<?=$edit['goodsname']?>" style="width:300px">
+                                                <input readonly name="goodsname" type="text" class="text" value="<?=$edit['goodsname']?>" style="width:300px">
                                             </div>
                                         </div>
-										
-										<div class="formrow">
+										<div style="display:none;" class="formrow">
                                             <h3 class="label"><label>District<font color="red">*</font></label></h3>
                                             <div class="form-enter">
 												<select name="cityid">
@@ -60,38 +130,27 @@ function check_sub(){
 												</select>
                                             </div>
                                         </div>
-                                        
-                                        <div class="formrow">
-                                            <h3 class="label">Category<font color="red">*</font></h3>
-                                            <div class="form-enter">
-												<select name="catid">
-												<option value="">select</option>
-												<?=goods_cat_list(0,$edit[catid])?>
-												</select>
-                                            </div>
-                                        </div>
-			
 										<div class="formrow">
-                                            <h3 class="label"><label>Cost<font color="red">*</font></label></h3>
+                                            <h3 class="label"><label id="oldprice_libel"><? if($edit['type']==0) echo '折扣条件'; else echo 'Cost' ?><font color="red">*</font></label></h3>
                                             <div class="form-enter">
-                                                <input name="oldprice" type="text" class="text" value="<?=$edit['oldprice']?>" style="width:70px">
-												<?php echo $moneytype; ?>
+                                                <input readonly name="oldprice" type="text" class="text" value="<?=$edit['oldprice']?>" style="width:70px">
+                                                <label id="oldprice_libel_moneytype"><?php echo $moneytype; ?></label>
                                             </div>
                                         </div>
 										
 										<div class="formrow">
-                                            <h3 class="label"><label>Pay<font color="red">*</font></label></h3>
+                                            <h3 class="label"><label id="nowprice_libel"><? if($edit['type']==0) echo 'Discount'; else echo 'Pay' ?><font color="red">*</font></label></h3>
                                             <div class="form-enter">
-                                                <input name="nowprice" type="text" class="text" value="<?=$edit['nowprice']?>" style="width:70px"> 
-												<?php echo $moneytype; ?>
+                                                <input readonly name="nowprice" type="text" class="text" value="<?=$edit['nowprice']?>" style="width:70px">
+                                                <label id="nowprice_libel_moneytype"><? if($edit['type']==0) echo '% (0 ~ 100)'; else echo $moneytype ?></label>
                                             </div>
                                         </div>
 										
 										<div class="formrow">
                                             <h3 class="label"><label>Available<font color="red">*</font></label></h3>
                                             <div class="form-enter">
-											<input name="huoyuan" type="radio" class="radio" value="2" <?php if($edit['huoyuan'] != 1) echo 'checked';?>>Yes
-                                            <input name="huoyuan" type="radio" class="radio" value="1" <?php if($edit['huoyuan'] == 1 || empty($edit)) echo 'checked';?>>No
+											<input name="huoyuan" type="radio" class="radio" value="2" <?php if($edit['huoyuan'] != 1) echo 'checked';?>>No
+                                            <input name="huoyuan" type="radio" class="radio" value="1" <?php if($edit['huoyuan'] == 1 || empty($edit)) echo 'checked';?>>Yes
 												
                                             </div>
                                         </div>

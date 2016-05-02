@@ -18,18 +18,18 @@ if(!$cat = get_cat_info($catid)){
 	errormsg('The column you requested either does not exist or deleted!');
 }
 
-//ÊÖ»ú°æÃ¿Ò³ÏÔÊ¾¼ÇÂ¼
+//ï¿½Ö»ï¿½ï¿½Ã¿Ò³ï¿½ï¿½Ê¾ï¿½ï¿½Â¼
 $perpage = $mobile_settings['mobiletopicperpage'] ? $mobile_settings['mobiletopicperpage'] : 10;
 $page = isset($_GET['page']) ? intval($_GET['page']) : '';
 $page = empty($page) ? 1 : $page;
 
-//É¸Ñ¡×Ö¶Î
+//É¸Ñ¡ï¿½Ö¶ï¿½
 $allow_identifier = allow_identifier();
 $allow_identifier = $allow_identifier[$cat['modid']]['identifier'];
 $allow_identifier = is_array($allow_identifier) ? $allow_identifier : array();
 $allow_identifiers = array_merge(array('mod','catid','cityid','areaid','streetid'),$allow_identifier);
 
-//×Ö¶ÎÉ¸Ñ¡
+//ï¿½Ö¶ï¿½É¸Ñ¡
 $mymps_extra_model = mod_identifier();
 $mymps_extra_model = $mymps_extra_model[$cat['modid']];
 $mymps_extra_model = is_array($mymps_extra_model) ? $mymps_extra_model : array();
@@ -53,11 +53,11 @@ foreach($mymps_extra_model as $key => $val){
 	}
 }
 
-//·ÖÀàÉ¸Ñ¡
+//ï¿½ï¿½ï¿½ï¿½É¸Ñ¡
 $parentcats = get_parent_cats('category',$catid);
 $parentcats = is_array($parentcats) ? array_reverse($parentcats) : '';
 
-//¹¹ÔìSQL
+//ï¿½ï¿½ï¿½ï¿½SQL
 $sq = $s = '';
 if($cat['modid'] > 1){
 	$s = "LEFT JOIN `{$db_mymps}information_{$cat[modid]}` AS g ON a.id = g.id";
@@ -99,6 +99,15 @@ foreach($infolist as $k => $row){
 	$arr['web_address']     = $row['web_address'];
 	$arr['content']	        = $row['content'];
 	$arr['begintime']       = $row['begintime'];
+
+    //modified by GGYY
+    $arr['userid']       = $row['userid'];
+    //todo å¾ªçŽ¯ä¸­æ‰§è¡Œsqlæ•ˆçŽ‡ä½Žï¼Œè€ƒè™‘åœ¨æ·»åŠ voucheråŽï¼Œå°†voucherç¼“å­˜ä¸€ä»½åˆ°infromationä¸­ã€‚
+    $sql_vouchers = "select g.* from `{$db_mymps}information` AS i INNER JOIN `{$db_mymps}member` as m ON i.userid = m.userid INNER JOIN `{$db_mymps}goods` as g ON m.userid = g.userid
+                              WHERE i.id='".$row['id']."'";
+    $goods_list = $db -> getAll($sql_vouchers);
+    $arr['goods_list'] = $goods_list;
+
 	$info_list[$row['id']]	= $arr;
 	$ids .= $row['id'].',';
 }	
@@ -118,7 +127,7 @@ if($cat['modid'] > 1 && $idin) {
 $pageline = NULL;
 $pageview	= page2($rewrite);
 
-//µØÇø·ÖÀà
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 if($city['cityid']){
 	$area_list = $db->getAll("SELECT * FROM `{$db_mymps}area` WHERE cityid = '$cityid'");
 	$area_list = $area_list ? $area_list : '';

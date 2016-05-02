@@ -46,11 +46,11 @@ $action = isset($_REQUEST['action']) ? mhtmlspecialchars($_REQUEST['action']) : 
 $cityid = isset($_REQUEST['cityid']) ? intval($_REQUEST['cityid']) : '';
 $cityid = isset($cityid) ? intval($cityid) : mgetcookie('cityid');
 
-!in_array($mod,array('category','index','items','information','login','openlogin','myhome','register','mypost','post','search','member','shoucang','history','delete','about','newinfo','changecity')) && $mod = 'index';
+!in_array($mod,array('category','index','items','information','login','openlogin','myhome','register','mypost','post','search','member','shoucang','history','delete','about','newinfo','changecity','hui','tuan','hui_list','tuan_list','store_hui_list','store_tuan_list')) && $mod = 'index';
 
 if($cityid) {
 	if(!$city = $db->getRow("SELECT * FROM `{$db_mymps}city` WHERE cityid = '$cityid'")){
-		redirectmsg('This state doesn¡¯t exist; please reselect state!','index.php?mod=changecity');
+		redirectmsg('This state doesnï¿½ï¿½t exist; please reselect state!','index.php?mod=changecity');
 	}else{
 		msetcookie('cityid',$cityid);	
 	}

@@ -505,7 +505,7 @@ function page2($rewrite='active',$ext='.html')
 	}
 	$begin = ($begin < 0)?1:$begin;
 	if($rewrite == 'active'){
-		$nav .="<span class=anum>".$rows_num." Comments</span> ";
+		$nav .="<span class=anum>".$rows_num." Results</span> ";
 		if($page>1)$nav .= "<a href='?$param"."page=".($page-1)."' title='Page".($page-1)."~'><Previous Page</a>";
 		if($begin!=1)$nav .= "<a href='?$param' title='Page 1 ~'>1 ...</a>";
 		$end = ($begin+$per_screen>$pages_num)?$pages_num+1:$begin+$per_screen;
@@ -517,7 +517,7 @@ function page2($rewrite='active',$ext='.html')
 		if($end!=$pages_num+1) $nav .= "<a href='?$param"."page=$pages_num' title='Page{$pages_num}~'>... {$pages_num}</a>";
 		if($page<$pages_num)   $nav .= "<a href='?$param"."page=".($page+1)."' title='Page".($page+1)."~'>Next Page></a>";
 	} elseif($rewrite == 'rewrite') {
-		$nav .="<span class=anum>".$rows_num." Comments</span> ";
+		$nav .="<span class=anum>".$rows_num." Results</span> ";
 		if($page>1)$nav .= "<a href='$param"."page-".($page-1).".html' title='Page".($page-1)."~'><Previous Page</a>";
 		if($begin!=1)$nav .= "<a href='$param"."page-1.html' title='Page 1 ~'>1 ...</a>";
 		$end = ($begin+$per_screen>$pages_num)?$pages_num+1:$begin+$per_screen;
@@ -530,7 +530,7 @@ function page2($rewrite='active',$ext='.html')
 		if($page<$pages_num)   $nav .= "<a href='$param"."page-".($page+1).".html' title='Page".($page+1)."~'>Next Page></a>";
 	}elseif($rewrite == 'rewrite_py') {
 		$param = $city['domain'].$dir_typename.'-'.$param;
-		$nav .="<span class=anum>".$rows_num." Comments</span> ";
+		$nav .="<span class=anum>".$rows_num." Results</span> ";
 		if($page>1)$nav .= "<a href='$param"."page-".($page-1)."/' title='Page".($page-1)."~'><Previous Page</a>";
 		if($begin!=1)$nav .= "<a href='$param"."page-1/' title='Page 1 ~'>1 ...</a>";
 		$end = ($begin+$per_screen>$pages_num)?$pages_num+1:$begin+$per_screen;

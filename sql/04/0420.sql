@@ -1,0 +1,1 @@
+ALTER TABLE `ezi2u`.`my_goods_category` ADD COLUMN `type` smallint(2) AFTER `catorder`;

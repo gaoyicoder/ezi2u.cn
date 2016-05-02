@@ -30,6 +30,7 @@
 		<div id="msg_success"></div>
 <div id="msg_error"></div>
 <div id="msg_alert"></div>
+        <div>任意付</div>
         <form method="post" action="?m=<?=$m?>&ac=<?=$ac?>&page=<?=$page?>">
         <div class="datatablewrap">
             <table class="datatable">
@@ -40,14 +41,15 @@
                         </td>
                         <td width="100">Voucher Number</td>
                         <td>Voucher Name</td>
-						<td>Cost</td>
-						<td>Pay</td>
+						<td>折扣条件</td>
+						<td>Discount</td>
                         <td>Time of Post</td>
 			            <td>Status</td>
                         <td>Operation</td>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $rows_num = $rows_num0;?>
 					<?php if($rows_num == 0 ){?>
                     <tr>
                         <td colspan="8">
@@ -56,7 +58,7 @@
                     </tr>
 					<?php } else {
 					$i = 1;
-					foreach($goods as $d){
+					foreach($goods0 as $d){
 					?>
                 	<tr >
                         <td><input class="checkbox" type='checkbox' name='selectedids[]' value='<?=$d[goodsid]?>' id="<?=$d[goodsid]?>"></td>
@@ -66,11 +68,11 @@
                         <td width="240">
                        <a href="../goods.php?id=<?=$d[goodsid]?>" target="_blank"><?=$d[goodsname]?></a>
                         </td>
-                        <td style="text-decoration:line-through">
+                        <td>
                        <?=$d[oldprice]?> <?php echo $moneytype; ?>
                         </td>
 						<td style="color:red">
-                       <?=$d[nowprice]?> <?php echo $moneytype; ?>
+                       <?=$d[nowprice]?> %
                         </td>
 						<td>
                        <?=GetTime($d[dateline])?>
@@ -98,6 +100,76 @@
             </div>
         </div>
 		</form>
+        <div>固定付</div>
+        <form method="post" action="?m=<?=$m?>&ac=<?=$ac?>&page=<?=$page?>">
+            <div class="datatablewrap">
+                <table class="datatable">
+                    <thead>
+                    <tr>
+                        <td>
+                            <input class="checkall" name="checkall" type="checkbox" id="checkall" onClick="CheckAll(this.form)"/>
+                        </td>
+                        <td width="100">Voucher Number</td>
+                        <td>Voucher Name</td>
+                        <td>Cost</td>
+                        <td>Pay</td>
+                        <td>Time of Post</td>
+                        <td>Status</td>
+                        <td>Operation</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $rows_num = $rows_num1;?>
+                    <?php if($rows_num == 0 ){?>
+                        <tr>
+                            <td colspan="8">
+                                <div class="nodata">You have not yet posted any vouchers</div>
+                            </td>
+                        </tr>
+                    <?php } else {
+                        $i = 1;
+                        foreach($goods1 as $d){
+                            ?>
+                            <tr >
+                                <td><input class="checkbox" type='checkbox' name='selectedids[]' value='<?=$d[goodsid]?>' id="<?=$d[goodsid]?>"></td>
+                                <td>
+                                    <?=$d[goodsbh]?>
+                                </td>
+                                <td width="240">
+                                    <a href="../goods.php?id=<?=$d[goodsid]?>" target="_blank"><?=$d[goodsname]?></a>
+                                </td>
+                                <td style="text-decoration:line-through">
+                                    <?=$d[oldprice]?> <?php echo $moneytype; ?>
+                                </td>
+                                <td style="color:red">
+                                    <?=$d[nowprice]?> <?php echo $moneytype; ?>
+                                </td>
+                                <td>
+                                    <?=GetTime($d[dateline])?>
+                                </td>
+                                <td>
+                                    <?php echo $d[onsale] == 1 ? '<font color=green>For Sale</font>':'<font color=green>No Longer For Sale</font>'?>
+                                </td>
+                                <td>
+                                    <a href="?type=corp&m=goods&ac=detail&id=<?=$d[goodsid]?>">Edit</a>
+                                </td>
+                            </tr>
+                            <?php
+                            $i++;
+                        }
+                        unset($i);
+                    }
+                    ?>
+                    </tbody>
+                </table>
+                <div class="clearfix datacontrol">
+                    <div class="dataaction">
+                        <span class="minbtn-wrap"><span class="btn"><input type="submit" value="Delete" class="button" name="goods_submit" onClick="if(!confirm('re you sure you want to delete these Products and activities? This cannot be reverted!'))return false;"/></span></span>
+                    </div>
+                    <div class="pagination"><?php echo page2(); ?></div>
+                </div>
+            </div>
+        </form>
     </div>
     <div class="pfoot"><p><b>-</b></p></div>
 </div>

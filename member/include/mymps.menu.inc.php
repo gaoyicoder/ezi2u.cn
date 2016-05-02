@@ -33,6 +33,7 @@ if($mymps_global['cfg_if_corp'] == 1){
 			$key != 'news' && $member_menu['corp'][$key]  = $val;
 		}
 	}
+    $member_menu['corp']['orderrecords']	= '销售记录';
 }
 
 function mymps_member_purview($purview='')

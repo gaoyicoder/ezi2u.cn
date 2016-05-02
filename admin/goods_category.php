@@ -1,11 +1,13 @@
 <?php
 define('CURSCRIPT','goods_category');
-
+echo $catname;
 require_once dirname(__FILE__)."/global.php";
+echo $catname;
 require_once MYMPS_INC."/db.class.php";
 require_once dirname(__FILE__)."/include/color.inc.php";
+echo $catname;
 require_once dirname(__FILE__)."/include/ifview.inc.php";
-
+echo $catname;
 @require_once MYMPS_ROOT."/plugin/goods/include/functions.php";
 
 (!defined('IN_ADMIN') || !defined('IN_MYMPS')) && exit('Access Denied');
@@ -20,12 +22,15 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 		
 		chk_admin_purview("purview_Goods Categories");
 		$f_cat = goods_cat_list('category',0,0,false);
+
 		$here = "Product Category List";
 		include(mymps_tpl("goods_category_list"));
 		
 	} elseif($part == 'edit') {
 		include MYMPS_DATA.'/category_tpl.inc.php';
 		$cat = $db->getRow("SELECT * FROM {$db_mymps}goods_category WHERE catid = '$catid'");
+        $description = json_decode($cat['description'], true);
+        $cat  = array_merge($cat, $description);
 		$here = "Edit Product Category";
 		include(mymps_tpl("goods_category_edit"));
 		
@@ -77,7 +82,7 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 		write_msg('Product category has successfully been updated!','?part=list','record');
 		
 	} elseif ($part == 'add'){
-		
+
 		$catname  	 = explode('|',trim($catname));
 		$template 	 = empty($template) ? 'list' : trim($template);
 		
@@ -86,9 +91,16 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 		if(empty($catorder)){
 			$sql = "SELECT MAX(catorder) FROM {$db_mymps}goods_category";
 			$maxorder = $db->getOne($sql);
-			$catorder = $catorder + 1;
+			$catorder = $maxorder + 1;
 		}
-		
+
+        $description = array(
+            "cost" => $cost,
+            "pay" => $pay,
+            "discount" => $discount,
+            "greaterthan" => $greaterthan,
+        );
+        $description = json_encode($description);
 		if(is_array($catname)){
 			
 			foreach ($catname as $key => $value){
@@ -96,7 +108,7 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 				$catorder ++;
 				$len = strlen($value);
 				($len < 2 || $len > 30) && write_msg("Product category name must be between 2 and 30 characters in length!");
-				$db->query("INSERT INTO {$db_mymps}goods_category (catname,if_view,title,keywords,description,parentid,catorder) VALUES ('$value','$isview','$value','$value','$value','$parentid','$catorder')");
+				$db->query("INSERT INTO {$db_mymps}goods_category (catname,if_view,title,keywords,description,parentid,catorder, type) VALUES ('$value','$isview','$value','$value','$description','0','$catorder','$type')");
 
 			}
 
@@ -126,8 +138,16 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 		$len = strlen($catname);
 		
 		($len < 2 || $len > 30) && write_msg("Product category name must be between 2 and 30 characters in length!");
-		
-		$sql = "UPDATE {$db_mymps}goods_category SET catname='$catname',if_view = '$isview',color='$fontcolor',title='$title',keywords='$keywords',description='$description',parentid='$parentid',catorder='$catorder' WHERE catid = '$catid'";
+
+        $description = array(
+            "cost" => $cost,
+            "pay" => $pay,
+            "discount" => $discount,
+            "greaterthan" => $greaterthan,
+        );
+        $description = json_encode($description);
+
+		$sql = "UPDATE {$db_mymps}goods_category SET catname='$catname',if_view = '$isview',color='$fontcolor',title='$title',keywords='$keywords',description='$description',parentid='0',catorder='$catorder',type=$type WHERE catid = '$catid'";
 		
 		$res = $db->query($sql);
 		
