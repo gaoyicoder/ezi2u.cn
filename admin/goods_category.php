@@ -1,13 +1,11 @@
 <?php
 define('CURSCRIPT','goods_category');
-echo $catname;
+
 require_once dirname(__FILE__)."/global.php";
-echo $catname;
 require_once MYMPS_INC."/db.class.php";
 require_once dirname(__FILE__)."/include/color.inc.php";
-echo $catname;
 require_once dirname(__FILE__)."/include/ifview.inc.php";
-echo $catname;
+
 @require_once MYMPS_ROOT."/plugin/goods/include/functions.php";
 
 (!defined('IN_ADMIN') || !defined('IN_MYMPS')) && exit('Access Denied');
@@ -22,7 +20,6 @@ if(!submit_check(CURSCRIPT.'_submit')) {
 		
 		chk_admin_purview("purview_Goods Categories");
 		$f_cat = goods_cat_list('category',0,0,false);
-
 		$here = "Product Category List";
 		include(mymps_tpl("goods_category_list"));
 		

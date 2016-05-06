@@ -1824,7 +1824,7 @@ function mymps_get_info_list($num=10,$info_level='',$upgrade_type='',$userid='',
 	$idin = get_page_idin("id","SELECT a.id FROM `{$db_mymps}information` AS a {$where} {$orderby}",$num);
 	
 	if($idin){
-		$sql = "SELECT a.id,a.contact_who,a.web_address,a.title,a.content,a.begintime,a.catid,a.info_level,a.hit,a.dir_typename,a.ifred,a.ifbold,a.userid,a.catid,a.cityid,a.catname,a.img_path FROM `{$GLOBALS['db_mymps']}information` AS a WHERE id IN ($idin) {$orderby}";
+		$sql = "SELECT a.id,a.contact_who,a.web_address,a.mappoint,a.title,a.content,a.begintime,a.catid,a.info_level,a.hit,a.dir_typename,a.ifred,a.ifbold,a.userid,a.catid,a.cityid,a.catname,a.img_path FROM `{$GLOBALS['db_mymps']}information` AS a WHERE id IN ($idin) {$orderby}";
 		$do_mymps = $db -> query($sql);
 		while($row = $db -> fetchRow($do_mymps)){
 			$arr['id']        = $row['id'];
@@ -1841,6 +1841,7 @@ function mymps_get_info_list($num=10,$info_level='',$upgrade_type='',$userid='',
 			$arr['userid']    = $row['userid'];
 			$arr['contact_who']= $row['contact_who'];
 			$arr['web_address']= $row['web_address'];
+			$arr['mappoint']= $row['mappoint'];
 			$arr['uri_tname'] = Rewrite('space',array('user'=>$row['userid']));
 			$arr['uri']       = Rewrite('info',array('id'=>$row['id'],'cityid'=>$row['cityid'],'dir_typename'=>$row['dir_typename']));
 			$arr['uri_tname'] = Rewrite('space',array('user'=>$row['userid']));

@@ -35,7 +35,7 @@ if(!submit_check(CURSCRIPT.'_submit')){
 		$db->query("UPDATE `{$db_mymps}goods` SET hit = hit + 1 WHERE goodsid = '$id'");
 		
 		$goods['picture'] = $goods['picture'] ? $goods['picture'] : $mymps_global['SiteUrl'].'/images/nophoto.gif';
-		/*ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+		/*ÉÌÆ·½éÉÜÄÚÁ´´¦Àí*/
 		$goods['content'] = replace_insidelink($goods['content'],'goods');
 		
 		$loc = get_goods_location($goods['catid'],$goods['goodsname']);
@@ -61,7 +61,7 @@ if(!submit_check(CURSCRIPT.'_submit')){
         }
 	}else{
 		$city = get_city_caches($cityid);
-		/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½start*/
+		/*×Ô¶¯²¹³ä×ÜÕ¾Êý¾Ýstart*/
 		if($mymps_global['cfg_independency'] && $cityid){
 			$maincity = get_city_caches(0);
 			$independency = explode(',',$mymps_global['cfg_independency']);
@@ -74,7 +74,7 @@ if(!submit_check(CURSCRIPT.'_submit')){
 			}
 			$maincity = NULL;
 		}
-		/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½end*/
+		/*×Ô¶¯²¹³ä×ÜÕ¾Êý¾Ýend*/
 		
 		$where = " WHERE onsale = '1'";
 		$where .= $city[cityid] ? " AND cityid = '$city[cityid]'" : "";
@@ -196,7 +196,7 @@ function get_goods_location($catid=0,$str=''){
 	$page_title = $pluginsettings['goods']['seotitle'] ? $pluginsettings['goods']['seotitle'] : $city['cityname'].'Purchase Online - '.$GLOBALS['mymps_global']['SiteName'];
 	
 	if(!empty($catid)){
-		/* Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+		/* Ñ­»··ÖÀà */
 		if (!empty($cat_arr)){
 			krsort($cat_arr);
 			foreach ($cat_arr as $val){

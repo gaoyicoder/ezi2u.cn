@@ -97,6 +97,7 @@ foreach($infolist as $k => $row){
 	$arr['upgrade_type_list']= $row['upgrade_type_list'];
 	$arr['contact_who']     = $row['contact_who'];
 	$arr['web_address']     = $row['web_address'];
+	$arr['mappoint']        = $row['mappoint'];
 	$arr['content']	        = $row['content'];
 	$arr['begintime']       = $row['begintime'];
 

@@ -7,6 +7,7 @@
 ?>
 
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 <script>
 var Lat, Lon;
@@ -16,6 +17,7 @@ var currentSubDomain;
 var currentDomain;
 
 var eachState = ["johor", "kedah", "kelantan", "lumpur", "melaka", "semblan", "pahang", "penang", "perak", "perlis", "selangor", "sabah", "sarawak", "terengganu"];
+var eachChineseState = ["Èá·ð", "¼ª´ò", "¼ªÀ¼µ¤", "¼ªÂ¡ÆÂ", "ÂíÁù¼×", "É­ÃÀÀ¼", "Åíºà", "éÄ³Ç", "Åùö¨", "²£Á§ÊÐ", "Ñ©À¼Ý­", "É³°Í", "É°À­Ô½", "µÇ¼ÎÂ¥"];
 var domainState = ["johor", "kedah", "kelantan", "kl", "mm", "ns", "pahan", "penan", "perak", "perli", "selan", "sabah", "saraw", "teren"];
 var preDomain = "/city/";
 
@@ -55,6 +57,10 @@ function getLocation(state) {
 
 function getLocationAlways(state) {
        
+	var curSite = window.location.href;
+
+   // alert(curSite);
+	
 	previousState = state;
 	
 	previousState = previousState.toLowerCase();
@@ -159,7 +165,10 @@ function codeLatLng(lat, lng)
 			  console.log(curState);
 			  
 			  pos = curState.search(eachState[i]);
-			  
+
+                          if(pos < 0)
+			       pos = curState.search(eachChineseState [i]);
+
 			//  console.log(pos);
 			  
 			  if( pos >= 0)
@@ -264,27 +273,132 @@ function checkCookie() {
 }
 
 
-function checkCookieBeforeClose() {
-    var user = getCookie("username");
-    if ((user != "") && (user != "undefined")) {
-    // alert("Reset cookie");
-     user = "";
-     setCookie("username", user, 365);
-    }
-    else
-    {
-   	// alert("Cookie is empty");
-    } 
-    
+function checkLoginBeforeClose() {
+// window.open("http://www.ezi2u.com.my/member/index.php");
+
+   //var curSite = window.location.href;
+   //alert("clientX =" + window.event.clientX + "clientY =" + window.event.clientX);
+   //alert(curSite);
+
+   var curClientX = window.event.clientX;
+   var curClientY = window.event.clientY;
+
+
+
+    if((curSite == "http://www.ezi2u.com.my/") || (curSite == "http://ezi2u.com.my/"))
+  // if(window.event.clientX < 0 && window.event.clientY <0)
+ //if(window.event.clientX <= 0 || window.event.clientY <= 0)
+ if((curClientX >= 0) && (curClientX >= 0))
+ {
+		window.open("http://www.ezi2u.com.my/member.php?mod=out&amp;url=");
  }
+	
+//	return "logout"
+}
+
+
+function CheckBrowser()
+{
+	alert("beofore to be closed");
+	
+     // Check Browser Close [X] , Alt+F4 , File -> Close  
+     if(event.clientX <= 0 || event.clientY <= 0)
+    {
+		alert("to be closed")
+      /*    window.open("Operation.aspx", 
+                "Operation",'left=12000,top=1200,width=10,height=1');*/
+    }
+}
+
+</script>
+
+<script>
+
+/**
+ * This javascript file checks for the brower/browser tab action.
+ * It is based on the file menstioned by Daniel Melo.
+ * Reference: http://stackoverflow.com/questions/1921941/close-kill-the-session-when-the-browser-or-tab-is-closed
+ */
+var validNavigation = false;
+ 
+function wireUpEvents() {
+  /**
+   * For a list of events that triggers onbeforeunload on IE
+   * check http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx
+   *
+   * onbeforeunload for IE and chrome
+   * check http://stackoverflow.com/questions/1802930/setting-onbeforeunload-on-body-element-in-chrome-and-ie-using-jquery
+   */
+
+
+  var dont_confirm_leave = 0; //set dont_confirm_leave to 1 when you want the user to be able to leave without confirmation
+  var leave_message = 'For your security, please logout before leaving this page. Thanks.'
+  function goodbye(e) {
+    if (!validNavigation) {
+      if (dont_confirm_leave!==1) {
+        if(!e) e = window.event;
+        //e.cancelBubble is supported by IE - this will kill the bubbling process.
+        e.cancelBubble = true;
+        e.returnValue = leave_message;
+        //e.stopPropagation works in Firefox.
+        if (e.stopPropagation) {
+          e.stopPropagation();
+          e.preventDefault();
+        }
+        //return works for Chrome and Safari
+  
+        //$member_log->out('noredirect');
+
+        window.open("http://www.ezi2u.com.my/member.php?mod=out&amp;url=");
+ 
+        return leave_message;
+      }
+    }
+  }
+
+  window.onbeforeunload=goodbye;
+ 
+  // Attach the event keypress to exclude the F5 refresh
+  $(document).bind('keypress', function(e) {
+    if (e.keyCode == 116){
+      validNavigation = true;
+    }
+  });
+ 
+  // Attach the event click for all links in the page
+  $("a").bind("click", function() {
+    validNavigation = true;
+  });
+ 
+  // Attach the event submit for all forms in the page
+  $("form").bind("submit", function() {
+    validNavigation = true;
+  });
+ 
+  // Attach the event click for all inputs in the page
+  $("input[type=submit]").bind("click", function() {
+    validNavigation = true;
+  });
+ 
+}
+ 
+// Wire up the events as soon as the DOM tree is ready
+$(document).ready(function() {
+  wireUpEvents();
+});
 
 </script>
 
 
 <body onload="getLocation('<?=$city[cityname]?>')">
 
-<!--<body onbeforeunload="checkCookieBeforeClose()">-->
+<!--<body onload="CheckBrowser('<?=$city[cityname]?>')">-->
 
+<!--<body onbeforeunload="checkLoginBeforeClose()">-->
+
+<!--<body onunload="checkLoginBeforeClose()">-->
+
+<!--<body onbeforeunload="handleBrowserCloseButton(event)">-->
 
 <div class="bartop floater">
 	<div class="barcenter">

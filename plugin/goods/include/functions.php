@@ -252,6 +252,7 @@ function goods_cat_options($spec_catid, $arr)
                         break;
                     }
                 }
+
                 $count = count($cat_id_array);
                 if ($count > 1){
                     $last_cat_id = array_pop($cat_id_array);

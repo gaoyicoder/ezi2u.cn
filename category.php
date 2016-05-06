@@ -86,7 +86,7 @@ $city_limit    .= empty($streetid) ? "": " AND a.streetid = '$streetid'";
 $orderby	= $cat['parentid'] == 0 ? " ORDER BY a.upgrade_type DESC,a.begintime DESC" : " ORDER BY a.upgrade_type_list DESC,a.begintime DESC";
 $param		= setParam($allow_identifiers,$rewrite,'category-',$city['domain'].$seo['seo_htmldir'].$cat['html_dir']);
 $rows_num   =  $db -> getOne("SELECT COUNT(a.id) FROM `{$db_mymps}information` AS a {$s} WHERE a.info_level > 0 {$sq}{$cate_limit}{$city_limit}");
-$sql = "SELECT a.id,a.title,a.cityid,a.userid,a.contact_who,a.content,a.img_path,a.img_count,a.upgrade_type,a.upgrade_type_list,a.upgrade_time,a.upgrade_time_list,a.begintime,a.endtime,a.info_level,a.certify,a.ifred,a.ifbold,a.dir_typename,a.web_address,b.areaname FROM {$db_mymps}information AS a LEFT JOIN `{$db_mymps}area` AS b ON a.areaid = b.areaid {$s} WHERE 1 AND a.info_level > 0 {$sq}{$cate_limit}{$city_limit}{$orderby}";
+$sql = "SELECT a.id,a.title,a.cityid,a.userid,a.contact_who,a.content,a.img_path,a.img_count,a.upgrade_type,a.upgrade_type_list,a.upgrade_time,a.upgrade_time_list,a.begintime,a.endtime,a.info_level,a.certify,a.ifred,a.ifbold,a.dir_typename,a.web_address,a.mappoint,b.areaname FROM {$db_mymps}information AS a LEFT JOIN `{$db_mymps}area` AS b ON a.areaid = b.areaid {$s} WHERE 1 AND a.info_level > 0 {$sq}{$cate_limit}{$city_limit}{$orderby}";
 $page1 = page1($sql,$mymps_global['cfg_list_page_line'] ? $mymps_global['cfg_list_page_line'] : 10);
 $info_list = array();
 foreach($page1 as $key => $val){
@@ -108,6 +108,7 @@ foreach($page1 as $key => $val){
 	$infolist['upgrade_type']	= !$cat['parentid'] ? ($val['upgrade_time'] >= $timestamp ? $val['upgrade_type'] : 1):($val['upgrade_time_list'] >= $timestamp ? $val['upgrade_type_list'] : 1);
 	$infolist['certify']		= $val['certify'];
 	$infolist['web_address']	= $val['web_address'];
+	$infolist['mappoint']	    = $val['mappoint'];
 
     //Modified by GGYY
     $infolist['userid']       = $val['userid'];

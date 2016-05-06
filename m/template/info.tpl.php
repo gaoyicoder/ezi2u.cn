@@ -11,7 +11,7 @@
 	<script src="template/js/jq.min.js"></script>
 	
 <!--XXXXXX-->
-<meta charset="UTF-8" />
+
     <title>Find a route using Geolocation and Google Maps API</title>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -133,6 +133,23 @@ function showError(error) {
             break;
     }
 }
+
+
+function Refresh()
+{
+  //  alert('enter refresh');
+
+    var x =  document.getElementById("from").value;
+    
+  //  alert(x);
+
+    var y = x + ' ';;
+  
+  //  alert(y);
+
+    document.getElementById("from").value = y;
+}
+
     </script>
     <style type="text/css">
       #map {
@@ -156,7 +173,7 @@ function showError(error) {
 .inputtextFrom { width: 200px; height: 20px; } 
 .inputtextTo { width: 250px; height: 20px; } 
 .inputtextSubmit { width: 120px; height: 30px; color: white; background-color: rgb(0, 0, 102);} 
-.inputtextSearch { width: 60px; height: 30px; color: white; background-color: rgb(0, 0, 102);} 
+.inputtextSearch { width: 60px; height: 20px; color: white; background-color: rgb(0, 0, 102);} 
 </style> 
 
 <!--xxxxxx-->
@@ -241,15 +258,16 @@ function showError(error) {
 		  <input type="text" id="to" name="daddr" required="required" value="<?=$row[web_address]?>" size="40" class="inputtextTo"/>
 		  <br />
 		  <br />
-		  <input type="submit" value="Start Navigation" class="inputtextSubmit"/>
+		 <!-- <input type="submit" value="Start Navigation" class="inputtextSubmit"/>-->
+                 <button size="2" color="blue" class="inputtextSubmit" onclick="Refresh()">Start Navigation</button>
 		 <!-- <br />
-		  <br />background-size
+		  <br />
 		  <div class="relative" id="mapholder"></div>-->
 	</form>	
 			</span>
 		</ul>
         <? if($row['userid'] != '') { ?>
-
+	
         <div class="detail-tit">Pay</div>
         <div class="detail_txt_che">
             <?

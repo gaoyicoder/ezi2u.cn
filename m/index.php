@@ -70,7 +70,15 @@ include MYMPS_INC.'/member.class.php';
 $returnurl = urlencode(GetUrl());
 if($member_log->chk_in()){
 	$iflogin = 1;
-	$loginfo = '<a class="u_name fl">Welcome, </a><a href="index.php?mod=member&userid='.$s_uid.'" class="u_name fl">'.$s_uid.'</a> <a href="index.php?mod=login&action=logout&returnurl='.$returnurl.'" class="exit58">Exit Safely</a>';
+
+    $row_member = $db -> getRow("SELECT * FROM `{$db_mymps}member` WHERE userid = '$s_uid'");
+    if($row_member['if_corp'] == 1) {
+        $user_title = "Seller";
+    } else {
+        $user_title = "Dear";
+    }
+
+	$loginfo = '<a style="padding-top: 0px;height: 20px;line-height: 20px;" class="u_name fl">Welcome, '.$user_title.'</a><br /><a style="padding-top: 0px;height: 20px;line-height: 20px;" href="index.php?mod=member&userid='.$s_uid.'" class="u_name fl">'.$s_uid.'</a> <a href="index.php?mod=login&action=logout&returnurl='.$returnurl.'" class="exit58">Exit Safely</a>';
 	$loginfopost = '<a class="u_name fl">Welcome, </a><a href="index.php?mod=member&userid='.$s_uid.'" class="u_name fl"><b>'.$s_uid.'</b></a>   &nbsp;&nbsp;<a href="index.php?mod=login&action=logout&returnurl='.$returnurl.'" class="exit58">Exit</a>';
 	$loginfomypost = '<a href="index.php?mod=mypost&userid='.$s_uid.'" class="my_publish">'.Posts.'</a>';
 	$loginfomyshoucang = '<a href="index.php?mod=shoucang&userid='.$s_uid.'" class="my_collect">'.Favourites.'</a>';

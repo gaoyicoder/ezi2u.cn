@@ -34,7 +34,7 @@ var current_domain = '<?php echo $mymps_global[SiteUrl]?>';
                                             </a>
                                         </div>
                                         <div class="account-quicktools">
-                                            <span class="account-sum" title="Coin Balance: <?php echo $row['money_own']?>"><strong><?php echo $row['money_own']?></strong></span>
+                                            <span class="account-sum" title="Coixn Balance: <?php echo $row['money_own']?>"><strong><?php echo $row['money_own']?></strong></span>
                                             <a class="account-topup" href="index.php?m=pay">Recharge Coins</a>
                                         </div>
                                         <div class="account-uesrinfo">

@@ -121,9 +121,17 @@
 		<ul>
 			<div class="information_title"><?=$info[title]?></div>
 			<div class="information_time">
-				<span class="viewhits">Views: <font id="hit" color="red"><script type="text/javascript" src="<?=$mymps_global[SiteUrl]?>/javascript.php?part=information&id=<?=$info[id]?>"></script></font></span>
+				<!--<span class="viewhits">Views: <font id="hit" color="red"><script type="text/javascript" src="<?=$mymps_global[SiteUrl]?>/javascript.php?part=information&id=<?=$info[id]?>"></script></font></span>-->
+                                <?
+                                       if($mymps_global['cfg_info_if_count'])
+                                       {
+                                          ?><span class="viewhits">Views: <font id="hit" color="red"><script type="text/javascript" src="<?=$mymps_global[SiteUrl]?>/javascript.php?part=information&id=<?=$info[id]?>"></script></font></span><?
+                                       }
+                                 ?>
+
 				<span class="lasttime">This Post<?=$info[endtime]?></span>
-				<span class="begintime">Time Of Post: <?=GetTime($info[begintime])?></span>
+				<!--<span class="begintime">Time Of Post: <?=GetTime($info[begintime])?></span>-->
+				<span class="begintime"><?=$mymps_global['cfg_info_if_date'] ? 'Time Of Post: ' : '' ?><?=$mymps_global['cfg_info_if_date'] ? GetTime($info[begintime]) : '' ?></span>
 			</div>
 		</ul>
 	</div>
