@@ -44,13 +44,13 @@
             $('#discount_num_'+good_id).html(off);
             $('#discount_num_'+good_id).after('<i class="mb-select J-promo-check mutiple-selected"></i>');
             $('#discount_show').html(discount);
-            $('.J-submit-payment').html(discount+'元 确认买单');
+            $('.J-submit-payment').html(discount+'RM Confirm');
             $('.J-submit-payment').attr('data-amount', discount);
             $("input[name='goodsid']").val(good_id);
             $("input[name='real_amount']").val(discount);
         } else {
             $('#discount_show').html(val);
-            $('.J-submit-payment').html(val+'元 确认买单');
+            $('.J-submit-payment').html(val+'RM Confirm');
             $('.J-submit-payment').attr('data-amount', val);
             $("input[name='goodsid']").val(0);
             $("input[name='real_amount']").val(val);
@@ -58,11 +58,11 @@
     }
     function check_sub() {
         if($("input[name='total_amount']").val() == '') {
-            alert('消费金额不能为空!');
+            alert('The Cost Can\'t Be Empty!');
             return false;
         }
         if($("input[name='total_amount']").val() > <?=$money_own ?>) {
-            alert('金币余额不足!');
+            alert('You Don\'t Have Enough Coin!');
             return false;
         }
     }
@@ -81,7 +81,7 @@
     <div class="data-wrapper">
         <div class="cashier-container">
             <div class="amount-total has-value" data-placeholder="询问服务员后输入">
-                <div class="label">消费总额：</div>
+                <div class="label">Cost:</div>
                 <input name="total_amount" onkeyup="count_discount(this.value)" type="number" class="amount J-total-amount" autocomplete="off" maxlength="7">
                 <input type="hidden" value="" name="goodsid" />
                 <input type="hidden" value="" name="real_amount" />
@@ -106,7 +106,7 @@
                     <div data-reactid=".1.0" class="syt-balance-box syt-mb-list-fix mb-list-wrapper mb-line-tb">
                         <div data-reactid=".1.0.0"></div>
                         <div class="mb-list-line" id="syt-pay-total" data-reactid=".1.0.1">
-                            <span data-reactid=".1.0.1.0">还需支付</span><div class="p-r" data-reactid=".1.0.1.1">
+                            <span data-reactid=".1.0.1.0">Pay</span><div class="p-r" data-reactid=".1.0.1.1">
                                 <p class="syt-price" data-reactid=".1.0.1.1.0">
                                     <span data-reactid=".1.0.1.1.0.0">¥</span>
                                     <strong id="discount_show" data-reactid=".1.0.1.1.0.1"></strong>
@@ -115,11 +115,11 @@
                         </div>
                     </div>
                     <div data-reactid=".1.1">
-                        <h3 class="syt-pay-bar" data-reactid=".1.1.0">支付方式</h3>
+                        <h3 class="syt-pay-bar" data-reactid=".1.1.0">Pay By</h3>
                         <div class="syt-pay-way syt-mb-list-fix mb-list-wrapper mb-line-tb" data-reactid=".1.1.1">
                             <div class="mb-list-line mb-line-b" data-reactid=".1.1.1.0:$alipay">
                                 <i class="syt-pay-icon syt-alipay" data-reactid=".1.1.1.0:$alipay.0"></i>
-                                <span data-reactid=".1.1.1.0:$alipay.1">金币支付</span>
+                                <span data-reactid=".1.1.1.0:$alipay.1">Coin</span>
                                 <div class="p-r" data-reactid=".1.1.1.0:$alipay.3">
                                     <i class="mb-select single-selected" data-reactid=".1.1.1.0:$alipay.3.0"></i>
                                 </div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="pay-wrap">
-                <div onclick="submit_form()" class="btn-pay J-submit-payment" data-amount="">确认买单</div>
+                <div onclick="submit_form()" class="btn-pay J-submit-payment" data-amount="">Confirm Payment</div>
             </div>
         </div>
     </div>

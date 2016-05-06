@@ -15,6 +15,8 @@ $id 		= isset($id) 		? intval($id) 		: '';
 $catid 		= isset($catid) 	? intval($catid) 	: 0;
 $cityid 	= isset($cityid) 	? intval($cityid) 	: 0;
 $page	 	= isset($page)	   	? intval($page)	  	: 1;
+$mod        = isset($mod)       ? intval($mod)      : '';
+
 
 !ifplugin(CURSCRIPT) && exit('The goods plug-in has either been disabled by the administrator or not been installed!');
 
@@ -33,7 +35,7 @@ if(!submit_check(CURSCRIPT.'_submit')){
 		$db->query("UPDATE `{$db_mymps}goods` SET hit = hit + 1 WHERE goodsid = '$id'");
 		
 		$goods['picture'] = $goods['picture'] ? $goods['picture'] : $mymps_global['SiteUrl'].'/images/nophoto.gif';
-		/*ÉÌÆ·½éÉÜÄÚÁ´´¦Àí*/
+		/*ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 		$goods['content'] = replace_insidelink($goods['content'],'goods');
 		
 		$loc = get_goods_location($goods['catid'],$goods['goodsname']);
@@ -52,11 +54,14 @@ if(!submit_check(CURSCRIPT.'_submit')){
 		
 		$relategoods = get_goods(6,1,'',$goods['catid']);
 		globalassign();
-		include DIR_NAV.'/plugin/'.CURSCRIPT.'/template/view.tpl.php';
-	
+        if ($mod == 'tuan') {
+            include DIR_NAV.'/plugin/'.CURSCRIPT.'/template/tuan.tpl.php';
+        } else {
+            include DIR_NAV.'/plugin/'.CURSCRIPT.'/template/view.tpl.php';
+        }
 	}else{
 		$city = get_city_caches($cityid);
-		/*×Ô¶¯²¹³ä×ÜÕ¾Êý¾Ýstart*/
+		/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½start*/
 		if($mymps_global['cfg_independency'] && $cityid){
 			$maincity = get_city_caches(0);
 			$independency = explode(',',$mymps_global['cfg_independency']);
@@ -69,7 +74,7 @@ if(!submit_check(CURSCRIPT.'_submit')){
 			}
 			$maincity = NULL;
 		}
-		/*×Ô¶¯²¹³ä×ÜÕ¾Êý¾Ýend*/
+		/*ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½end*/
 		
 		$where = " WHERE onsale = '1'";
 		$where .= $city[cityid] ? " AND cityid = '$city[cityid]'" : "";
@@ -128,26 +133,55 @@ if(!submit_check(CURSCRIPT.'_submit')){
 		
 	}
 }else{
+    if ($mod == 'tuan') {
+        if(1) {
+            $goodsid = $goodsid ? intval($goodsid):'';
+            $infoid = isset($infoid) ? intval($infoid):'';
+            $ordernum = isset($ordernum) ? intval($ordernum):'';
+            $sql_good = "select * from `{$db_mymps}goods` AS g where g.goodsid='".$goodsid."'";
+            $good = $db->getRow($sql_good);
 
-	$oname = $oname ? mhtmlspecialchars($oname) : '';
-	$goodsid = isset($goodsid) ? intval($goodsid) : '';
-	$ordernum = isset($ordernum) ? intval($ordernum) : '';
-	$qq = isset($qq) ? mhtmlspecialchars($qq) : '';
-	$tel =  isset($tel) ? mhtmlspecialchars($tel) : '';
-	$mobile =  isset($mobile) ? mhtmlspecialchars($mobile) : '';
-	$ip = GetIP();
-	$msg = isset($msg) ? textarea_post_change($msg) : '';
-	$address = isset($address) ? mhtmlspecialchars($address) : '';
-	
-	$_COOKIE['goodsorder'.$goodsid] == 1 && write_msg('You have ordered this product already, so why not take a look at other products?','olmsg');
-	if(empty($goodsid)) write_msg('The product you wish to buy either does not exist or has been removed!');
-	if(empty($oname)) write_msg('Your name cannot be empty!');
-	
-	$db -> query("INSERT INTO `{$db_mymps}goods_order` (goodsid,ordernum,oname,qq,tel,mobile,ip,address,msg,dateline) VALUES ('$goodsid','$ordernum','$oname','$qq','$tel','$mobile','$ip','$address','$msg','$timestamp')");
-	
-	setcookie('goodsorder'.$goodsid,1,$timestamp+180,'/');
-	write_msg('You have successfully made the order, and we will contact you as soon as possible!<br /><br /><input value="Close Window" type="button" onclick=\'parent.closeopendiv()\' style="margin-left:auto;margin-right:auto;" class="blue">','olmsg');
+            $total_amount = $ordernum*$good['oldprice'];
+            $real_amount = $ordernum*$good['nowprice'];
+            $sql_user = "select * from `{$db_mymps}member` AS m where m.userid='".$s_uid."'";
+            $dateline = time();
+            $useddate = time();
+            $user = $db->getRow($sql_user);
+            $ip = GetIP();
+            $msg = time();
+            $sql_insert_order = "insert into {$db_mymps}goods_order (goodsid, ordernum, oname, mobile, ip, dateline, type, userid, useddate, infoid, totalamount, realamount, msg)
+                                VALUES ('".$goodsid."', '".$ordernum."', '".$good['goodsname']."', '".$user['mobile']."', '".$ip."','".$dateline."','1','".$s_uid."','','".$infoid."','".$total_amount."','".$real_amount."','".$msg."')";
+            $db -> query($sql_insert_order);
 
+            $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own - '$real_amount' WHERE userid='".$s_uid."'");
+
+            $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own + '$real_amount' WHERE userid='".$good['userid']."'");
+
+            write_msg('You have successfully made the order!<br /><br /><input value="Close Window" type="button" onclick=\'parent.closeopendiv()\' style="margin-left:auto;margin-right:auto;" class="blue">','olmsg');
+
+        } else {
+            errormsg('é”™è¯¯çš„id');
+        }
+    } else {
+        $oname = $oname ? mhtmlspecialchars($oname) : '';
+        $goodsid = isset($goodsid) ? intval($goodsid) : '';
+        $ordernum = isset($ordernum) ? intval($ordernum) : '';
+        $qq = isset($qq) ? mhtmlspecialchars($qq) : '';
+        $tel =  isset($tel) ? mhtmlspecialchars($tel) : '';
+        $mobile =  isset($mobile) ? mhtmlspecialchars($mobile) : '';
+        $ip = GetIP();
+        $msg = isset($msg) ? textarea_post_change($msg) : '';
+        $address = isset($address) ? mhtmlspecialchars($address) : '';
+
+        $_COOKIE['goodsorder'.$goodsid] == 1 && write_msg('You have ordered this product already, so why not take a look at other products?','olmsg');
+        if(empty($goodsid)) write_msg('The product you wish to buy either does not exist or has been removed!');
+        if(empty($oname)) write_msg('Your name cannot be empty!');
+
+        $db -> query("INSERT INTO `{$db_mymps}goods_order` (goodsid,ordernum,oname,qq,tel,mobile,ip,address,msg,dateline) VALUES ('$goodsid','$ordernum','$oname','$qq','$tel','$mobile','$ip','$address','$msg','$timestamp')");
+
+        setcookie('goodsorder'.$goodsid,1,$timestamp+180,'/');
+        write_msg('You have successfully made the order, and we will contact you as soon as possible!<br /><br /><input value="Close Window" type="button" onclick=\'parent.closeopendiv()\' style="margin-left:auto;margin-right:auto;" class="blue">','olmsg');
+    }
 }
 is_object($db) && $db->Close();
 $city = $maincity = NULL;
@@ -162,7 +196,7 @@ function get_goods_location($catid=0,$str=''){
 	$page_title = $pluginsettings['goods']['seotitle'] ? $pluginsettings['goods']['seotitle'] : $city['cityname'].'Purchase Online - '.$GLOBALS['mymps_global']['SiteName'];
 	
 	if(!empty($catid)){
-		/* Ñ­»··ÖÀà */
+		/* Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 		if (!empty($cat_arr)){
 			krsort($cat_arr);
 			foreach ($cat_arr as $val){

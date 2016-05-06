@@ -108,6 +108,15 @@ foreach($page1 as $key => $val){
 	$infolist['upgrade_type']	= !$cat['parentid'] ? ($val['upgrade_time'] >= $timestamp ? $val['upgrade_type'] : 1):($val['upgrade_time_list'] >= $timestamp ? $val['upgrade_type_list'] : 1);
 	$infolist['certify']		= $val['certify'];
 	$infolist['web_address']	= $val['web_address'];
+
+    //Modified by GGYY
+    $infolist['userid']       = $val['userid'];
+    //todo 循环中执行sql效率低，考虑在添加voucher后，将voucher缓存一份到infromation中。
+    $sql_vouchers = "select g.* from `{$db_mymps}information` AS i INNER JOIN `{$db_mymps}member` as m ON i.userid = m.userid INNER JOIN `{$db_mymps}goods` as g ON m.userid = g.userid
+                              WHERE i.id='".$val['id']."'";
+    $goods_list = $db -> getAll($sql_vouchers);
+    $infolist['goods_list'] = $goods_list;
+
 	$info_list[$val['id']]		= $infolist;
 	$ids .= $val['id'].',';
 }

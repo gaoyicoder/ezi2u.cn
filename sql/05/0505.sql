@@ -1,0 +1,1 @@
+ALTER TABLE `ezi2u`.`my_goods_order` ADD COLUMN `receivedmoney` smallint(1) DEFAULT 0 AFTER `realamount`;

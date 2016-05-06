@@ -15,6 +15,6 @@ if($iflogin != 1){
 $tuan_list = $db -> getAll("SELECT gso.*, i.title FROM `{$db_mymps}goods_order` as gso
                                                 INNER JOIN `{$db_mymps}information` as i ON gso.infoid = i.id
                                                 INNER JOIN `{$db_mymps}member` as m ON m.userid = i.userid
-                                                WHERE m.userid = '$s_uid' AND gso.type=1 AND gso.useddate = 0 ");
-$title = "Unused";
+                                                WHERE m.userid = '$s_uid' AND gso.type=1 AND gso.useddate != 0 ");
+$title = "Used";
 include mymps_tpl('store_tuan_list');

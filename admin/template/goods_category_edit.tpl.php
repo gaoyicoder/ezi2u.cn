@@ -122,7 +122,7 @@ function change_type(type_id) {
 </tr>
 
 <tr style="<?if($cat[type] == 1) echo 'display: none;';?>" class="loose" bgcolor="white">
-    <td width="15%" bgcolor="#F1F5F8">折扣条件:  </td>
+    <td width="15%" bgcolor="#F1F5F8">Required Amount:  </td>
     <td><input name="greaterthan" type="text" id="greaterthan" value="<?=$cat[greaterthan]?>" class="txt"></td>
 </tr>
 <!--

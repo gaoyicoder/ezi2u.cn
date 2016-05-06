@@ -48,7 +48,7 @@ $if_corp	 = $row['if_corp'];
 $uid		= $row['id'];
 $cityid		= $row['cityid'];
 
-$allowm = $mymps_global['cfg_if_corp'] == 1 ? array('info','pm','base','avatar','levelup','certify','pay','password','album','comment','document','certifycorp','shop','goods','shoucang','orderrecords') : array('info','pm','base','avatar','levelup','certify','pay','password','shoucang');
+$allowm = $mymps_global['cfg_if_corp'] == 1 ? array('info','pm','base','avatar','levelup','certify','pay','password','album','comment','document','certifycorp','shop','goods','shoucang','orderrecords','receivemoney') : array('info','pm','base','avatar','levelup','certify','pay','password','shoucang');
 
 require_once MEMBERDIR.'/include/mymps.menu.inc.php';
 is_array($data) && $allowm = array_merge(array_keys($data),$allowm);

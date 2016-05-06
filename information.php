@@ -112,6 +112,11 @@ if($info['modid'] > 1){
 
 $info['image'] = $info['img_path'] != '' ? $db -> getAll("SELECT prepath,path FROM `{$db_mymps}info_img` WHERE infoid = '$id' ORDER BY id DESC") : false;
 
+$sql_vouchers = "select g.* from `{$db_mymps}information` AS i INNER JOIN `{$db_mymps}member` as m ON i.userid = m.userid INNER JOIN `{$db_mymps}goods` as g ON m.userid = g.userid
+                              WHERE i.id='".$info['id']."' and g.type=1";
+$goods_list = $db -> getAll($sql_vouchers);
+$info['goods_list'] = $goods_list;
+
 $advertisement	= get_advertisement('info');
 $adveritems		= $city['advertisement'];
 $advertisement['type']	= $advertisement['all'] ? (is_array($advertisement[$info['catid']]['type']) ? array_merge($advertisement['all']['type'],$advertisement[$info['catid']]['type']) : $advertisement['all']['type']): $advertisement[$info['catid']]['type'];

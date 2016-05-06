@@ -53,7 +53,7 @@ function change_type(type_id)
     jQuery("input[name='oldprice']").val("");
     jQuery("input[name='nowprice']").val("");
     if(type_id == 0) {
-        jQuery("#oldprice_libel").html('折扣条件<font color="red">*</font>');
+        jQuery("#oldprice_libel").html('Required Amount<font color="red">*</font>');
         jQuery("#nowprice_libel").html('Discount<font color="red">*</font>');
         jQuery("#nowprice_libel_moneytype").html('% (0 ~ 100)');
     } else {
@@ -107,7 +107,7 @@ function change_type(type_id)
                                         </div>
 
                                         <div class="formrow">
-                                            <h3 class="label">快速添加<font color="red">*</font></h3>
+                                            <h3 class="label">Benefit<font color="red">*</font></h3>
                                             <div class="form-enter">
                                                 <select name="catid" onchange="fast_add(this)">
                                                     <option value="">select</option>
@@ -131,7 +131,7 @@ function change_type(type_id)
                                             </div>
                                         </div>
 										<div class="formrow">
-                                            <h3 class="label"><label id="oldprice_libel"><? if($edit['type']==0) echo '折扣条件'; else echo 'Cost' ?><font color="red">*</font></label></h3>
+                                            <h3 class="label"><label id="oldprice_libel"><? if($edit['type']==0) echo 'Required Amount'; else echo 'Cost' ?><font color="red">*</font></label></h3>
                                             <div class="form-enter">
                                                 <input readonly name="oldprice" type="text" class="text" value="<?=$edit['oldprice']?>" style="width:70px">
                                                 <label id="oldprice_libel_moneytype"><?php echo $moneytype; ?></label>

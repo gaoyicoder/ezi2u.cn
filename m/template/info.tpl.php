@@ -250,7 +250,7 @@ function showError(error) {
 		</ul>
         <? if($row['userid'] != '') { ?>
 
-        <div class="detail-tit">付款</div>
+        <div class="detail-tit">Pay</div>
         <div class="detail_txt_che">
             <?
             if($row['goods_list']) {

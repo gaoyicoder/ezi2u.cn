@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/style.head_<?=$mymps_global[head_style]?>.css">
 <link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/information.css">
 <link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/information_comment.css">
+<link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/list.css" />
 <script src="<?=$mymps_global[SiteUrl]?>/template/global/noerr.js" type="text/javascript"></script>
 <script src="<?=$mymps_global[SiteUrl]?>/template/default/js/global.js" type="text/javascript"></script>
 <script src="<?=$mymps_global[SiteUrl]?>/template/default/js/jquery.min.js" type="text/javascript"></script>
@@ -178,6 +179,28 @@
 					</ul>
 				</div>
 			</div>
+            <div class="clear15"></div>
+            <div class="view_hd">
+                <div><a href="" class="currentr"><span></span>固定付</a></div>
+            </div>
+            <div class="view_bd">
+                <div class="maincon cfix">
+                    <?
+                    if($info['goods_list']) {
+                        foreach($info['goods_list'] as $key=>$good) {
+                            if($good['type']==1) {
+                                echo '<a target="_blank" href="goods.php?mod=tuan&id='.$good['goodsid'].'&info='.$info[id].'"><span class="coupon-tag tuan"></span>'.$good['goodsname'].'</a>';
+                            }
+                            echo "<br />";
+                        }
+                    } else {
+                        echo '<span class="coupon-tag-gray hui"></span>';
+                        echo '<span class="coupon-tag-gray tuan"></span>';
+                    }
+                    ?>
+                </div>
+            </div>
+
 			<div class="clear15"></div>
 			<div class="view_hd">
 				<div><a href="" class="currentr"><span></span>Post Details</a></div>

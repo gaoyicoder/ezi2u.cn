@@ -20,7 +20,7 @@
                 <div class="promo-hui J-promo-hui">
                     <ul class="discount">
                         <li class="J-promo">
-                            付款成功！
+                            Payment Successful!
                         </li>
                     </ul>
                 </div>

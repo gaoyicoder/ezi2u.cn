@@ -24,13 +24,13 @@
         <div class="cleafix pagetab-wrap">
             <ul class="pagetab">
                 <li><a href="?m=goods&ac=list&type=corp" <?php if($ac == 'list') echo 'class="current"'; ?>><span>Posted Voucher</span></a></li>
-                <li><a href="?m=goods&ac=order&type=corp" <?php if($ac == 'signin') echo 'class="current"'; ?>><span>Order Management</span></a></li>
+                <!--<li><a href="?m=goods&ac=order&type=corp" <?php if($ac == 'signin') echo 'class="current"'; ?>><span>Order Management</span></a></li>-->
             </ul>
         </div>
 		<div id="msg_success"></div>
 <div id="msg_error"></div>
 <div id="msg_alert"></div>
-        <div>任意付</div>
+        <div>Discount of Price</div>
         <form method="post" action="?m=<?=$m?>&ac=<?=$ac?>&page=<?=$page?>">
         <div class="datatablewrap">
             <table class="datatable">
@@ -41,7 +41,7 @@
                         </td>
                         <td width="100">Voucher Number</td>
                         <td>Voucher Name</td>
-						<td>折扣条件</td>
+						<td>Required Amount</td>
 						<td>Discount</td>
                         <td>Time of Post</td>
 			            <td>Status</td>
@@ -100,7 +100,7 @@
             </div>
         </div>
 		</form>
-        <div>固定付</div>
+        <div>Less for More</div>
         <form method="post" action="?m=<?=$m?>&ac=<?=$ac?>&page=<?=$page?>">
             <div class="datatablewrap">
                 <table class="datatable">

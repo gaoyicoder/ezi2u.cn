@@ -29,6 +29,7 @@ if($cat['modid'] > 1 && $idin) {
 <script src="<?=$mymps_global[SiteUrl]?>/template/default/js/global.js" type="text/javascript"></script>
 <script src="<?=$mymps_global[SiteUrl]?>/template/default/js/jquery.min.js" type="text/javascript"></script>
 <script src="<?=$mymps_global[SiteUrl]?>/template/default/js/hover_bg.js" type="text/javascript"></script>
+<link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/list.css" />
 
    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -418,11 +419,33 @@ document.getElementById("demo").innerHTML = getDistanceFromLatLonInKm(39.865768,
 				<? 
 				if(is_array($v['extra'])){
 					foreach($v['extra'] as $t => $w){
-						if($w) echo in_array($w,array('0元','0万元','0元/月')) ? ' Discuss Face To Face / ' : $w.' / ';
+						if($w) echo in_array($w,array('0元','0锟斤拷元','0元/锟斤拷')) ? ' Discuss Face To Face / ' : $w.' / ';
 					}
 				}
 				?>
-				<?=$v[areaname]?></div>
+				<?=$v[areaname]?>
+                    &nbsp;&nbsp;
+                    <?
+                    if($v['userid'] != '') {
+                        if($v['goods_list']) {
+                            $set_hui = 0;
+                            $set_tuan = 0;
+                            foreach($v['goods_list'] as $key=>$good) {
+                                if($good['type']==0 && $set_hui == 0) {
+                                    $set_hui = 1;
+                                    echo '<span class="coupon-tag hui"></span>';
+                                } else if($good['type']==1  && $set_tuan == 0) {
+                                    $set_tuan = 1;
+                                    echo '<span class="coupon-tag tuan"></span>';
+                                }
+                            }
+                        } else {
+                            echo '<span class="coupon-tag-gray hui"></span>';
+                            echo '<span class="coupon-tag-gray tuan"></span>';
+                        }
+                    }
+                    ?>
+                </div>
 				</div>
 				</div>
 				<? }?>

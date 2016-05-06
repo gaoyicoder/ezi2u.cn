@@ -27,30 +27,52 @@ if(!submit_check(CURSCRIPT.'_submit')){
     }
     include mymps_tpl('tuan');
 } else {
-    //todo 所有post数值的验证
-    if(1) {
+    $userpwd = isset($_REQUEST['userpwd']) ? mhtmlspecialchars($_REQUEST['userpwd']):'';
+    if(!$userpwd) {
         $goodsid = isset($_REQUEST['good']) ? intval($_REQUEST['good']):'';
         $infoid = isset($_REQUEST['id']) ? intval($_REQUEST['id']):'';
         $ordernum = isset($_REQUEST['ordernum']) ? intval($_REQUEST['ordernum']):'';
+
         $sql_good = "select * from `{$db_mymps}goods` AS g where g.goodsid='".$goodsid."'";
         $good = $db->getRow($sql_good);
+        $sql_info = "select * from `{$db_mymps}information` AS i where i.id='".$infoid."'";
+        $info = $db->getRow($sql_info);
 
-        $total_amount = $ordernum*$good['oldprice'];
-        $real_amount = $ordernum*$good['nowprice'];
-        $sql_user = "select * from `{$db_mymps}member` AS m where m.userid='".$s_uid."'";
-        $dateline = time();
-        $useddate = time();
-        $user = $db->getRow($sql_user);
-        $ip = GetIP();
-        $msg = time();
-        $sql_insert_order = "insert into {$db_mymps}goods_order (goodsid, ordernum, oname, mobile, ip, dateline, type, userid, useddate, infoid, totalamount, realamount, msg)
-                                VALUES ('".$goodsid."', '".$ordernum."', '".$good['goodsname']."', '".$user['mobile']."', '".$ip."','".$dateline."','1','".$s_uid."','','".$infoid."','".$total_amount."','".$real_amount."','".$msg."')";
-        $db -> query($sql_insert_order);
-
-        $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own - '$real_amount' WHERE userid='".$s_uid."'");
-        include mymps_tpl('tuan_success');
-
+        include mymps_tpl('tuan_password');
     } else {
-        errormsg('错误的id');
+        //todo 所有post数值的验证
+        if(1) {
+            $sql_user = "select * from `{$db_mymps}member` AS m where m.userid='".$s_uid."'";
+            $user = $db->getRow($sql_user);
+            if (md5($userpwd) != $user['userpwd']) {
+                errormsg('Wrong Password');
+            }
+            $goodsid = isset($_REQUEST['good']) ? intval($_REQUEST['good']):'';
+            $infoid = isset($_REQUEST['id']) ? intval($_REQUEST['id']):'';
+            $ordernum = isset($_REQUEST['ordernum']) ? intval($_REQUEST['ordernum']):'';
+            $sql_good = "select * from `{$db_mymps}goods` AS g where g.goodsid='".$goodsid."'";
+            $good = $db->getRow($sql_good);
+
+            $total_amount = $ordernum*$good['oldprice'];
+            $real_amount = $ordernum*$good['nowprice'];
+
+            $dateline = time();
+            $useddate = time();
+            $ip = GetIP();
+            $msg = time();
+            $sql_insert_order = "insert into {$db_mymps}goods_order (goodsid, ordernum, oname, mobile, ip, dateline, type, userid, useddate, infoid, totalamount, realamount, msg)
+                                VALUES ('".$goodsid."', '".$ordernum."', '".$good['goodsname']."', '".$user['mobile']."', '".$ip."','".$dateline."','1','".$s_uid."','','".$infoid."','".$total_amount."','".$real_amount."','".$msg."')";
+            $db -> query($sql_insert_order);
+
+            $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own - '$real_amount' WHERE userid='".$s_uid."'");
+
+            $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own + '$real_amount' WHERE userid='".$good['userid']."'");
+
+            include mymps_tpl('tuan_success');
+
+        } else {
+            errormsg('错误的id');
+        }
     }
+
 }

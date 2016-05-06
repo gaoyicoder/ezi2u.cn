@@ -50,9 +50,9 @@
     }
 </script>
 <header class="mb-line-b">
-    <a class="back back-gray" href="javascript:history.go(-1)">返回</a>
+    <a class="back back-gray" href="javascript:history.go(-1)">Back</a>
 
-    <div class="title">提交订单</div>
+    <div class="title">Order</div>
 </header>
 <h3 class="headbar">
     <?= $info['title'];?>-<?= $good['goodsname'];?>
@@ -61,7 +61,7 @@
 <form id="form_tuan" action="?mod=tuan&id=<?=$info_id?>&good=<?=$good_id?>" enctype="multipart/form-data" method="post" name="form1" onSubmit="return check_sub();">
 <div class="mb-list-fix mb-list-wrapper mb-line-tb m-b-10">
     <div class="mb-list-line mb-line-b">
-        <span>数量</span>
+        <span>Amount</span>
 
         <div class="p-r number-box J_number_box">
             <span class="J_minus minus ">—</span>
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="mb-list-line">
-        <span>小计</span>
+        <span>Total</span>
 
         <div class="p-r">
             <p class="price">¥<strong class="J_price"><?= $good['nowprice'];?></strong>
@@ -81,6 +81,6 @@
         </div>
     </div>
 </div>
-<span class="J_submit mb-btn-primary-block-single mb-btn-md">提交订单</span>
+<span class="J_submit mb-btn-primary-block-single mb-btn-md">Submit</span>
 </form>
 </body>

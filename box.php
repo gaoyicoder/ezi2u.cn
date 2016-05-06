@@ -40,7 +40,7 @@ $report_type = isset($_POST['report_type']) ? trim(mhtmlspecialchars($_POST['rep
 $id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : '';
 $uid = isset($_GET['uid']) ? intval($_GET['uid']) : '';
 
-!in_array($part,array('upgrade','shoucang','wap_shoucang','report','do_report','information','checkmemberinfo','sp_testdirs','adminmenu','member','memberinfopost','advertisement','advertisementview','jswizard','iptoarea','goodsorder','score_coin','credits_up','howtogetscore','seecontact','delinfo')) && exit('FORBIDDEN');
+!in_array($part,array('upgrade','shoucang','wap_shoucang','report','do_report','information','checkmemberinfo','sp_testdirs','adminmenu','member','memberinfopost','advertisement','advertisementview','jswizard','iptoarea','goodsorder','score_coin','credits_up','howtogetscore','seecontact','delinfo', 'tuanorder')) && exit('FORBIDDEN');
 
 include MYMPS_INC.'/box/'.$part.'.php';
 
