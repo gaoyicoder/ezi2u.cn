@@ -68,8 +68,9 @@ if(!submit_check(CURSCRIPT.'_submit')){
             $useddate = time();
             $user = $db->getRow($sql_user);
             $ip = GetIP();
-            $sql_insert_order = "insert into {$db_mymps}goods_order (goodsid, ordernum, oname, mobile, ip, dateline, type, userid, useddate, infoid, totalamount, realamount)
-                                VALUES ('".$goodsid."', '0', '".$good['goodsname']."', '".$user['mobile']."', '".$ip."','".$dateline."','0','".$s_uid."','".$useddate."','".$infoid."','".$total_amount."','".$real_amount."')";
+            $msg = time();
+            $sql_insert_order = "insert into {$db_mymps}goods_order (goodsid, ordernum, oname, mobile, ip, dateline, type, userid, useddate, infoid, totalamount, realamount, msg)
+                                VALUES ('".$goodsid."', '0', '".$good['goodsname']."', '".$user['mobile']."', '".$ip."','".$dateline."','0','".$s_uid."','".$useddate."','".$infoid."','".$total_amount."','".$real_amount."','".$msg."')";
             $db -> query($sql_insert_order);
             $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own - '$real_amount' WHERE userid='".$s_uid."'");
 
