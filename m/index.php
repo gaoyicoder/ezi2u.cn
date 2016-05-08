@@ -73,9 +73,9 @@ if($member_log->chk_in()){
 
     $row_member = $db -> getRow("SELECT * FROM `{$db_mymps}member` WHERE userid = '$s_uid'");
     if($row_member['if_corp'] == 1) {
-        $user_title = "Seller";
+        $user_title = "<span style='color: #27ae60'>Seller</span>";
     } else {
-        $user_title = "Dear";
+        $user_title = "<span style='color: #27ae60;'>Dear</span>";
     }
 
 	$loginfo = '<a style="padding-top: 0px;height: 20px;line-height: 20px;" class="u_name fl">Welcome, '.$user_title.'</a><br /><a style="padding-top: 0px;height: 20px;line-height: 20px;" href="index.php?mod=member&userid='.$s_uid.'" class="u_name fl">'.$s_uid.'</a> <a href="index.php?mod=login&action=logout&returnurl='.$returnurl.'" class="exit58">Exit Safely</a>';

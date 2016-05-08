@@ -20,6 +20,7 @@
 <body>
 <script>
     $(document).ready(function(){
+        $("input[name='userpwd']").val('');
         $(".J_submit").click(function() {
             $("#form_tuan").submit();
         });

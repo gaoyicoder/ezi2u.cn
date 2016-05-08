@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffefc0c-b048-46c9-a1ee-5797e3e53839" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/footer.tpl.php" afterPath="$PROJECT_DIR$/m/template/footer.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui_password.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui_password.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_hui.php" afterPath="$PROJECT_DIR$/m/include/inc_hui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_hui_list.php" afterPath="$PROJECT_DIR$/m/include/inc_hui_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_tuan.php" afterPath="$PROJECT_DIR$/m/include/inc_tuan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_tuan_list.php" afterPath="$PROJECT_DIR$/m/include/inc_tuan_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/index.php" afterPath="$PROJECT_DIR$/m/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member.tpl.php" afterPath="$PROJECT_DIR$/m/template/member.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_login.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_login.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan_password.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan_password.tpl.php" />
     </list>
     <ignored path="ezi2u.cn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,12 +42,133 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="member.tpl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hui_password.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/template/hui_password.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hui_list.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/template/hui_list.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h2#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1462679128000" expanded="true" signature="1171:1202" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/template/footer.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <element signature="n#style#0;n#p#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tuan_list.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/template/tuan_list.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-29.375">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1462679178000" expanded="true" signature="1234:1265" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="member.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/m/template/member.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13114753">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.291667">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="member_login.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/template/member_login.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_hui.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_hui.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14754099">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <marker date="1462678095000" expanded="true" signature="331:397" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="502:571" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="719:970" placeholder="select g.* f..." />
+                <marker date="1462678095000" expanded="true" signature="1672:1740" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="1804:1872" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="2040:2106" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="2445:2513" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="2789:2855" placeholder="select * fro..." />
+                <marker date="1462678095000" expanded="true" signature="3053:3432" placeholder="insert into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_tuan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_tuan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-40.0">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <marker date="1462678126000" expanded="true" signature="564:632" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="697:766" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="1274:1342" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="1406:1474" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="1643:1709" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="2136:2204" placeholder="select * fro..." />
+                <marker date="1462678126000" expanded="true" signature="2517:2895" placeholder="insert into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_hui_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_hui_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+              <folding>
+                <marker date="1462678302000" expanded="true" signature="401:687" placeholder="SELECT gso.*..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_tuan_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_tuan_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+              <folding>
+                <marker date="1462678310000" expanded="true" signature="404:690" placeholder="SELECT gso.*..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,9 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/m/template/test.php" />
-        <option value="$PROJECT_DIR$/m/template/category_list.tpl.php" />
-        <option value="$PROJECT_DIR$/template/default/css/style.css" />
         <option value="$PROJECT_DIR$/template/default/css/category.css" />
         <option value="$PROJECT_DIR$/template/default/css/list.css" />
         <option value="$PROJECT_DIR$/template/default/list.tpl.php" />
@@ -63,12 +192,10 @@
         <option value="$PROJECT_DIR$/include/box/tuanorder.php" />
         <option value="$PROJECT_DIR$/template/box/tuanorder.html" />
         <option value="$PROJECT_DIR$/sql/05/0505.sql" />
-        <option value="$PROJECT_DIR$/m/template/footer.tpl.php" />
         <option value="$PROJECT_DIR$/member/include/inc_orderrecords.php" />
         <option value="$PROJECT_DIR$/member/template/css/new.common.css" />
         <option value="$PROJECT_DIR$/member/index.php" />
         <option value="$PROJECT_DIR$/member/include/inc_receivemoney.php" />
-        <option value="$PROJECT_DIR$/m/include/inc_tuan.php" />
         <option value="$PROJECT_DIR$/goods.php" />
         <option value="$PROJECT_DIR$/m/include/inc_member.php" />
         <option value="$PROJECT_DIR$/member/include/mymps.menu.inc.php" />
@@ -80,8 +207,6 @@
         <option value="$PROJECT_DIR$/member/template/receive_money.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/info.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/hui.tpl.php" />
-        <option value="$PROJECT_DIR$/m/template/tuan_password.tpl.php" />
-        <option value="$PROJECT_DIR$/m/template/hui_password.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/hui_success.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/tuan_success.tpl.php" />
         <option value="$PROJECT_DIR$/plugin/goods/template/tuan.tpl.php" />
@@ -90,16 +215,23 @@
         <option value="$PROJECT_DIR$/m/include/inc_store_tuan_list.php" />
         <option value="$PROJECT_DIR$/m/include/inc_store_tuan_list_fi.php" />
         <option value="$PROJECT_DIR$/m/template/store_tuan_list.tpl.php" />
-        <option value="$PROJECT_DIR$/m/template/tuan_list.tpl.php" />
         <option value="$PROJECT_DIR$/m/include/inc_receive_money_list.php" />
         <option value="$PROJECT_DIR$/m/template/receive_money_list.tpl.php" />
-        <option value="$PROJECT_DIR$/m/index.php" />
         <option value="$PROJECT_DIR$/member/template/index.tpl.php" />
-        <option value="$PROJECT_DIR$/m/include/inc_hui.php" />
-        <option value="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" />
-        <option value="$PROJECT_DIR$/m/template/hui_list.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/css/hui.css" />
+        <option value="$PROJECT_DIR$/m/template/hui_password.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/tuan_password.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" />
         <option value="$PROJECT_DIR$/m/template/member.tpl.php" />
+        <option value="$PROJECT_DIR$/m/index.php" />
+        <option value="$PROJECT_DIR$/m/include/inc_hui.php" />
+        <option value="$PROJECT_DIR$/m/include/inc_tuan.php" />
+        <option value="$PROJECT_DIR$/m/include/inc_hui_list.php" />
+        <option value="$PROJECT_DIR$/m/include/inc_tuan_list.php" />
+        <option value="$PROJECT_DIR$/m/template/hui_list.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/tuan_list.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/footer.tpl.php" />
+        <option value="$PROJECT_DIR$/m/template/member_login.tpl.php" />
       </list>
     </option>
   </component>
@@ -209,6 +341,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ezi2u.cn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ezi2u.cn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -270,14 +420,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="103" width="1920" height="1057" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16613418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16613418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -317,45 +467,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/m/template/footer.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/template/inc_head.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39548022">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/template/css/new.common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322314">
-          <caret line="0" column="10129" selection-start-line="0" selection-start-column="10129" selection-end-line="0" selection-end-column="10129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/include/inc_orderrecords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33070865">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/include/inc_openlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goods.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54330707">
           <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -415,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/tuan_password.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.958333">
-          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/hui_success.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.708333">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugin/goods/template/tuan.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42243436">
@@ -440,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/hui_password.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3921568">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -489,6 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -547,6 +643,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4015748">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -557,28 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/hui.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2976378">
-          <caret line="122" column="75" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/tuan.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25826773">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/include/inc_store_hui_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -586,45 +661,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/tuan_list.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16535433">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/include/inc_tuan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24409449">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/hui_list.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
-          <caret line="62" column="73" selection-start-line="62" selection-start-column="73" selection-end-line="62" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/template/store_hui_list.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/include/inc_hui.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2083335">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/template/css/list.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.430956">
           <caret line="3421" column="23" selection-start-line="3421" selection-start-column="23" selection-end-line="3421" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -632,34 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/04/0427.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17355372">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/04/0421.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/04/0420.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/05/0505.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -674,11 +687,214 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sql/05/0505.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="59" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/04/0420.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="86" selection-start-line="0" selection-start-column="86" selection-end-line="0" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/04/0421.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="47" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/04/0427.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.118644066">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/tuan_password.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/hui.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09836066">
+          <caret line="86" column="67" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6885246">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1460685202000" expanded="true" signature="-1:-1" placeholder="SELECT useri..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/hui_success.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3114754">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/tuan.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22950819">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/store_hui_list.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1462675905000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2941177">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462677524000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/hui_password.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/hui_list.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1462679128000" expanded="true" signature="1171:1202" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/footer.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/tuan_list.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.375">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1462679178000" expanded="true" signature="1234:1265" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_tuan_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <marker date="1462678310000" expanded="true" signature="404:690" placeholder="SELECT gso.*..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_hui_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <marker date="1462678302000" expanded="true" signature="401:687" placeholder="SELECT gso.*..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_tuan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-40.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <marker date="1462678126000" expanded="true" signature="564:632" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="697:766" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="1274:1342" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="1406:1474" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="1643:1709" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="2136:2204" placeholder="select * fro..." />
+            <marker date="1462678126000" expanded="true" signature="2517:2895" placeholder="insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/m/template/member.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13114753">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="-15.291667">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/template/member_login.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_hui.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14754099">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <marker date="1462678095000" expanded="true" signature="331:397" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="502:571" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="719:970" placeholder="select g.* f..." />
+            <marker date="1462678095000" expanded="true" signature="1672:1740" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="1804:1872" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="2040:2106" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="2445:2513" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="2789:2855" placeholder="select * fro..." />
+            <marker date="1462678095000" expanded="true" signature="3053:3432" placeholder="insert into ..." />
+          </folding>
         </state>
       </provider>
     </entry>

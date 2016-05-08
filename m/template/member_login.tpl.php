@@ -8,7 +8,13 @@
 	<link type="text/css" rel="stylesheet" href="template/css/login.css">
 </head>
 
-<body>
+<body onload="load()">
+<script type="text/javascript">
+    function load() {
+        document.getElementsByName('userpwd')[0].value = "";
+
+    }
+</script>
 <div class="body_div">
 
 	<?php include mymps_tpl('header_search');?>

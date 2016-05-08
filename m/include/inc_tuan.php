@@ -68,7 +68,9 @@ if(!submit_check(CURSCRIPT.'_submit')){
 
             $db->query("UPDATE `{$db_mymps}member` SET money_own = money_own + '$real_amount' WHERE userid='".$good['userid']."'");
 
-            include mymps_tpl('tuan_success');
+            header('Location: '.'index.php?mod=tuan_list&msg=Payment Successful!');
+
+//            include mymps_tpl('tuan_success');
 
         } else {
             errormsg('错误的id');
