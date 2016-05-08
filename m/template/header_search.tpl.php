@@ -1,4 +1,5 @@
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 <script>
 var Lat, Lon;
@@ -8,6 +9,7 @@ var currentSubDomain;
 var currentDomain;
 
 var eachState = ["johor", "kedah", "kelantan", "lumpur", "melaka", "semblan", "pahang", "penang", "perak", "perlis", "selangor", "terengganu", "sabah", "sarawak"];
+var eachChineseState = ["柔佛", "吉打", "吉兰丹", "吉隆坡", "马六甲", "森美兰", "彭亨", "槟城", "霹雳", "玻璃市", "雪兰莪", "登嘉楼", "沙巴", "砂拉越"];
 //var domainState = ["johor", "kedah", "kelantan", "kl", "mm", "ns", "pahan", "penan", "perak", "perli", "selan", "sabah", "saraw", "teren"];
 var preDomain = "?mod=index&cityid=";
 
@@ -52,13 +54,12 @@ function getLocationAlways(state) {
 	previousState = previousState.toLowerCase();
 	
 //	console.log(previousState);
-
-//        alert(previousState);
 	
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else { 
  //       x.innerHTML = "Geolocation is not supported by this browser.";
+          alert('2');
     }
 
 }
@@ -96,7 +97,7 @@ function showError(error) {
 
 function codeLatLng(lat, lng) 
 {
-   // alert(lat + " " + lng);
+  //  alert(lat + " " + lng);
     var latlng = new google.maps.LatLng(lat, lng);
 
     var geocoder;
@@ -160,7 +161,10 @@ function codeLatLng(lat, lng)
 			// alert(curState);
 			  
 			  pos = curState.search(eachState[i]);
-			  
+
+                          if(pos < 0)
+			        pos = curState.search(eachChineseState[i]);
+
 			//  console.log(pos);
 			  
 			  if( pos >= 0)
@@ -256,17 +260,95 @@ function getCookie(cname) {
 
 function checkCookie() {
     var user = getCookie("username");
-    if ((user != "") && (user != "undefined")) {
-     //   alert("Your current location is " + user);
-    } else {
+   // if ((user != "") && (user != "undefined")) {
+    //    alert("Your current location is " + user);
+   // } else {
        // user = prompt("Please enter your name:", "");
        // if (user != "" && user != null) {
             //user = Lat.toFixed(2) + " " + Lon.toFixed(2);
 			user = Lat + "," + Lon;
+
+        //    alert("Your current Lat and Lon is " + user);
+
             setCookie("username", user, 365);
       //  }
-    }
+ //   }
 }
+
+</script>
+
+<script>
+
+/**
+ * This javascript file checks for the brower/browser tab action.
+ * It is based on the file menstioned by Daniel Melo.
+ * Reference: http://stackoverflow.com/questions/1921941/close-kill-the-session-when-the-browser-or-tab-is-closed
+ */
+var validNavigation = false;
+ 
+function wireUpEvents() {
+  /**
+   * For a list of events that triggers onbeforeunload on IE
+   * check http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx
+   *
+   * onbeforeunload for IE and chrome
+   * check http://stackoverflow.com/questions/1802930/setting-onbeforeunload-on-body-element-in-chrome-and-ie-using-jquery
+   */
+
+
+  var dont_confirm_leave = 0; //set dont_confirm_leave to 1 when you want the user to be able to leave without confirmation
+  var leave_message = 'For your security, please logout before leaving this page. Thanks.'
+  function goodbye(e) {
+    if (!validNavigation) {
+      if (dont_confirm_leave!==1) {
+        if(!e) e = window.event;
+        //e.cancelBubble is supported by IE - this will kill the bubbling process.
+        e.cancelBubble = true;
+        e.returnValue = leave_message;
+        //e.stopPropagation works in Firefox.
+        if (e.stopPropagation) {
+          e.stopPropagation();
+          e.preventDefault();
+        }
+        //return works for Chrome and Safari
+  
+        window.open("https://www.ezi2u.com.my/m/index.php?mod=login&action=logout&returnurl=");
+
+        return leave_message;
+      }
+    }
+  }
+
+  window.onbeforeunload=goodbye;
+ 
+  // Attach the event keypress to exclude the F5 refresh
+  $(document).bind('keypress', function(e) {
+    if (e.keyCode == 116){
+      validNavigation = true;
+    }
+  });
+ 
+  // Attach the event click for all links in the page
+  $("a").bind("click", function() {
+    validNavigation = true;
+  });
+ 
+  // Attach the event submit for all forms in the page
+  $("form").bind("submit", function() {
+    validNavigation = true;
+  });
+ 
+  // Attach the event click for all inputs in the page
+  $("input[type=submit]").bind("click", function() {
+    validNavigation = true;
+  });
+ 
+}
+ 
+// Wire up the events as soon as the DOM tree is ready
+$(document).ready(function() {
+  wireUpEvents();
+});
 
 </script>
 
