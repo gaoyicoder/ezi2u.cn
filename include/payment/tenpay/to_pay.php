@@ -1,70 +1,139 @@
-<?php
-if(!defined('IN_MYMPS')){
-	exit();
-}
-
-//------------------ ²ÎÊý¿ªÊ¼ ------------------
-
-//ÉÌ»§ºÅ
-$bargainor_id=$payr['payuser'];
-
-//ÃÜÔ¿
-$key=$payr['paykey'];
-
-//·µ»ØµØÖ·
-$return_url=$PayReturnUrlQz."/include/payment/tenpay/payend.php";
-
-//Ö§¸¶±ÒÖÖ,1ÎªÈËÃñ±Ò
-$fee_type=1;
-
-//ÒøÐÐÀàÐÍ
-$bank_type="0";
-
-//------------------ ²ÎÊý½áÊø ------------------
-
-//Ö§¸¶½ð¶î
-$total_fee=$money*100;
-
-//Ìá½»µÄÊý¾Ý
-
-$strCmdNo="1";	//²Æ¸¶Í¨Ö§¸¶Îª"1" (µ±Ç°Ö»Ö§³Ö cmdno=1)
-$strBillDate=date('Ymd');	//½»Ò×ÈÕÆÚ (yyyymmdd)
-$desc=$productname;	//ÉÌÆ·Ãû³Æ
-$strBuyerId="";	//QQºÅÂë
-$strSpBillNo=$ddno?$ddno:$timestamp;//¶©µ¥ºÅ
-msetcookie("checkpaysession",$strSpBillNo,0);	//ÉèÖÃ¶¨µ¥ºÅ
-$strTransactionId=$bargainor_id.$strBillDate.$strSpBillNo;	//½»Ò×¶©µ¥ºÅ
-$attach=$strSpBillNo;
-$spbill_create_ip = $_SERVER["REMOTE_ADDR"];
-
-//md5
-$strSignText="cmdno=".$strCmdNo."&date=".$strBillDate."&bargainor_id=".$bargainor_id."&transaction_id=".$strTransactionId."&sp_billno=".$strSpBillNo."&total_fee=".$total_fee."&fee_type=".$fee_type."&return_url=".$return_url."&attach=".$attach."&spbill_create_ip=".$spbill_create_ip."&key=".$key;
-$strSign=strtoupper(md5($strSignText));
-ToPayMoney($money,$attach,$uid,$s_uid,'tenpay');//Ð´ÈëµÈ´ýÖ§¸¶¼ÇÂ¼
-?>
-<html>
-<title>Pay by ?</title>
-<meta http-equiv="Cache-Control" content="no-cache"/>
-<body>
-<form action="https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi" name="dopaypost" id="dopaypost">
-<input type=hidden name="cmdno" value="<?echo $strCmdNo; ?>">
-<input type=hidden name="date" value="<?echo $strBillDate; ?>">
-<input type=hidden name="bank_type" value="<?echo $bank_type; ?>">
-<input type=hidden name="desc" value="<?echo $desc; ?>">
-<input type=hidden name="purchaser_id" value="<?echo $strBuyerId; ?>">
-<input type=hidden name="bargainor_id" value="<?echo $bargainor_id; ?>">
-<input type=hidden name="transaction_id" value="<?echo $strTransactionId; ?>">
-<input type=hidden name="sp_billno" value="<?echo $strSpBillNo; ?>">
-<input type=hidden name="total_fee" value="<?echo $total_fee; ?>">
-<input type=hidden name="fee_type" value="<?echo $fee_type; ?>">
-<input type=hidden name="return_url" value="<?echo $return_url; ?>">
-<input type=hidden name="attach" value="<?echo $attach; ?>">
-<input type=hidden name="sign" value="<?echo $strSign; ?>">
-<input type=hidden name="spbill_create_ip" value="<?echo $spbill_create_ip; ?>">
-<input type="submit" name="submit2" value="²Æ¸¶Í¨Ö§¸¶">
-</form>
-<script>
-document.getElementById('dopaypost').submit();
-</script>
-</body>
+<?php
+
+if(!defined('IN_MYMPS')){
+
+	exit();
+
+}
+
+
+
+//------------------ ï¿½ï¿½ï¿½ï¿½Ê¼ ------------------
+
+
+
+//ï¿½Ì»ï¿½ï¿½ï¿½
+
+$bargainor_id=$payr['payuser'];
+
+
+
+//ï¿½ï¿½Ô¿
+
+$key=$payr['paykey'];
+
+
+
+//ï¿½ï¿½ï¿½Øµï¿½Ö·
+
+$return_url=$PayReturnUrlQz."/include/payment/tenpay/payend.php";
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,1Îªï¿½ï¿½ï¿½ï¿½ï¿½
+
+$fee_type=1;
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$bank_type="0";
+
+
+
+//------------------ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ------------------
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$total_fee=$money*100;
+
+
+
+//ï¿½á½»ï¿½ï¿½ï¿½ï¿½ï¿½
+
+
+
+$strCmdNo="1";	//ï¿½Æ¸ï¿½Í¨Ö§ï¿½ï¿½Îª"1" (ï¿½ï¿½Ç°Ö»Ö§ï¿½ï¿½ cmdno=1)
+
+$strBillDate=date('Ymd');	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (yyyymmdd)
+
+$desc=$productname;	//ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+
+$strBuyerId="";	//QQï¿½ï¿½ï¿½ï¿½
+
+$strSpBillNo=$ddno?$ddno:$timestamp;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+msetcookie("checkpaysession",$strSpBillNo,0);	//ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$strTransactionId=$bargainor_id.$strBillDate.$strSpBillNo;	//ï¿½ï¿½ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$attach=$strSpBillNo;
+
+$spbill_create_ip = $_SERVER["REMOTE_ADDR"];
+
+
+
+//md5
+
+$strSignText="cmdno=".$strCmdNo."&date=".$strBillDate."&bargainor_id=".$bargainor_id."&transaction_id=".$strTransactionId."&sp_billno=".$strSpBillNo."&total_fee=".$total_fee."&fee_type=".$fee_type."&return_url=".$return_url."&attach=".$attach."&spbill_create_ip=".$spbill_create_ip."&key=".$key;
+
+$strSign=strtoupper(md5($strSignText));
+
+ToPayMoney($money,$attach,$uid,$s_uid,'tenpay');//Ð´ï¿½ï¿½È´ï¿½Ö§ï¿½ï¿½ï¿½ï¿½Â¼
+
+?>
+
+<html>
+
+<title>Pay by ?</title>
+
+<meta http-equiv="Cache-Control" content="no-cache"/>
+
+<body>
+
+<form action="https://www.tenpay.com/cgi-bin/v1.0/pay_gate.cgi" name="dopaypost" id="dopaypost">
+
+<input type=hidden name="cmdno" value="<?echo $strCmdNo; ?>">
+
+<input type=hidden name="date" value="<?echo $strBillDate; ?>">
+
+<input type=hidden name="bank_type" value="<?echo $bank_type; ?>">
+
+<input type=hidden name="desc" value="<?echo $desc; ?>">
+
+<input type=hidden name="purchaser_id" value="<?echo $strBuyerId; ?>">
+
+<input type=hidden name="bargainor_id" value="<?echo $bargainor_id; ?>">
+
+<input type=hidden name="transaction_id" value="<?echo $strTransactionId; ?>">
+
+<input type=hidden name="sp_billno" value="<?echo $strSpBillNo; ?>">
+
+<input type=hidden name="total_fee" value="<?echo $total_fee; ?>">
+
+<input type=hidden name="fee_type" value="<?echo $fee_type; ?>">
+
+<input type=hidden name="return_url" value="<?echo $return_url; ?>">
+
+<input type=hidden name="attach" value="<?echo $attach; ?>">
+
+<input type=hidden name="sign" value="<?echo $strSign; ?>">
+
+<input type=hidden name="spbill_create_ip" value="<?echo $spbill_create_ip; ?>">
+
+<input type="submit" name="submit2" value="ï¿½Æ¸ï¿½Í¨Ö§ï¿½ï¿½">
+
+</form>
+
+<script>
+
+document.getElementById('dopaypost').submit();
+
+</script>
+
+</body>
+
 </html>

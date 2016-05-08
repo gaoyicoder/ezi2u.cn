@@ -1,4 +1,7 @@
-<?php
-define('CURSCRIPT','items');
-include mymps_tpl('member_items');
+<?php
+
+define('CURSCRIPT','items');
+
+include mymps_tpl('member_items');
+
 ?>

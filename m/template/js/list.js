@@ -1,95 +1,190 @@
-$(function(){
-    if(window.BLightApp){//ÅÐ¶ÏÈç¹ûÊÇ°Ù¶Èapp»¹ÓÃ¾ÉµÄfilter
-		loadJS("/template/js/filter.js",function(){
-			if($(".filter").length){
-				var myfilter = new filter(filter_data);
-				myfilter.drawList();
-			}
-		});
-	}else{
-		window.keyword_other = '';
-
-		//ÒÑÑ¡ÏîÎ»ÖÃ´¦Àí
-		//$(".filter_item .selected").each(function(){
-		//	$(this).insertBefore($(this).siblings());
-		//});	
-			
-			//±éÀúËùÓÐÉ¸Ñ¡Ïî dl
-		$(".filter_item").each(function(){
-			var len=$(this).find("dd a").length;
-			//Èç¹ûa±êÇ©µÄ³¤¶È´óÓÚ4£¬²¢ÇÒÊý¾ÝÀàÐÍÊÇcmc»òÕßcmcs
-			if(len>3 && $(this).attr("type")=="cmc_cmcs"){
-				$(this).find("dd").append("<div class='ico_more'></div>");
-				$(this).find("dd").css("padding-right","30px");
-			}
-			//Èç¹ûa±êÇ©µÄ³¤¶È´óÓÚ4£¬²¢ÇÒÊý¾ÝÀàÐÍÊÇÉÌÈ¦Êý¾Ý
-			if(len>4 && $(this).attr("type")=="subarea"){
-				$(this).find("dd").append("<div class='ico_more'></div>");
-				$(this).find("dd").css("padding-right","30px");
-			}
-			//Èç¹ûa±êÇ©µÄ³¤¶È´óÓÚ»òµÈÓÚ5£¬²¢ÇÒÊý¾ÝÀàÐÍÊÇÇøÓò£¬ÉèÖÃicoÎ»ÖÃºÍdd¸ß¶È
-			if(len>=5 && $(this).attr("type")=="area"){
-				$(this).find("dd").append("<div class='ico_more'></div>");
-				$(".ico_more").css("top","24px");
-				$(this).find("dd").css({"padding-right":"30px","height":"56px"});
-			}
-			
-		});
-		
-		//ÏÔÊ¾»òÒþ²Ø¸ü¶à×ÓÉ¸Ñ¡Ïî
-			//isclick ¼ÇÂ¼ÊÇ·ñ´¥Ãþµ½a±êÇ©£¬½â¾öÍ¬Ê±´¥·¢Á½¸öÊÂ¼þµÄbug
-			var isclick = false;
-			$(".ico_more,.ico_more2").bind("touchstart",function(){isside=false});
-			$(".ico_more,.ico_more2").bind("touchmove",function(){isside=true});
-			$(".ico_more,.ico_more2").bind("touchend",function(){
-				if(isside){return;}
-				$('.filter').css({"height":"auto","-webkit-transition-duration":"0ms"});
-				isclick=true;
-				if($(this).hasClass("up")){
-					if($(this).parent().parent().attr("type")=="area"){
-						$(this).parent().css("height","56px");
-					}else{
-						$(this).parent().css("height","28px");
-					}
-					$(this).removeClass("up");
-				}else{
-					$(this).parent().css("height","auto");
-					$(this).addClass("up");
-				}
-				setTimeout(function(){
-					isclick=false;
-				},500);
-			});
-
-			$(".filter_item a").bind("click",function(){
-				var _a=$(this);
-				var urls = _a.attr("href");
-				if(isclick){
-					isclick=false;
-					_a.attr("href","javascript:;");
-					setTimeout(function(){
-						_a.attr("href",urls);
-					},500);
-				}
-			});
-		//ÏÔÊ¾»òÒþ²Ø¸ü¶àÉ¸Ñ¡Ïî
-		$(".filter_more").bind("click",function(){
-			var btn_more = $(this);
-
-			$(".filter .filter_item").each(function(){
-
-				if($(this).css('display') == "none" ){
-					$(this).css('display','block').addClass('none');
-					btn_more.addClass("less").find("span").text("Simplify filtering condition");
-				}else if($(this).hasClass("none") && $(this).css('display') != "none"){
-					$(this).css('display','none');
-					btn_more.removeClass("less").find("span").text("More filtering conditions");
-				}
-				
-				
-			});
-			
-		});	
-	}
-	
-});
+$(function(){
+
+    if(window.BLightApp){//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Ù¶ï¿½appï¿½ï¿½ï¿½Ã¾Éµï¿½filter
+
+		loadJS("/template/js/filter.js",function(){
+
+			if($(".filter").length){
+
+				var myfilter = new filter(filter_data);
+
+				myfilter.drawList();
+
+			}
+
+		});
+
+	}else{
+
+		window.keyword_other = '';
+
+
+
+		//ï¿½ï¿½Ñ¡ï¿½ï¿½Î»ï¿½Ã´ï¿½ï¿½ï¿½
+
+		//$(".filter_item .selected").each(function(){
+
+		//	$(this).insertBefore($(this).siblings());
+
+		//});	
+
+			
+
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½ dl
+
+		$(".filter_item").each(function(){
+
+			var len=$(this).find("dd a").length;
+
+			//ï¿½ï¿½ï¿½aï¿½ï¿½Ç©ï¿½Ä³ï¿½ï¿½È´ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cmcï¿½ï¿½ï¿½ï¿½cmcs
+
+			if(len>3 && $(this).attr("type")=="cmc_cmcs"){
+
+				$(this).find("dd").append("<div class='ico_more'></div>");
+
+				$(this).find("dd").css("padding-right","30px");
+
+			}
+
+			//ï¿½ï¿½ï¿½aï¿½ï¿½Ç©ï¿½Ä³ï¿½ï¿½È´ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¦ï¿½ï¿½ï¿½
+
+			if(len>4 && $(this).attr("type")=="subarea"){
+
+				$(this).find("dd").append("<div class='ico_more'></div>");
+
+				$(this).find("dd").css("padding-right","30px");
+
+			}
+
+			//ï¿½ï¿½ï¿½aï¿½ï¿½Ç©ï¿½Ä³ï¿½ï¿½È´ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½icoÎ»ï¿½Ãºï¿½ddï¿½ß¶ï¿½
+
+			if(len>=5 && $(this).attr("type")=="area"){
+
+				$(this).find("dd").append("<div class='ico_more'></div>");
+
+				$(".ico_more").css("top","24px");
+
+				$(this).find("dd").css({"padding-right":"30px","height":"56px"});
+
+			}
+
+			
+
+		});
+
+		
+
+		//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½
+
+			//isclick ï¿½ï¿½Â¼ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½aï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½bug
+
+			var isclick = false;
+
+			$(".ico_more,.ico_more2").bind("touchstart",function(){isside=false});
+
+			$(".ico_more,.ico_more2").bind("touchmove",function(){isside=true});
+
+			$(".ico_more,.ico_more2").bind("touchend",function(){
+
+				if(isside){return;}
+
+				$('.filter').css({"height":"auto","-webkit-transition-duration":"0ms"});
+
+				isclick=true;
+
+				if($(this).hasClass("up")){
+
+					if($(this).parent().parent().attr("type")=="area"){
+
+						$(this).parent().css("height","56px");
+
+					}else{
+
+						$(this).parent().css("height","28px");
+
+					}
+
+					$(this).removeClass("up");
+
+				}else{
+
+					$(this).parent().css("height","auto");
+
+					$(this).addClass("up");
+
+				}
+
+				setTimeout(function(){
+
+					isclick=false;
+
+				},500);
+
+			});
+
+
+
+			$(".filter_item a").bind("click",function(){
+
+				var _a=$(this);
+
+				var urls = _a.attr("href");
+
+				if(isclick){
+
+					isclick=false;
+
+					_a.attr("href","javascript:;");
+
+					setTimeout(function(){
+
+						_a.attr("href",urls);
+
+					},500);
+
+				}
+
+			});
+
+		//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½É¸Ñ¡ï¿½ï¿½
+
+		$(".filter_more").bind("click",function(){
+
+			var btn_more = $(this);
+
+
+
+			$(".filter .filter_item").each(function(){
+
+
+
+				if($(this).css('display') == "none" ){
+
+					$(this).css('display','block').addClass('none');
+
+					btn_more.addClass("less").find("span").text("Simplify filtering condition");
+
+				}else if($(this).hasClass("none") && $(this).css('display') != "none"){
+
+					$(this).css('display','none');
+
+					btn_more.removeClass("less").find("span").text("More filtering conditions");
+
+				}
+
+				
+
+				
+
+			});
+
+			
+
+		});	
+
+	}
+
+	
+
+});
+

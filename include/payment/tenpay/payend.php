@@ -1,85 +1,169 @@
-<?php
-define('IN_MYMPS', true);
-define('IN_ADMIN',true);
-define('CURSCRIPT','payend');
-
-require_once dirname(__FILE__).'/../../../include/global.php';
-require_once MYMPS_DATA.'/config.php';
-require_once MYMPS_DATA.'/config.db.php';
-require_once MYMPS_INC.'/db.class.php';
-require_once MYMPS_INC."/member.class.php";
-if(!$member_log->chk_in()) write_msg("","../".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
-
-$editor=1;
-
-//¶©µ¥ºÅ
-/*
-if(!mgetcookie('checkpaysession')){
-	write_msg('·Ç·¨²Ù×÷£¡','olmsg');
-}else{
-	msetcookie("checkpaysession","",0);
-}
-*/
-
-//²Ù×÷ÊÂ¼þ
-/*
-$pay_type = mgetcookie('pay_type');
-if($pay_type=='PayToMoney')//½ð±Ò³äÖµ
-{
-	
-}else{
-	write_msg('ÄúÀ´×ÔµÄÁ´½Ó²»´æÔÚ','olmsg');
-}*/
-
-$paytype='tenpay';
-$payr=$db->getRow("SELECT * FROM {$db_mymps}payapi WHERE paytype='$paytype'");
-$bargainor_id=$payr['payuser'];//ÉÌ»§ºÅ
-
-$key=$payr['paykey'];//ÃÜÔ¿
-
-//----------------------------------------------·µ»ØÐÅÏ¢
-import_request_variables("gpc", "frm_");
-$strCmdno			= $frm_cmdno;
-$strPayResult		= $frm_pay_result;
-$strPayInfo			= $frm_pay_info;
-$strBillDate		= $frm_date;
-$strBargainorId		= $frm_bargainor_id;
-$strTransactionId	= $frm_transaction_id;
-$strSpBillno		= $frm_sp_billno;
-$strTotalFee		= $frm_total_fee;
-$strFeeType			= $frm_fee_type;
-$strAttach			= $frm_attach;
-$strMd5Sign			= $frm_sign;
-$strCreateIp		= $frm_spbill_create_ip;
-
-//Ö§¸¶ÑéÖ¤
-$checkkey="cmdno=".$strCmdno."&pay_result=".$strPayResult."&date=".$strBillDate."&transaction_id=".$strTransactionId."&sp_billno=".$strSpBillno."&total_fee=".$strTotalFee."&fee_type=".$strFeeType."&attach=".$strAttach."&spbill_create_ip=".$strCreateIp."&key=".$key;
-$checkSign=strtoupper(md5($checkkey));
-  
-/*if($checkSign!=$strMd5Sign){
-	write_msg('ÑéÖ¤MD5Ç©ÃûÊ§°Ü.','olmsg');
-}*/
-
-if($bargainor_id!=$strBargainorId){
-	write_msg('Wrong Merchant Code.','olmsg');
-}
-
-if($strPayResult=="0"){
-
-	include MYMPS_INC.'/pay.fun.php';
-	
-	$orderid=$strSpBillno;	//Ö§¸¶¶©µ¥
-	$ddno=$strAttach;	//ÍøÕ¾µÄ¶©µ¥ºÅ
-	$money=$strTotalFee/100;
-	
-	$paybz='Payment completed';
-	UpdatePayRecord($ddno,$paybz);//ÐÞ¸ÄÖ§¸¶×´Ì¬
-	write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
-
-} else {
-	write_msg('Payment failed.','olmsg');
-}
-
-is_object($db) && $db -> Close();
-$mymps_global = NULL;
+<?php
+
+define('IN_MYMPS', true);
+
+define('IN_ADMIN',true);
+
+define('CURSCRIPT','payend');
+
+
+
+require_once dirname(__FILE__).'/../../../include/global.php';
+
+require_once MYMPS_DATA.'/config.php';
+
+require_once MYMPS_DATA.'/config.db.php';
+
+require_once MYMPS_INC.'/db.class.php';
+
+require_once MYMPS_INC."/member.class.php";
+
+if(!$member_log->chk_in()) write_msg("","../".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
+
+
+
+$editor=1;
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+/*
+
+if(!mgetcookie('checkpaysession')){
+
+	write_msg('ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}else{
+
+	msetcookie("checkpaysession","",0);
+
+}
+
+*/
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+
+/*
+
+$pay_type = mgetcookie('pay_type');
+
+if($pay_type=='PayToMoney')//ï¿½ï¿½Ò³ï¿½Öµ
+
+{
+
+	
+
+}else{
+
+	write_msg('ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}*/
+
+
+
+$paytype='tenpay';
+
+$payr=$db->getRow("SELECT * FROM {$db_mymps}payapi WHERE paytype='$paytype'");
+
+$bargainor_id=$payr['payuser'];//ï¿½Ì»ï¿½ï¿½ï¿½
+
+
+
+$key=$payr['paykey'];//ï¿½ï¿½Ô¿
+
+
+
+//----------------------------------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+
+import_request_variables("gpc", "frm_");
+
+$strCmdno			= $frm_cmdno;
+
+$strPayResult		= $frm_pay_result;
+
+$strPayInfo			= $frm_pay_info;
+
+$strBillDate		= $frm_date;
+
+$strBargainorId		= $frm_bargainor_id;
+
+$strTransactionId	= $frm_transaction_id;
+
+$strSpBillno		= $frm_sp_billno;
+
+$strTotalFee		= $frm_total_fee;
+
+$strFeeType			= $frm_fee_type;
+
+$strAttach			= $frm_attach;
+
+$strMd5Sign			= $frm_sign;
+
+$strCreateIp		= $frm_spbill_create_ip;
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½Ö¤
+
+$checkkey="cmdno=".$strCmdno."&pay_result=".$strPayResult."&date=".$strBillDate."&transaction_id=".$strTransactionId."&sp_billno=".$strSpBillno."&total_fee=".$strTotalFee."&fee_type=".$strFeeType."&attach=".$strAttach."&spbill_create_ip=".$strCreateIp."&key=".$key;
+
+$checkSign=strtoupper(md5($checkkey));
+
+  
+
+/*if($checkSign!=$strMd5Sign){
+
+	write_msg('ï¿½ï¿½Ö¤MD5Ç©ï¿½ï¿½Ê§ï¿½ï¿½.','olmsg');
+
+}*/
+
+
+
+if($bargainor_id!=$strBargainorId){
+
+	write_msg('Wrong Merchant Code.','olmsg');
+
+}
+
+
+
+if($strPayResult=="0"){
+
+
+
+	include MYMPS_INC.'/pay.fun.php';
+
+	
+
+	$orderid=$strSpBillno;	//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	$ddno=$strAttach;	//ï¿½ï¿½Õ¾ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	$money=$strTotalFee/100;
+
+	
+
+	$paybz='Payment completed';
+
+	UpdatePayRecord($ddno,$paybz);//ï¿½Þ¸ï¿½Ö§ï¿½ï¿½×´Ì¬
+
+	write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
+
+
+
+} else {
+
+	write_msg('Payment failed.','olmsg');
+
+}
+
+
+
+is_object($db) && $db -> Close();
+
+$mymps_global = NULL;
+
 ?>

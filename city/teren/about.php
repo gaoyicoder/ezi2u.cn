@@ -1,4 +1,7 @@
-<?php
-$cityid=12;
-require dirname(__FILE__).'/../../'.basename(__FILE__);
+<?php
+
+$cityid=12;
+
+require dirname(__FILE__).'/../../'.basename(__FILE__);
+
 ?>

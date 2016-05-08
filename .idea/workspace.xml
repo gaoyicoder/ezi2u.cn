@@ -2,15 +2,531 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffefc0c-b048-46c9-a1ee-5797e3e53839" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/header_search.tpl.php" afterPath="$PROJECT_DIR$/template/default/header_search.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/inc_head.tpl.php" afterPath="$PROJECT_DIR$/template/default/inc_head.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/info.tpl.php" afterPath="$PROJECT_DIR$/template/default/info.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/info_2.tpl.php" afterPath="$PROJECT_DIR$/template/default/info_2.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/info_3.tpl.php" afterPath="$PROJECT_DIR$/template/default/info_3.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/info_post_write.tpl.php" afterPath="$PROJECT_DIR$/template/default/info_post_write.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/list.tpl.php" afterPath="$PROJECT_DIR$/template/default/list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/04/0427.sql" afterPath="$PROJECT_DIR$/sql/04/0427.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/1.html" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/2.html" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/3.html" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/template/html/3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/map/51ditu.js" afterPath="$PROJECT_DIR$/include/map/51ditu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/ScrollPic.js" afterPath="$PROJECT_DIR$/template/default/js/ScrollPic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/ShowLeft.js" afterPath="$PROJECT_DIR$/admin/js/ShowLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/js/StoreComment.js" afterPath="$PROJECT_DIR$/template/spaces/store/blue/js/StoreComment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/js/StoreComment.js" afterPath="$PROJECT_DIR$/template/spaces/store/green/js/StoreComment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/js/StoreComment.js" afterPath="$PROJECT_DIR$/template/spaces/store/orange/js/StoreComment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/about.css" afterPath="$PROJECT_DIR$/m/template/css/about.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/about.php" afterPath="$PROJECT_DIR$/city/johor/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/about.php" afterPath="$PROJECT_DIR$/city/kedah/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/about.php" afterPath="$PROJECT_DIR$/city/kelan/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/about.php" afterPath="$PROJECT_DIR$/city/kelantan/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/about.php" afterPath="$PROJECT_DIR$/city/kl/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/about.php" afterPath="$PROJECT_DIR$/city/mm/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/about.php" afterPath="$PROJECT_DIR$/city/ns/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/about.php" afterPath="$PROJECT_DIR$/city/pahan/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/about.php" afterPath="$PROJECT_DIR$/city/penan/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/about.php" afterPath="$PROJECT_DIR$/city/perak/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/about.php" afterPath="$PROJECT_DIR$/city/perli/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/about.php" afterPath="$PROJECT_DIR$/city/sabah/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/about.php" afterPath="$PROJECT_DIR$/city/saraw/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/about.php" afterPath="$PROJECT_DIR$/city/selan/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/about.php" afterPath="$PROJECT_DIR$/city/teren/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/about.tpl.php" afterPath="$PROJECT_DIR$/m/template/about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/about.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/blue/about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/about.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/green/about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/about.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/actionmessage.inc.php" afterPath="$PROJECT_DIR$/member/include/actionmessage.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_group.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_group.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_group_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_group_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_group_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_group_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_left.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_left.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_user.tpl - Copy.php" afterPath="$PROJECT_DIR$/admin/template/admin_user.tpl - Copy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_user.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_user.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_user_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_user_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/admin_user_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/admin_user_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/advertisement.php" afterPath="$PROJECT_DIR$/include/box/advertisement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/advertisement.tpl.php" afterPath="$PROJECT_DIR$/admin/template/advertisement.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/advertisement_intro.tpl.php" afterPath="$PROJECT_DIR$/admin/template/advertisement_intro.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/album.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/blue/album.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/album.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/green/album.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/album.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/album.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/album_list.tpl.php" afterPath="$PROJECT_DIR$/member/template/album_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/album_upload.tpl.php" afterPath="$PROJECT_DIR$/member/template/album_upload.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/all.css" afterPath="$PROJECT_DIR$/m/template/css/all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/anchor/anchor.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/anchor/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/announce.tpl.php" afterPath="$PROJECT_DIR$/template/default/announce.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/announce_add.tpl.php" afterPath="$PROJECT_DIR$/admin/announce_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/announce_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/announce_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/announce_all.tpl.php" afterPath="$PROJECT_DIR$/admin/template/announce_all.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/announce_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/announce_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/area_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/area_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/avatar.tpl.php" afterPath="$PROJECT_DIR$/member/template/avatar.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/badwords.tpl.php" afterPath="$PROJECT_DIR$/admin/template/badwords.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/map/baidu.js" afterPath="$PROJECT_DIR$/include/map/baidu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/baidushare.js" afterPath="$PROJECT_DIR$/template/default/js/baidushare.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js" afterPath="$PROJECT_DIR$/m/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/cache.inc.php" afterPath="$PROJECT_DIR$/admin/include/cache.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/cache.tpl.php" afterPath="$PROJECT_DIR$/admin/template/cache.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/cache_sys.tpl.php" afterPath="$PROJECT_DIR$/admin/template/cache_sys.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/calendar.js" afterPath="$PROJECT_DIR$/admin/js/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/calendar.js" afterPath="$PROJECT_DIR$/member/template/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/category.php" afterPath="$PROJECT_DIR$/city/johor/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/category.php" afterPath="$PROJECT_DIR$/city/kedah/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/category.php" afterPath="$PROJECT_DIR$/city/kelan/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/category.php" afterPath="$PROJECT_DIR$/city/kelantan/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/category.php" afterPath="$PROJECT_DIR$/city/kl/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/category.php" afterPath="$PROJECT_DIR$/city/mm/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/category.php" afterPath="$PROJECT_DIR$/city/ns/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/category.php" afterPath="$PROJECT_DIR$/city/pahan/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/category.php" afterPath="$PROJECT_DIR$/city/penan/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/category.php" afterPath="$PROJECT_DIR$/city/perak/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/category.php" afterPath="$PROJECT_DIR$/city/perli/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/category.php" afterPath="$PROJECT_DIR$/city/sabah/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/category.php" afterPath="$PROJECT_DIR$/city/saraw/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/category.php" afterPath="$PROJECT_DIR$/city/selan/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/category.php" afterPath="$PROJECT_DIR$/city/teren/category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/category_all.tpl.php" afterPath="$PROJECT_DIR$/m/template/category_all.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/category_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/category_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/certification.tpl.php" afterPath="$PROJECT_DIR$/admin/template/certification.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/changecity.css" afterPath="$PROJECT_DIR$/m/template/css/changecity.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/group/template/check_signin.js" afterPath="$PROJECT_DIR$/plugin/group/template/check_signin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/chk_authcode.php" afterPath="$PROJECT_DIR$/include/box/chk_authcode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/city.php" afterPath="$PROJECT_DIR$/admin/template/city.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/city.tpl.php" afterPath="$PROJECT_DIR$/admin/template/city.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/cityidselect.tpl.php" afterPath="$PROJECT_DIR$/admin/template/cityidselect.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/class.fun.php" afterPath="$PROJECT_DIR$/include/class.fun.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/clearhtml/clearhtml.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/clearhtml/clearhtml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/code/code.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/code/code.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/color.inc.php" afterPath="$PROJECT_DIR$/admin/include/color.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/comment.js" afterPath="$PROJECT_DIR$/template/global/comment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comment.php" afterPath="$PROJECT_DIR$/comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/comment.tpl.php" afterPath="$PROJECT_DIR$/admin/template/comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/comment.tpl.php" afterPath="$PROJECT_DIR$/member/template/comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/comment.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/blue/comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/comment.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/green/comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/comment.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/comment_reply.tpl.php" afterPath="$PROJECT_DIR$/member/template/comment_reply.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/commentsettings.tpl.php" afterPath="$PROJECT_DIR$/admin/template/commentsettings.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/common.func.php" afterPath="$PROJECT_DIR$/member/include/common.func.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/js/common.js" afterPath="$PROJECT_DIR$/template/spaces/store/blue/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/js/common.js" afterPath="$PROJECT_DIR$/template/spaces/store/green/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/js/common.js" afterPath="$PROJECT_DIR$/template/spaces/store/orange/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/config.inc.php" afterPath="$PROJECT_DIR$/admin/include/config.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/cordova.js" afterPath="$PROJECT_DIR$/m/cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/cordova_plugins.js" afterPath="$PROJECT_DIR$/m/cordova_plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/corp_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/corp_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/corp_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/corp_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/corp_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/corp_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/corporation.php" afterPath="$PROJECT_DIR$/city/johor/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/corporation.php" afterPath="$PROJECT_DIR$/city/kedah/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/corporation.php" afterPath="$PROJECT_DIR$/city/kelan/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/corporation.php" afterPath="$PROJECT_DIR$/city/kelantan/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/corporation.php" afterPath="$PROJECT_DIR$/city/kl/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/corporation.php" afterPath="$PROJECT_DIR$/city/mm/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/corporation.php" afterPath="$PROJECT_DIR$/city/ns/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/corporation.php" afterPath="$PROJECT_DIR$/city/pahan/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/corporation.php" afterPath="$PROJECT_DIR$/city/penan/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/corporation.php" afterPath="$PROJECT_DIR$/city/perak/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/corporation.php" afterPath="$PROJECT_DIR$/city/perli/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/corporation.php" afterPath="$PROJECT_DIR$/city/sabah/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/corporation.php" afterPath="$PROJECT_DIR$/city/saraw/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/corporation.php" afterPath="$PROJECT_DIR$/city/selan/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/corporation.php" afterPath="$PROJECT_DIR$/city/teren/corporation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/coupon.php" afterPath="$PROJECT_DIR$/city/johor/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/coupon.php" afterPath="$PROJECT_DIR$/city/kedah/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/coupon.php" afterPath="$PROJECT_DIR$/city/kelan/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/coupon.php" afterPath="$PROJECT_DIR$/city/kelantan/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/coupon.php" afterPath="$PROJECT_DIR$/city/kl/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/coupon.php" afterPath="$PROJECT_DIR$/city/mm/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/coupon.php" afterPath="$PROJECT_DIR$/city/ns/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/coupon.php" afterPath="$PROJECT_DIR$/city/pahan/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/coupon.php" afterPath="$PROJECT_DIR$/city/penan/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/coupon.php" afterPath="$PROJECT_DIR$/city/perak/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/coupon.php" afterPath="$PROJECT_DIR$/city/perli/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/coupon.php" afterPath="$PROJECT_DIR$/city/sabah/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/coupon.php" afterPath="$PROJECT_DIR$/city/saraw/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/coupon.php" afterPath="$PROJECT_DIR$/city/selan/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/coupon.php" afterPath="$PROJECT_DIR$/city/teren/coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/coupon_detail.tpl.php" afterPath="$PROJECT_DIR$/member/template/coupon_detail.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/coupon_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/coupon_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/coupon_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/coupon_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/coupon_list.tpl.php" afterPath="$PROJECT_DIR$/member/template/coupon_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/credit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/credit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/credit_set.tpl.php" afterPath="$PROJECT_DIR$/admin/template/credit_set.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/credits_up.html" afterPath="$PROJECT_DIR$/template/box/credits_up.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/credits_up.php" afterPath="$PROJECT_DIR$/include/box/credits_up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/data_replace.tpl.php" afterPath="$PROJECT_DIR$/admin/template/data_replace.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/datepicker/datepicker.js" afterPath="$PROJECT_DIR$/include/datepicker/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_backup.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_backup.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_check.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_check.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_optimize.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_optimize.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_repair.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_repair.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_restore.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_restore.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/db_result.tpl.php" afterPath="$PROJECT_DIR$/admin/template/db_result.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/delete.css" afterPath="$PROJECT_DIR$/m/template/css/delete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/delinfo.php" afterPath="$PROJECT_DIR$/include/box/delinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/delinfo.tpl.php" afterPath="$PROJECT_DIR$/template/default/delinfo.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/delinfo_modifed.php" afterPath="$PROJECT_DIR$/include/box/delinfo_modifed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/do_report.php" afterPath="$PROJECT_DIR$/include/box/do_report.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/document.tpl.php" afterPath="$PROJECT_DIR$/admin/template/document.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/document.tpl.php" afterPath="$PROJECT_DIR$/member/template/document.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/document_type.tpl.php" afterPath="$PROJECT_DIR$/admin/template/document_type.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/document_type_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/document_type_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/documents.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/green/documents.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/documents.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/documents.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/emoticons/emoticons.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/emoticons/emoticons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/cordova-js-src/exec.js" afterPath="$PROJECT_DIR$/m/cordova-js-src/exec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/faq_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/faq_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/faq_all.tpl.php" afterPath="$PROJECT_DIR$/admin/template/faq_all.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/faq_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/faq_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/faq_type.tpl.php" afterPath="$PROJECT_DIR$/admin/template/faq_type.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/file_manage.tpl.php" afterPath="$PROJECT_DIR$/admin/template/file_manage.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/filemanager/filemanager.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/filemanager/filemanager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/js/filter.js" afterPath="$PROJECT_DIR$/m/template/js/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/flash/flash.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/flash/flash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/floatadv.js" afterPath="$PROJECT_DIR$/template/global/floatadv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/footer.tpl.php.bak" afterPath="$PROJECT_DIR$/template/spaces/store/blue/footer.tpl.php.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/footer.tpl.php" afterPath="$PROJECT_DIR$/m/template/footer.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/footer2.tpl.php" afterPath="$PROJECT_DIR$/m/template/footer2.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/footer_error.tpl.php" afterPath="$PROJECT_DIR$/m/template/footer_error.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/forgetpass.inc.php" afterPath="$PROJECT_DIR$/member/include/forgetpass.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/friendlink_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/friendlink_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/friendlink_default.tpl.php" afterPath="$PROJECT_DIR$/admin/template/friendlink_default.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/friendlink_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/friendlink_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/friendlink_type.tpl.php" afterPath="$PROJECT_DIR$/admin/template/friendlink_type.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/get_pinyin.php" afterPath="$PROJECT_DIR$/admin/include/get_pinyin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/global.css" afterPath="$PROJECT_DIR$/m/template/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/goods/template/goods.js" afterPath="$PROJECT_DIR$/plugin/goods/template/goods.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/goods.php" afterPath="$PROJECT_DIR$/city/johor/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/goods.php" afterPath="$PROJECT_DIR$/city/kedah/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/goods.php" afterPath="$PROJECT_DIR$/city/kelan/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/goods.php" afterPath="$PROJECT_DIR$/city/kelantan/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/goods.php" afterPath="$PROJECT_DIR$/city/kl/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/goods.php" afterPath="$PROJECT_DIR$/city/mm/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/goods.php" afterPath="$PROJECT_DIR$/city/ns/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/goods.php" afterPath="$PROJECT_DIR$/city/pahan/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/goods.php" afterPath="$PROJECT_DIR$/city/penan/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/goods.php" afterPath="$PROJECT_DIR$/city/perak/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/goods.php" afterPath="$PROJECT_DIR$/city/perli/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/goods.php" afterPath="$PROJECT_DIR$/city/sabah/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/goods.php" afterPath="$PROJECT_DIR$/city/saraw/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/goods.php" afterPath="$PROJECT_DIR$/city/selan/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/goods.php" afterPath="$PROJECT_DIR$/city/teren/goods.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/goods.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/goods.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/goods_order_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/goods_order_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/goods_order_view.tpl.php" afterPath="$PROJECT_DIR$/admin/template/goods_order_view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/map/google.js" afterPath="$PROJECT_DIR$/include/map/google.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/map/google_v3.js" afterPath="$PROJECT_DIR$/include/map/google_v3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/group.php" afterPath="$PROJECT_DIR$/city/johor/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/group.php" afterPath="$PROJECT_DIR$/city/kedah/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/group.php" afterPath="$PROJECT_DIR$/city/kelan/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/group.php" afterPath="$PROJECT_DIR$/city/kelantan/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/group.php" afterPath="$PROJECT_DIR$/city/kl/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/group.php" afterPath="$PROJECT_DIR$/city/mm/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/group.php" afterPath="$PROJECT_DIR$/city/ns/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/group.php" afterPath="$PROJECT_DIR$/city/pahan/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/group.php" afterPath="$PROJECT_DIR$/city/penan/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/group.php" afterPath="$PROJECT_DIR$/city/perak/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/group.php" afterPath="$PROJECT_DIR$/city/perli/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/group.php" afterPath="$PROJECT_DIR$/city/sabah/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/group.php" afterPath="$PROJECT_DIR$/city/saraw/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/group.php" afterPath="$PROJECT_DIR$/city/selan/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/group.php" afterPath="$PROJECT_DIR$/city/teren/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/group_category.tpl.php" afterPath="$PROJECT_DIR$/admin/template/group_category.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/group_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/group_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/group_list.tpl.php" afterPath="$PROJECT_DIR$/member/template/group_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/group_signin.tpl.php" afterPath="$PROJECT_DIR$/member/template/group_signin.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/group_signin_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/group_signin_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/group_signin_view.tpl.php" afterPath="$PROJECT_DIR$/admin/template/group_signin_view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/group_signin_view.tpl.php" afterPath="$PROJECT_DIR$/member/template/group_signin_view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/header.tpl.php.bak" afterPath="$PROJECT_DIR$/template/spaces/store/green/header.tpl.php.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/header.tpl.php" afterPath="$PROJECT_DIR$/m/template/header.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/header_error.tpl.php" afterPath="$PROJECT_DIR$/m/template/header_error.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/js/history.js" afterPath="$PROJECT_DIR$/m/template/js/history.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/hotschool.js" afterPath="$PROJECT_DIR$/template/default/js/hotschool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/howtogetscore.html" afterPath="$PROJECT_DIR$/template/box/howtogetscore.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/howtogetscore.php" afterPath="$PROJECT_DIR$/include/box/howtogetscore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/html_runbox.tpl.php" afterPath="$PROJECT_DIR$/admin/template/html_runbox.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rewrite/httpd.ini" afterPath="$PROJECT_DIR$/rewrite/httpd.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rewrite/httpd_domain.ini" afterPath="$PROJECT_DIR$/rewrite/httpd_domain.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/hui.css" afterPath="$PROJECT_DIR$/m/template/css/hui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui_password.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui_password.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/hui_success.tpl.php" afterPath="$PROJECT_DIR$/m/template/hui_success.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/ifview.inc.php" afterPath="$PROJECT_DIR$/admin/include/ifview.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/image/image.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/image/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_about.php" afterPath="$PROJECT_DIR$/m/include/inc_about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_certify.php" afterPath="$PROJECT_DIR$/member/include/inc_certify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_changecity.php" afterPath="$PROJECT_DIR$/m/include/inc_changecity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_comment.php" afterPath="$PROJECT_DIR$/member/include/inc_comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_coupon.php" afterPath="$PROJECT_DIR$/member/include/inc_coupon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_delete.php" afterPath="$PROJECT_DIR$/m/include/inc_delete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/inc_foot.tpl.php" afterPath="$PROJECT_DIR$/template/default/inc_foot.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/inc_foot_about.tpl.php" afterPath="$PROJECT_DIR$/template/default/inc_foot_about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_group.php" afterPath="$PROJECT_DIR$/member/include/inc_group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/inc_head.tpl.php" afterPath="$PROJECT_DIR$/member/template/inc_head.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/inc_head_jq.tpl.php" afterPath="$PROJECT_DIR$/admin/template/inc_head_jq.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_history.php" afterPath="$PROJECT_DIR$/m/include/inc_history.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_hui.php" afterPath="$PROJECT_DIR$/m/include/inc_hui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_hui_list.php" afterPath="$PROJECT_DIR$/m/include/inc_hui_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_index.php" afterPath="$PROJECT_DIR$/m/include/inc_index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_info.php" afterPath="$PROJECT_DIR$/member/include/inc_info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_information.php" afterPath="$PROJECT_DIR$/m/include/inc_information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_items.php" afterPath="$PROJECT_DIR$/m/include/inc_items.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_login.php" afterPath="$PROJECT_DIR$/m/include/inc_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_member.php" afterPath="$PROJECT_DIR$/m/include/inc_member.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_mypost.php" afterPath="$PROJECT_DIR$/m/include/inc_mypost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_newinfo.php" afterPath="$PROJECT_DIR$/m/include/inc_newinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_openlogin.php" afterPath="$PROJECT_DIR$/m/include/inc_openlogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_orderrecords.php" afterPath="$PROJECT_DIR$/member/include/inc_orderrecords.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_pay.php" afterPath="$PROJECT_DIR$/member/include/inc_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_pm.php" afterPath="$PROJECT_DIR$/member/include/inc_pm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_receive_money_list.php" afterPath="$PROJECT_DIR$/m/include/inc_receive_money_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/inc_receivemoney.php" afterPath="$PROJECT_DIR$/member/include/inc_receivemoney.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_register.php" afterPath="$PROJECT_DIR$/m/include/inc_register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_search.php" afterPath="$PROJECT_DIR$/m/include/inc_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_shoucang.php" afterPath="$PROJECT_DIR$/m/include/inc_shoucang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_store_hui_list.php" afterPath="$PROJECT_DIR$/m/include/inc_store_hui_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_store_tuan_list.php" afterPath="$PROJECT_DIR$/m/include/inc_store_tuan_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_store_tuan_list_fi.php" afterPath="$PROJECT_DIR$/m/include/inc_store_tuan_list_fi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_tuan.php" afterPath="$PROJECT_DIR$/m/include/inc_tuan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/include/inc_tuan_list.php" afterPath="$PROJECT_DIR$/m/include/inc_tuan_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/index.css" afterPath="$PROJECT_DIR$/m/template/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/index.full.js" afterPath="$PROJECT_DIR$/template/default/js/index.full.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/js/index.js" afterPath="$PROJECT_DIR$/m/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/index.normal.js" afterPath="$PROJECT_DIR$/template/default/js/index.normal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/index.php" afterPath="$PROJECT_DIR$/city/johor/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/index.php" afterPath="$PROJECT_DIR$/city/kedah/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/index.php" afterPath="$PROJECT_DIR$/city/kelan/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/index.php" afterPath="$PROJECT_DIR$/city/kelantan/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/index.php" afterPath="$PROJECT_DIR$/city/kl/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/index.php" afterPath="$PROJECT_DIR$/city/mm/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/index.php" afterPath="$PROJECT_DIR$/city/ns/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/index.php" afterPath="$PROJECT_DIR$/city/pahan/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/index.php" afterPath="$PROJECT_DIR$/city/penan/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/index.php" afterPath="$PROJECT_DIR$/city/perak/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/index.php" afterPath="$PROJECT_DIR$/city/perli/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/index.php" afterPath="$PROJECT_DIR$/city/sabah/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/index.php" afterPath="$PROJECT_DIR$/city/saraw/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/index.php" afterPath="$PROJECT_DIR$/city/selan/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/index.php" afterPath="$PROJECT_DIR$/city/teren/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/index.standard.js" afterPath="$PROJECT_DIR$/template/default/js/index.standard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/index.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/index_portal.tpl.php" afterPath="$PROJECT_DIR$/template/default/index_portal.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info.php" afterPath="$PROJECT_DIR$/info.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/info.tpl.php" afterPath="$PROJECT_DIR$/member/template/info.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/info_do_type.inc.php" afterPath="$PROJECT_DIR$/admin/include/info_do_type.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/info_mod.tpl.php" afterPath="$PROJECT_DIR$/admin/template/info_mod.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/info_option.tpl.php" afterPath="$PROJECT_DIR$/admin/template/info_option.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/info_option_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/info_option_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/info_option_type.tpl.php" afterPath="$PROJECT_DIR$/admin/template/info_option_type.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/info_post.tpl.php" afterPath="$PROJECT_DIR$/template/default/info_post.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/info_report.tpl.php" afterPath="$PROJECT_DIR$/admin/template/info_report.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/info_upgrade.tpl.php" afterPath="$PROJECT_DIR$/member/template/info_upgrade.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/info_write_pwd.html" afterPath="$PROJECT_DIR$/template/box/info_write_pwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/johor/information.php" afterPath="$PROJECT_DIR$/city/johor/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kedah/information.php" afterPath="$PROJECT_DIR$/city/kedah/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelan/information.php" afterPath="$PROJECT_DIR$/city/kelan/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kelantan/information.php" afterPath="$PROJECT_DIR$/city/kelantan/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/kl/information.php" afterPath="$PROJECT_DIR$/city/kl/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/mm/information.php" afterPath="$PROJECT_DIR$/city/mm/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/ns/information.php" afterPath="$PROJECT_DIR$/city/ns/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/pahan/information.php" afterPath="$PROJECT_DIR$/city/pahan/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/penan/information.php" afterPath="$PROJECT_DIR$/city/penan/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perak/information.php" afterPath="$PROJECT_DIR$/city/perak/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/perli/information.php" afterPath="$PROJECT_DIR$/city/perli/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/sabah/information.php" afterPath="$PROJECT_DIR$/city/sabah/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/saraw/information.php" afterPath="$PROJECT_DIR$/city/saraw/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/selan/information.php" afterPath="$PROJECT_DIR$/city/selan/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/city/teren/information.php" afterPath="$PROJECT_DIR$/city/teren/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/information.php" afterPath="$PROJECT_DIR$/include/box/information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/blue/information.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/blue/information.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/information.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/green/information.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/information.tpl.php" afterPath="$PROJECT_DIR$/template/spaces/store/orange/information.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/information_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/information_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/information_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/information_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/information_pm.tpl.php" afterPath="$PROJECT_DIR$/admin/template/information_pm.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/insidelink.tpl.php" afterPath="$PROJECT_DIR$/admin/template/insidelink.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/iptoarea.html" afterPath="$PROJECT_DIR$/template/box/iptoarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/javascript.js" afterPath="$PROJECT_DIR$/member/template/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/jquery.172.min.js" afterPath="$PROJECT_DIR$/admin/js/jquery.172.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/datepicker/jquery.172.min.js" afterPath="$PROJECT_DIR$/include/datepicker/jquery.172.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/jquery.172.min.js" afterPath="$PROJECT_DIR$/member/template/jquery.172.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/css/jquery.autocomplete.css" afterPath="$PROJECT_DIR$/template/default/css/jquery.autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.color.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.cxselect.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.cxselect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.fancybox-1.3.4.pack.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.fancybox-1.3.4.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.jcarousel.pack.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.jcarousel.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/jquery.js" afterPath="$PROJECT_DIR$/admin/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.lightbox.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.lightbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.lightbox.min.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.lightbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/jquery.ylmarquee.js" afterPath="$PROJECT_DIR$/template/default/js/jquery.ylmarquee.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/jswizard.php" afterPath="$PROJECT_DIR$/include/box/jswizard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/jswizard.tpl.php" afterPath="$PROJECT_DIR$/admin/template/jswizard.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/jswizard_settings.tpl.php" afterPath="$PROJECT_DIR$/admin/template/jswizard_settings.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/kindeditor-min.js" afterPath="$PROJECT_DIR$/include/kindeditor/kindeditor-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/kindeditor.js" afterPath="$PROJECT_DIR$/include/kindeditor/kindeditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/levelup.tpl.php" afterPath="$PROJECT_DIR$/member/template/levelup.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/levelup_2.tpl.php" afterPath="$PROJECT_DIR$/member/template/levelup_2.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lifebox.php" afterPath="$PROJECT_DIR$/lifebox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/lifebox.tpl.php" afterPath="$PROJECT_DIR$/admin/template/lifebox.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/lineheight/lineheight.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/lineheight/lineheight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/link/link.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/link/link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/list.css" afterPath="$PROJECT_DIR$/m/template/css/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/css/list.css" afterPath="$PROJECT_DIR$/template/default/css/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/js/list.js" afterPath="$PROJECT_DIR$/m/template/js/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/login.css" afterPath="$PROJECT_DIR$/m/template/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/login.html" afterPath="$PROJECT_DIR$/template/box/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/login.inc.php" afterPath="$PROJECT_DIR$/member/include/login.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/login.js" afterPath="$PROJECT_DIR$/admin/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mail_sendlist.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mail_sendlist.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mail_template.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mail_template.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/map.html" afterPath="$PROJECT_DIR$/template/box/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.php" afterPath="$PROJECT_DIR$/map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/member.css" afterPath="$PROJECT_DIR$/m/template/css/member.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member.php" afterPath="$PROJECT_DIR$/member.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member.tpl.php" afterPath="$PROJECT_DIR$/m/template/member.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_comment.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_comment.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/member_count.inc.php" afterPath="$PROJECT_DIR$/member/include/member_count.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_default.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_default.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_delete.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_delete.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_group.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_group.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_group_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_group_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_group_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_group_edit.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_history.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_history.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/mymps.menu.inc.php" afterPath="$PROJECT_DIR$/member/include/mymps.menu.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_mypost.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_mypost.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_openlogin.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_openlogin.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_register.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_register.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/member_shoucang.tpl.php" afterPath="$PROJECT_DIR$/m/template/member_shoucang.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_tpl.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_tpl.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/member_tpl_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/member_tpl_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/memberinfopost.php" afterPath="$PROJECT_DIR$/include/box/memberinfopost.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/menu.js" afterPath="$PROJECT_DIR$/admin/js/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/qrcode/tools/merge.bat" afterPath="$PROJECT_DIR$/include/qrcode/tools/merge.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/qrcode/tools/merge.sh" afterPath="$PROJECT_DIR$/include/qrcode/tools/merge.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/messagebox.js" afterPath="$PROJECT_DIR$/template/global/messagebox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mobile.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mobile.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/mymps.citycount.inc.php" afterPath="$PROJECT_DIR$/admin/include/mymps.citycount.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/mymps.count.inc.php" afterPath="$PROJECT_DIR$/admin/include/mymps.count.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/mymps.js" afterPath="$PROJECT_DIR$/template/global/mymps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mymps_checkask.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mymps_checkask.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mymps_config.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mymps_config.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/mymps_imgcode.tpl.php" afterPath="$PROJECT_DIR$/admin/template/mymps_imgcode.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/mymps_tpl.js" afterPath="$PROJECT_DIR$/admin/js/mymps_tpl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/navurl.tpl.php" afterPath="$PROJECT_DIR$/admin/template/navurl.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/newinfo.tpl.php" afterPath="$PROJECT_DIR$/m/template/newinfo.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/news.tpl.php" afterPath="$PROJECT_DIR$/admin/template/news.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/news_channel_add.tpl.php" afterPath="$PROJECT_DIR$/admin/template/news_channel_add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/news_channel_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/news_channel_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/news_channel_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/news_channel_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/news_comment.php" afterPath="$PROJECT_DIR$/admin/news_comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/news_index.tpl.php" afterPath="$PROJECT_DIR$/template/default/news_index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/news_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/news_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rewrite/nginx.conf" afterPath="$PROJECT_DIR$/rewrite/nginx.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/noerr.js" afterPath="$PROJECT_DIR$/template/global/noerr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/alipay/notify.php" afterPath="$PROJECT_DIR$/include/payment/alipay/notify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/chinabank/notify.php" afterPath="$PROJECT_DIR$/include/payment/chinabank/notify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/tenpay/notify.php" afterPath="$PROJECT_DIR$/include/payment/tenpay/notify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/openlogin.tpl.php" afterPath="$PROJECT_DIR$/template/default/openlogin.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/optimise.php" afterPath="$PROJECT_DIR$/admin/optimise.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/optimise.tpl.php" afterPath="$PROJECT_DIR$/admin/template/optimise.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/optimize.inc.php" afterPath="$PROJECT_DIR$/admin/include/optimize.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/pagebreak/pagebreak.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/pagebreak/pagebreak.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/passport.tpl.php" afterPath="$PROJECT_DIR$/admin/template/passport.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/pay.fun.php" afterPath="$PROJECT_DIR$/include/pay.fun.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/pay_pay.tpl.php" afterPath="$PROJECT_DIR$/member/template/pay_pay.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/pay_record.tpl.php" afterPath="$PROJECT_DIR$/member/template/pay_record.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/pay_use.tpl.php" afterPath="$PROJECT_DIR$/member/template/pay_use.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/payapi.tpl.php" afterPath="$PROJECT_DIR$/admin/template/payapi.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/alipay/payend.php" afterPath="$PROJECT_DIR$/include/payment/alipay/payend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/chinabank/payend.php" afterPath="$PROJECT_DIR$/include/payment/chinabank/payend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/tenpay/payend.php" afterPath="$PROJECT_DIR$/include/payment/tenpay/payend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/payrecord.tpl.php" afterPath="$PROJECT_DIR$/admin/template/payrecord.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/include/pinyin.inc.php" afterPath="$PROJECT_DIR$/admin/include/pinyin.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/plainpaste/plainpaste.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/plainpaste/plainpaste.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/cordova-js-src/platform.js" afterPath="$PROJECT_DIR$/m/cordova-js-src/platform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/pm_inbox.tpl.php" afterPath="$PROJECT_DIR$/member/template/pm_inbox.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/pm_outbox.tpl.php" afterPath="$PROJECT_DIR$/admin/template/pm_outbox.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/pm_send.tpl.php" afterPath="$PROJECT_DIR$/admin/template/pm_send.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/pm_view.tpl.php" afterPath="$PROJECT_DIR$/member/template/pm_view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/post.css" afterPath="$PROJECT_DIR$/m/template/css/post.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/assign/post.php" afterPath="$PROJECT_DIR$/include/assign/post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/post_area.tpl.php" afterPath="$PROJECT_DIR$/m/template/post_area.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/post_cat.tpl.php" afterPath="$PROJECT_DIR$/m/template/post_cat.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/post_street.tpl.php" afterPath="$PROJECT_DIR$/m/template/post_street.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posthistory.php" afterPath="$PROJECT_DIR$/posthistory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/posthistory.tpl.php" afterPath="$PROJECT_DIR$/template/default/posthistory.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/ppRoll.js" afterPath="$PROJECT_DIR$/template/default/js/ppRoll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/preview/preview.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/preview/preview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/global/prototype.js" afterPath="$PROJECT_DIR$/template/global/prototype.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/province.php" afterPath="$PROJECT_DIR$/admin/province.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/province.tpl.php" afterPath="$PROJECT_DIR$/admin/template/province.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish.php" afterPath="$PROJECT_DIR$/publish.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/quickformat/quickformat.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/quickformat/quickformat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/randcode.php" afterPath="$PROJECT_DIR$/randcode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/receive_money_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/receive_money_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/record_action.tpl.php" afterPath="$PROJECT_DIR$/admin/template/record_action.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/record_bank.tpl.php" afterPath="$PROJECT_DIR$/admin/template/record_bank.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/record_login.tpl.php" afterPath="$PROJECT_DIR$/admin/template/record_login.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/record_login_member.tpl.php" afterPath="$PROJECT_DIR$/admin/template/record_login_member.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/reg_type.tpl.php" afterPath="$PROJECT_DIR$/admin/template/reg_type.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/include/register.inc.php" afterPath="$PROJECT_DIR$/member/include/register.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/register.tpl.php" afterPath="$PROJECT_DIR$/template/default/register.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/report.html" afterPath="$PROJECT_DIR$/template/box/report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/score.tpl.php" afterPath="$PROJECT_DIR$/admin/template/score.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/score_coin.html" afterPath="$PROJECT_DIR$/template/box/score_coin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/score_coin.php" afterPath="$PROJECT_DIR$/include/box/score_coin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/green/js/scrollPic.js" afterPath="$PROJECT_DIR$/template/spaces/store/green/js/scrollPic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/spaces/store/orange/js/scrollPic.js" afterPath="$PROJECT_DIR$/template/spaces/store/orange/js/scrollPic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_coupon.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_coupon.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_goods.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_goods.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_group.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_group.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_head.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_head.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_header.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_header.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_index.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/search/search_news.tpl.php" afterPath="$PROJECT_DIR$/template/search/search_news.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/seecontact.php" afterPath="$PROJECT_DIR$/include/box/seecontact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/seoset.tpl.php" afterPath="$PROJECT_DIR$/admin/template/seoset.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/shop_template.tpl.php" afterPath="$PROJECT_DIR$/member/template/shop_template.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/shoucang.php" afterPath="$PROJECT_DIR$/include/box/shoucang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/member/template/shoucang.tpl.php" afterPath="$PROJECT_DIR$/member/template/shoucang.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/site_about.tpl.php" afterPath="$PROJECT_DIR$/admin/template/site_about.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/js/slide.js" afterPath="$PROJECT_DIR$/m/template/js/slide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/slide_classic.js" afterPath="$PROJECT_DIR$/template/default/js/slide_classic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/slide_portal.js" afterPath="$PROJECT_DIR$/template/default/js/slide_portal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/store_hui_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/store_tuan_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/store_tuan_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/table/table.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/table/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/telephone.tpl.php" afterPath="$PROJECT_DIR$/admin/template/telephone.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/template/template.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/template/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/template.tpl.php" afterPath="$PROJECT_DIR$/admin/template/template.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/template_edit.tpl.php" afterPath="$PROJECT_DIR$/admin/template/template_edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/test.php" afterPath="$PROJECT_DIR$/m/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/test_same.tpl.php" afterPath="$PROJECT_DIR$/admin/template/test_same.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/template/test_same_list.tpl.php" afterPath="$PROJECT_DIR$/admin/template/test_same_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/titlealt.js" afterPath="$PROJECT_DIR$/admin/js/titlealt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/alipay/to_pay.php" afterPath="$PROJECT_DIR$/include/payment/alipay/to_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/chinabank/to_pay.php" afterPath="$PROJECT_DIR$/include/payment/chinabank/to_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/payment/tenpay/to_pay.php" afterPath="$PROJECT_DIR$/include/payment/tenpay/to_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/css/tuan.css" afterPath="$PROJECT_DIR$/m/template/css/tuan.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/goods/template/tuan.css" afterPath="$PROJECT_DIR$/plugin/goods/template/tuan.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan_list.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan_list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan_password.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan_password.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/template/tuan_success.tpl.php" afterPath="$PROJECT_DIR$/m/template/tuan_success.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/box/tuanorder.php" afterPath="$PROJECT_DIR$/include/box/tuanorder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/datepicker/ui.css" afterPath="$PROJECT_DIR$/include/datepicker/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/upfile.fun.php" afterPath="$PROJECT_DIR$/include/upfile.fun.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/box/upgrade.html" afterPath="$PROJECT_DIR$/template/box/upgrade.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/upload_admin.php" afterPath="$PROJECT_DIR$/include/kindeditor/upload_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/upload_user.php" afterPath="$PROJECT_DIR$/include/kindeditor/upload_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/validator.common.js" afterPath="$PROJECT_DIR$/template/default/js/validator.common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/default/js/validator.js" afterPath="$PROJECT_DIR$/template/default/js/validator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/vbm.js" afterPath="$PROJECT_DIR$/admin/js/vbm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/plugins/wordpaste/wordpaste.js" afterPath="$PROJECT_DIR$/include/kindeditor/plugins/wordpaste/wordpaste.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/kindeditor/lang/zh_CN.js" afterPath="$PROJECT_DIR$/include/kindeditor/lang/zh_CN.js" />
     </list>
     <ignored path="ezi2u.cn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,19 +557,73 @@
       <file leaf-file-name="mymps.menu.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/member/include/mymps.menu.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="member_history.tpl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mymps.count.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/include/mymps.count.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20604914">
+              <caret line="186" column="26" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="member_history.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/m/template/member_history.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3617021">
-              <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+            <state vertical-scroll-proportion="-8.916667">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_information.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_information.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1462692505000" expanded="true" signature="218:293" placeholder="SELECT * FRO..." />
+                <marker date="1462692505000" expanded="true" signature="415:462" placeholder="SELECT * FRO..." />
+                <marker date="1462692505000" expanded="true" signature="690:794" placeholder="SELECT catid..." />
+                <marker date="1462692505000" expanded="true" signature="1044:1128" placeholder="SELECT prepa..." />
+                <marker date="1462692505000" expanded="true" signature="1190:1258" placeholder="SELECT * FRO..." />
+                <marker date="1462692505000" expanded="true" signature="1612:1832" placeholder="select g.* f..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <marker date="1462685114000" expanded="true" signature="2116:2172" placeholder="SELECT * FRO..." />
+                <marker date="1462685114000" expanded="true" signature="2739:2796" placeholder="SELECT * FRO..." />
+                <marker date="1462685114000" expanded="true" signature="2874:2888" placeholder="..." />
+                <marker date="1462685114000" expanded="true" signature="2955:2970" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inc_member.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/include/inc_member.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.75">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <marker date="1462692021000" expanded="true" signature="372:429" placeholder="SELECT * FRO..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +650,6 @@
         <option value="$PROJECT_DIR$/member/index.php" />
         <option value="$PROJECT_DIR$/member/include/inc_receivemoney.php" />
         <option value="$PROJECT_DIR$/goods.php" />
-        <option value="$PROJECT_DIR$/m/include/inc_member.php" />
         <option value="$PROJECT_DIR$/data/config.inc.php" />
         <option value="$PROJECT_DIR$/admin/template/goods_category_edit.tpl.php" />
         <option value="$PROJECT_DIR$/admin/template/goods_category_add.tpl.php" />
@@ -117,6 +686,7 @@
         <option value="$PROJECT_DIR$/m/include/inc_login.php" />
         <option value="$PROJECT_DIR$/member/include/mymps.menu.inc.php" />
         <option value="$PROJECT_DIR$/m/template/member_history.tpl.php" />
+        <option value="$PROJECT_DIR$/m/include/inc_member.php" />
       </list>
     </option>
   </component>
@@ -204,7 +774,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="m" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -218,11 +788,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="m" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,7 +803,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -291,11 +861,12 @@
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31437436" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31437436" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16613418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3991727" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -305,7 +876,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39710444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -334,20 +904,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/template/goods_category_edit.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/template/group_detail.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5559211">
-          <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/template/goods_category_add.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0833333">
@@ -373,6 +929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.4166665">
           <caret line="254" column="14" selection-start-line="254" selection-start-column="14" selection-end-line="254" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -422,6 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -459,6 +1017,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09448819">
           <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -496,6 +1055,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -512,16 +1072,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/include/inc_member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.114754096">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1462495696000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,7 +1144,7 @@
         <state vertical-scroll-proportion="-10.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <marker date="1462675905000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -605,7 +1155,7 @@
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1462679178000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -627,7 +1177,7 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1462679128000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -653,13 +1203,13 @@
         <state vertical-scroll-proportion="1.5711948">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678126000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -669,7 +1219,7 @@
         <state vertical-scroll-proportion="0.22094926">
           <caret line="14" column="109" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
           <folding>
-            <marker date="1462678302000" expanded="true" signature="-1:-1" placeholder="SELECT gso.*..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT gso.*..." />
           </folding>
         </state>
       </provider>
@@ -679,7 +1229,7 @@
         <state vertical-scroll-proportion="0.22094926">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding>
-            <marker date="1462678310000" expanded="true" signature="-1:-1" placeholder="SELECT gso.*..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT gso.*..." />
           </folding>
         </state>
       </provider>
@@ -689,19 +1239,19 @@
         <state vertical-scroll-proportion="0.3453355">
           <caret line="318" column="12" selection-start-line="318" selection-start-column="12" selection-end-line="318" selection-end-column="12" />
           <folding>
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="SELECT catna..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="SELECT per_c..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="SELECT path,..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="SELECT id,pa..." />
-            <marker date="1460690476000" expanded="true" signature="-1:-1" placeholder="SELECT catna..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT catna..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT per_c..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT path,..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT id,pa..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT catna..." />
           </folding>
         </state>
       </provider>
@@ -719,15 +1269,15 @@
         <state vertical-scroll-proportion="0.65630114">
           <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="32" />
           <folding>
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select g.* f..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-            <marker date="1462678095000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select g.* f..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -737,20 +1287,7 @@
         <state vertical-scroll-proportion="0.2700491">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <marker date="1462685942000" expanded="true" signature="-1:-1" placeholder="SELECT useri..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41898528">
-          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-          <folding>
-            <marker date="1462685114000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1462685114000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1462685114000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1462685114000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1462692505000" expanded="true" signature="-1:-1" placeholder="SELECT useri..." />
           </folding>
         </state>
       </provider>
@@ -763,18 +1300,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/member/include/mymps.menu.inc.php">
+    <entry file="file://$PROJECT_DIR$/m/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1462685114000" expanded="true" signature="2116:2172" placeholder="SELECT * FRO..." />
+            <marker date="1462685114000" expanded="true" signature="2739:2796" placeholder="SELECT * FRO..." />
+            <marker date="1462685114000" expanded="true" signature="2874:2888" placeholder="..." />
+            <marker date="1462685114000" expanded="true" signature="2955:2970" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <marker date="1462692021000" expanded="true" signature="372:429" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/include/inc_information.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1462692505000" expanded="true" signature="218:293" placeholder="SELECT * FRO..." />
+            <marker date="1462692505000" expanded="true" signature="415:462" placeholder="SELECT * FRO..." />
+            <marker date="1462692505000" expanded="true" signature="690:794" placeholder="SELECT catid..." />
+            <marker date="1462692505000" expanded="true" signature="1044:1128" placeholder="SELECT prepa..." />
+            <marker date="1462692505000" expanded="true" signature="1190:1258" placeholder="SELECT * FRO..." />
+            <marker date="1462692505000" expanded="true" signature="1612:1832" placeholder="select g.* f..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/m/template/member_history.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3617021">
-          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+        <state vertical-scroll-proportion="-8.916667">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/include/mymps.menu.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/include/mymps.count.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20604914">
+          <caret line="186" column="26" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
           <folding />
         </state>
       </provider>

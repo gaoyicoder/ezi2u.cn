@@ -1,99 +1,198 @@
-<?php
-if(!defined('IN_MYMPS')) exit('Forbidden');
-
-$userid	 	= mhtmlspecialchars($userid);
-$userpwd 	= trim($userpwd);
-$loginip 	= GetIP();
-$logintime  = $timestamp ? $timestamp : time();
-$memory 	= isset($memory) ? trim($memory) : '';
-$url 		= trim($url);
-
-if($authcodesettings['login'] == 1 && !$randcode = mymps_chk_randcode($checkcode)){
-	write_msg('Wrong identifying code, please return and retry');
-}
-
-($userid == '' || $userpwd == '') && write_msg("User ID and password cannot be empty");
-
-$s_uid  = $db -> getOne("SELECT userid FROM `{$db_mymps}member` WHERE (userid='$userid' OR email = '$userid' OR tel = '$userid') AND userpwd='".md5($userpwd)."'");
-
-$userid = $userid ? $userid : $s_uid;
-
-if(PASSPORT_TYPE == 'phpwind'){
-	//pwÕûºÏ
-	require MYMPS_ROOT.'/pw_client/uc_client.php';
-	$user_login = uc_user_login($userid,md5($userpwd),0);
-	if($user_login['status'] == '-2'){
-		//ÃÜÂë´íÎó
-		//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
-		write_msg('You have entered the wrong password!');
-	} elseif($user_login['status'] == '-1') {
-		//ÓÃ»§Ãû²»´æÔÚ
-		write_msg('The user ID you have entered does not exist!');
-	} elseif($user_login['status'] == '1' && !$i =$db -> getOne("SELECT COUNT(id) FROM `{$db_mymps}member` WHERE userid = '$userid'")){
-		//ÓÃ»§´æÔÚÓÚpwÓÃ»§±í£¬²»´æÔÚmymps±í
-		member_reg($userid,md5($userpwd),$userid.'@163.com');
-	}
-
-} elseif(PASSPORT_TYPE == 'ucenter') {
-	//UCÕûºÏ
-	require MYMPS_ROOT.'/uc_client/client.php';
-	
-	//Í¨¹ý½Ó¿ÚÅÐ¶ÏµÇÂ¼ÕÊºÅµÄÕýÈ·ÐÔ£¬·µ»ØÖµÎªÊý×é
-	list($uid, $username, $password, $email) = uc_user_login($userid, $userpwd);
-	
-	if($uid > 0) {
-	
-		if(!$db->getOne("SELECT count(*) FROM {$db_mymps}member WHERE userid='$userid'")) {
-			member_reg($userid,md5($userpwd));
-		}else{
-			$db->query("UPDATE `{$db_mymps}member` SET userpwd = '".md5($userpwd)."' WHERE userid = '$userid'");
-		}
-		
-		$s_uid = $userid;
-		
-	} else {
-	
-		//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
-		
-		if($uid == -1) {
-			write_msg( 'The user ID does not exist or has been deleted');
-		} elseif ($uid == -2) {
-			write_msg( 'Wrong password');
-		} else {
-			write_msg( 'Undefined Operation');
-		}
-		
-		exit;
-	}
-} 
-
-//mymps¶ËµÇÂ¼
-if($s_uid){
-
-	if($_COOKIE['loginscore_'.md5($s_uid)] != 1){
-		/*»ý·Ö±ä»¯*/
-		$score_change = get_credit_score();
-		$score_changer = $score_change['score']['rank']['login'];
-	
-		$db->query("UPDATE `{$db_mymps}member` SET loginip = '$loginip',logintime = '$logintime',score = score".$score_changer." WHERE userid = '$s_uid'");
-		
-		$score_change = $score_changer = NULL;
-		$url = $url ? $url : $mymps_global[SiteUrl].'/member/index.php?alert=1';
-	}
-
-	setcookie("loginscore_".md5($s_uid),1);
-	
-	$member_log -> in($s_uid,md5($userpwd),$memory,'noredirect');
-	if(PASSPORT_TYPE == 'phpwind' && $user_login['synlogin']){
-		echo $user_login['synlogin'];//Éú³ÉÍ¬²½µÇÂ½µÄ´úÂë
-	} elseif(PASSPORT_TYPE == 'ucenter'){
-		echo uc_user_synlogin($uid);//Éú³ÉÍ¬²½µÇÂ¼µÄ´úÂë
-	}
-	echo mymps_goto($url ? $url : $mymps_global['SiteUrl'].'/member/index.php');
-	
-}else{
-
-	//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
-	write_msg("Logging-in failed, for you may have entered the wrong user ID or password");
-}
-?>
+<?php
+
+if(!defined('IN_MYMPS')) exit('Forbidden');
+
+
+
+$userid	 	= mhtmlspecialchars($userid);
+
+$userpwd 	= trim($userpwd);
+
+$loginip 	= GetIP();
+
+$logintime  = $timestamp ? $timestamp : time();
+
+$memory 	= isset($memory) ? trim($memory) : '';
+
+$url 		= trim($url);
+
+
+
+if($authcodesettings['login'] == 1 && !$randcode = mymps_chk_randcode($checkcode)){
+
+	write_msg('Wrong identifying code, please return and retry');
+
+}
+
+
+
+($userid == '' || $userpwd == '') && write_msg("User ID and password cannot be empty");
+
+
+
+$s_uid  = $db -> getOne("SELECT userid FROM `{$db_mymps}member` WHERE (userid='$userid' OR email = '$userid' OR tel = '$userid') AND userpwd='".md5($userpwd)."'");
+
+
+
+$userid = $userid ? $userid : $s_uid;
+
+
+
+if(PASSPORT_TYPE == 'phpwind'){
+
+	//pwï¿½ï¿½ï¿½
+
+	require MYMPS_ROOT.'/pw_client/uc_client.php';
+
+	$user_login = uc_user_login($userid,md5($userpwd),0);
+
+	if($user_login['status'] == '-2'){
+
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+		//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
+
+		write_msg('You have entered the wrong password!');
+
+	} elseif($user_login['status'] == '-1') {
+
+		//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+		write_msg('The user ID you have entered does not exist!');
+
+	} elseif($user_login['status'] == '1' && !$i =$db -> getOne("SELECT COUNT(id) FROM `{$db_mymps}member` WHERE userid = '$userid'")){
+
+		//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pwï¿½Ã»ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mympsï¿½ï¿½
+
+		member_reg($userid,md5($userpwd),$userid.'@163.com');
+
+	}
+
+
+
+} elseif(PASSPORT_TYPE == 'ucenter') {
+
+	//UCï¿½ï¿½ï¿½
+
+	require MYMPS_ROOT.'/uc_client/client.php';
+
+	
+
+	//Í¨ï¿½ï¿½Ó¿ï¿½ï¿½Ð¶Ïµï¿½Â¼ï¿½ÊºÅµï¿½ï¿½ï¿½È·ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªï¿½ï¿½ï¿½ï¿½
+
+	list($uid, $username, $password, $email) = uc_user_login($userid, $userpwd);
+
+	
+
+	if($uid > 0) {
+
+	
+
+		if(!$db->getOne("SELECT count(*) FROM {$db_mymps}member WHERE userid='$userid'")) {
+
+			member_reg($userid,md5($userpwd));
+
+		}else{
+
+			$db->query("UPDATE `{$db_mymps}member` SET userpwd = '".md5($userpwd)."' WHERE userid = '$userid'");
+
+		}
+
+		
+
+		$s_uid = $userid;
+
+		
+
+	} else {
+
+	
+
+		//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
+
+		
+
+		if($uid == -1) {
+
+			write_msg( 'The user ID does not exist or has been deleted');
+
+		} elseif ($uid == -2) {
+
+			write_msg( 'Wrong password');
+
+		} else {
+
+			write_msg( 'Undefined Operation');
+
+		}
+
+		
+
+		exit;
+
+	}
+
+} 
+
+
+
+//mympsï¿½Ëµï¿½Â¼
+
+if($s_uid){
+
+
+
+	if($_COOKIE['loginscore_'.md5($s_uid)] != 1){
+
+		/*ï¿½ï¿½Ö±ä»¯*/
+
+		$score_change = get_credit_score();
+
+		$score_changer = $score_change['score']['rank']['login'];
+
+	
+
+		$db->query("UPDATE `{$db_mymps}member` SET loginip = '$loginip',logintime = '$logintime',score = score".$score_changer." WHERE userid = '$s_uid'");
+
+		
+
+		$score_change = $score_changer = NULL;
+
+		$url = $url ? $url : $mymps_global[SiteUrl].'/member/index.php?alert=1';
+
+	}
+
+
+
+	setcookie("loginscore_".md5($s_uid),1);
+
+	
+
+	$member_log -> in($s_uid,md5($userpwd),$memory,'noredirect');
+
+	if(PASSPORT_TYPE == 'phpwind' && $user_login['synlogin']){
+
+		echo $user_login['synlogin'];//ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ä´ï¿½ï¿½ï¿½
+
+	} elseif(PASSPORT_TYPE == 'ucenter'){
+
+		echo uc_user_synlogin($uid);//ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ä´ï¿½ï¿½ï¿½
+
+	}
+
+	echo mymps_goto($url ? $url : $mymps_global['SiteUrl'].'/member/index.php');
+
+	
+
+}else{
+
+
+
+	//$db->query("INSERT INTO `{$db_mymps}member_record_login` (id,userid,userpwd,pubdate,ip,result) VALUES ('','$userid','$userpwd','$logintime','$loginip','0')");
+
+	write_msg("Logging-in failed, for you may have entered the wrong user ID or password");
+
+}
+
+?>
+

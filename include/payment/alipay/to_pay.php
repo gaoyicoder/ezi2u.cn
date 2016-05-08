@@ -1,120 +1,239 @@
-<?php
-if(!defined('IN_MYMPS')){
-	exit;
-}
-
-//------------------ ²ÎÊý¿ªÊ¼ ------------------
-
-$agent="";
-
-$service= $payr['buytype'] == 2 ? "trade_create_by_buyer" : "create_direct_pay_by_user";
-
-//ÉÌ»§ºÅ
-$partner=$payr['payuser'];
-
-//ÃÜÔ¿
-$paykey=$payr['paykey'];
-
-//Âô¼ÒÖ§¸¶±¦ÕÊ»§
-$seller_email=$payr['payemail'];
-
-//×Ö·û±àÂë¸ñÊ½
-$_input_charset = $charset == 'utf-8' ? "UTF-8" : "GBK";
-
-//¼ÓÃÜ·½Ê½
-$sign_type="MD5";
-
-//·µ»ØµØÖ·
-$return_url=$PayReturnUrlQz."/include/payment/alipay/payend.php";
-$notify_url=$PayReturnUrlQz."/include/payment/alipay/notify.php";
-
-//Ö§¸¶·½Ê½
-$payment_type=1;
-
-//Ä¬ÈÏÖ§¸¶·½Ê½
-$paymethod="";
-
-//ÒøÐÐÀàÐÍ
-$defaultbank="";
-
-//------------------ ²ÎÊý½áÊø ------------------
-
-//Ö§¸¶½ð¶î
-$price=$money;
-$quantity=1;
-
-$out_trade_no=$ddno?$ddno:$timestamp;	//¶©µ¥ºÅ
-msetcookie("checkpaysession",$out_trade_no,0);	//ÉèÖÃ¶¨µ¥ºÅ
-
-//²úÆ·ÐÅÏ¢
-$subject=$productname;	//ÉÌÆ·Ãû³Æ
-$body=$out_trade_no;	//ÉÌÆ·ÃèÊö
-
-//md5
-if($payr['buytype'] == 2){
-	$parameter=array(
-	'service'           => $service,
-	'partner'           => $partner,
-	'seller_email'      => $seller_email,
-	'_input_charset'    => $_input_charset,
-	'return_url'        => $return_url,
-	'notify_url'        => $notify_url,
-	'subject'           => $subject,
-	'body'				=> $body,
-	'out_trade_no'      => $out_trade_no,
-	'price'             => $price,
-	'quantity'          => $quantity,
-	'payment_type'      => $payment_type,
-	'paymethod'			=> $paymethod,
-	'defaultbank'		=> $defaultbank,
-	'logistics_fee'		=> '0.00',
-	'logistics_payment' => 'SELLER_PAY',
-	'logistics_type'	=> 'EXPRESS'
-	);
- }else{
-	$parameter=array(
-	'service'           => $service,
-	'partner'           => $partner,
-	'seller_email'      => $seller_email,
-	'_input_charset'    => $_input_charset,
-	'return_url'        => $return_url,
-	'notify_url'        => $notify_url,
-	'subject'           => $subject,
-	'body'				=> $body,
-	'out_trade_no'      => $out_trade_no,
-	'price'             => $price,
-	'quantity'          => $quantity,
-	'payment_type'      => $payment_type,
-	'paymethod'			=> $paymethod,
-	'defaultbank'		=> $defaultbank
-	);
-}
-ksort($parameter);
-reset($parameter);
-
-$param='';
-$sign='';
-
-foreach($parameter AS $key => $val){
-	if(strlen($val)==0){
-		continue;
-	}
-	$param.="$key=".urlencode($val)."&";
-	$sign.="$key=$val&";
-}
-
-$param=substr($param,0,-1);
-$sign=md5(substr($sign,0,-1).$paykey);
-$gotopayurl='https://www.alipay.com/cooperate/gateway.do?'.$param.'&sign='.$sign.'&sign_type='.$sign_type;
-ToPayMoney($money,$out_trade_no,$uid,$s_uid,'alipay');//Ð´ÈëµÈ´ýÖ§¸¶¼ÇÂ¼
-?>
-<html>
-<title>Pay Through ?</title>
-<meta http-equiv="Cache-Control" content="no-cache"/>
-<body>
-<script>
-self.location.href='<?=$gotopayurl?>';
-</script>
-<input type="button" style="font-size: 9pt" value="Ö§¸¶±¦Ö§¸¶" name="v_action" onClick="self.location.href='<?=$gotopayurl?>';">
-</body>
+<?php
+
+if(!defined('IN_MYMPS')){
+
+	exit;
+
+}
+
+
+
+//------------------ ï¿½ï¿½ï¿½ï¿½Ê¼ ------------------
+
+
+
+$agent="";
+
+
+
+$service= $payr['buytype'] == 2 ? "trade_create_by_buyer" : "create_direct_pay_by_user";
+
+
+
+//ï¿½Ì»ï¿½ï¿½ï¿½
+
+$partner=$payr['payuser'];
+
+
+
+//ï¿½ï¿½Ô¿
+
+$paykey=$payr['paykey'];
+
+
+
+//ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½
+
+$seller_email=$payr['payemail'];
+
+
+
+//ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+
+$_input_charset = $charset == 'utf-8' ? "UTF-8" : "GBK";
+
+
+
+//ï¿½ï¿½ï¿½Ü·ï¿½Ê½
+
+$sign_type="MD5";
+
+
+
+//ï¿½ï¿½ï¿½Øµï¿½Ö·
+
+$return_url=$PayReturnUrlQz."/include/payment/alipay/payend.php";
+
+$notify_url=$PayReturnUrlQz."/include/payment/alipay/notify.php";
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½Ê½
+
+$payment_type=1;
+
+
+
+//Ä¬ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½Ê½
+
+$paymethod="";
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$defaultbank="";
+
+
+
+//------------------ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ------------------
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$price=$money;
+
+$quantity=1;
+
+
+
+$out_trade_no=$ddno?$ddno:$timestamp;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+msetcookie("checkpaysession",$out_trade_no,0);	//ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+
+
+//ï¿½ï¿½Æ·ï¿½ï¿½Ï¢
+
+$subject=$productname;	//ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+
+$body=$out_trade_no;	//ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+
+
+
+//md5
+
+if($payr['buytype'] == 2){
+
+	$parameter=array(
+
+	'service'           => $service,
+
+	'partner'           => $partner,
+
+	'seller_email'      => $seller_email,
+
+	'_input_charset'    => $_input_charset,
+
+	'return_url'        => $return_url,
+
+	'notify_url'        => $notify_url,
+
+	'subject'           => $subject,
+
+	'body'				=> $body,
+
+	'out_trade_no'      => $out_trade_no,
+
+	'price'             => $price,
+
+	'quantity'          => $quantity,
+
+	'payment_type'      => $payment_type,
+
+	'paymethod'			=> $paymethod,
+
+	'defaultbank'		=> $defaultbank,
+
+	'logistics_fee'		=> '0.00',
+
+	'logistics_payment' => 'SELLER_PAY',
+
+	'logistics_type'	=> 'EXPRESS'
+
+	);
+
+ }else{
+
+	$parameter=array(
+
+	'service'           => $service,
+
+	'partner'           => $partner,
+
+	'seller_email'      => $seller_email,
+
+	'_input_charset'    => $_input_charset,
+
+	'return_url'        => $return_url,
+
+	'notify_url'        => $notify_url,
+
+	'subject'           => $subject,
+
+	'body'				=> $body,
+
+	'out_trade_no'      => $out_trade_no,
+
+	'price'             => $price,
+
+	'quantity'          => $quantity,
+
+	'payment_type'      => $payment_type,
+
+	'paymethod'			=> $paymethod,
+
+	'defaultbank'		=> $defaultbank
+
+	);
+
+}
+
+ksort($parameter);
+
+reset($parameter);
+
+
+
+$param='';
+
+$sign='';
+
+
+
+foreach($parameter AS $key => $val){
+
+	if(strlen($val)==0){
+
+		continue;
+
+	}
+
+	$param.="$key=".urlencode($val)."&";
+
+	$sign.="$key=$val&";
+
+}
+
+
+
+$param=substr($param,0,-1);
+
+$sign=md5(substr($sign,0,-1).$paykey);
+
+$gotopayurl='https://www.alipay.com/cooperate/gateway.do?'.$param.'&sign='.$sign.'&sign_type='.$sign_type;
+
+ToPayMoney($money,$out_trade_no,$uid,$s_uid,'alipay');//Ð´ï¿½ï¿½È´ï¿½Ö§ï¿½ï¿½ï¿½ï¿½Â¼
+
+?>
+
+<html>
+
+<title>Pay Through ?</title>
+
+<meta http-equiv="Cache-Control" content="no-cache"/>
+
+<body>
+
+<script>
+
+self.location.href='<?=$gotopayurl?>';
+
+</script>
+
+<input type="button" style="font-size: 9pt" value="Ö§ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½" name="v_action" onClick="self.location.href='<?=$gotopayurl?>';">
+
+</body>
+
 </html>

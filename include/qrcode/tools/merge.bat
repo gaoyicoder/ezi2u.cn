@@ -1,2 +1,3 @@
-php ./merge.php
+php ./merge.php
+
 pause

@@ -1,78 +1,155 @@
-<?php
-define('IN_MYMPS', true);
-define('IN_ADMIN',true);
-define('CURSCRIPT','payend');
-
-require_once dirname(__FILE__).'/../../../include/global.php';
-require_once MYMPS_DATA.'/config.php';
-require_once MYMPS_DATA.'/config.db.php';
-require_once MYMPS_INC.'/db.class.php';
-require_once MYMPS_INC."/member.class.php";
-if(!$member_log->chk_in()) write_msg("","../".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
-
-$editor=1;
-
-//¶©µ¥ºÅ
-/*
-if(!mgetcookie('checkpaysession')){
-	write_msg('·Ç·¨²Ù×÷£¡','olmsg');
-}else{
-	msetcookie("checkpaysession","",0);
-}*/
-
-//²Ù×÷ÊÂ¼þ
-$pay_type = mgetcookie('pay_type');
-/*
-if($pay_type=='PayToMoney')//½ð±Ò³äÖµ
-{
-	
-}else{
-	write_msg('ÄúÀ´×ÔµÄÁ´½Ó²»´æÔÚ','olmsg');
-}*/
-
-$paytype='chinabank';
-$payr=$db->getRow("select * from {$db_mymps}payapi where paytype='$paytype'");
-
-$v_mid=$payr['payuser'];//ÉÌ»§ºÅ
-
-$key=$payr['paykey'];//ÃÜÔ¿
-
-//----------------------------------------------·µ»ØÐÅÏ¢
-$v_oid    =trim($_POST['v_oid']);      
-$v_pmode   =trim($_POST['v_pmode']);      
-$v_pstatus=trim($_POST['v_pstatus']);      
-$v_pstring=trim($_POST['v_pstring']);
-$v_amount=trim($_POST['v_amount']);     
-$v_moneytype  =trim($_POST['v_moneytype']);
-$remark1  =trim($_POST['remark1']);     
-$remark2  =trim($_POST['remark2']);     
-$v_md5str =trim($_POST['v_md5str']);    
-
-//md5
-$md5string=strtoupper(md5($v_oid.$v_pstatus.$v_amount.$v_moneytype.$key));
-
-/*if($v_md5str!=$md5string)
-{
-	write_msg('ÑéÖ¤MD5Ç©ÃûÊ§°Ü.','olmsg');
-}*/
-
-include MYMPS_INC.'/pay.fun.php';
-
-$orderid=$v_oid;	//Ö§¸¶¶©µ¥
-$ddno=$remark1;	//ÍøÕ¾µÄ¶©µ¥ºÅ
-$money=$v_amount;
-
-if($v_pstatus=="20"){
-	$paybz='Successfully paid';
-} elseif($v_pstatus == "30"){
-	$paybz='Payment failed';
-} else{
-	$paybz='Payment completed';
-}
-
-UpdatePayRecord($ddno,$paybz);//ÐÞ¸ÄÖ§¸¶×´Ì¬
-write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
-
-is_object($db) && $db -> Close();
-$mymps_global = NULL;
+<?php
+
+define('IN_MYMPS', true);
+
+define('IN_ADMIN',true);
+
+define('CURSCRIPT','payend');
+
+
+
+require_once dirname(__FILE__).'/../../../include/global.php';
+
+require_once MYMPS_DATA.'/config.php';
+
+require_once MYMPS_DATA.'/config.db.php';
+
+require_once MYMPS_INC.'/db.class.php';
+
+require_once MYMPS_INC."/member.class.php";
+
+if(!$member_log->chk_in()) write_msg("","../".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
+
+
+
+$editor=1;
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+/*
+
+if(!mgetcookie('checkpaysession')){
+
+	write_msg('ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}else{
+
+	msetcookie("checkpaysession","",0);
+
+}*/
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+
+$pay_type = mgetcookie('pay_type');
+
+/*
+
+if($pay_type=='PayToMoney')//ï¿½ï¿½Ò³ï¿½Öµ
+
+{
+
+	
+
+}else{
+
+	write_msg('ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}*/
+
+
+
+$paytype='chinabank';
+
+$payr=$db->getRow("select * from {$db_mymps}payapi where paytype='$paytype'");
+
+
+
+$v_mid=$payr['payuser'];//ï¿½Ì»ï¿½ï¿½ï¿½
+
+
+
+$key=$payr['paykey'];//ï¿½ï¿½Ô¿
+
+
+
+//----------------------------------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+
+$v_oid    =trim($_POST['v_oid']);      
+
+$v_pmode   =trim($_POST['v_pmode']);      
+
+$v_pstatus=trim($_POST['v_pstatus']);      
+
+$v_pstring=trim($_POST['v_pstring']);
+
+$v_amount=trim($_POST['v_amount']);     
+
+$v_moneytype  =trim($_POST['v_moneytype']);
+
+$remark1  =trim($_POST['remark1']);     
+
+$remark2  =trim($_POST['remark2']);     
+
+$v_md5str =trim($_POST['v_md5str']);    
+
+
+
+//md5
+
+$md5string=strtoupper(md5($v_oid.$v_pstatus.$v_amount.$v_moneytype.$key));
+
+
+
+/*if($v_md5str!=$md5string)
+
+{
+
+	write_msg('ï¿½ï¿½Ö¤MD5Ç©ï¿½ï¿½Ê§ï¿½ï¿½.','olmsg');
+
+}*/
+
+
+
+include MYMPS_INC.'/pay.fun.php';
+
+
+
+$orderid=$v_oid;	//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$ddno=$remark1;	//ï¿½ï¿½Õ¾ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+$money=$v_amount;
+
+
+
+if($v_pstatus=="20"){
+
+	$paybz='Successfully paid';
+
+} elseif($v_pstatus == "30"){
+
+	$paybz='Payment failed';
+
+} else{
+
+	$paybz='Payment completed';
+
+}
+
+
+
+UpdatePayRecord($ddno,$paybz);//ï¿½Þ¸ï¿½Ö§ï¿½ï¿½×´Ì¬
+
+write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
+
+
+
+is_object($db) && $db -> Close();
+
+$mymps_global = NULL;
+
 ?>

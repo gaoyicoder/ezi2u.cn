@@ -1,28 +1,55 @@
-<script type="text/javascript" src="<?=$mymps_global[SiteUrl]?>/template/default/js/jquery.autocomplete.min.js"></script> 
-<link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/jquery.autocomplete.css" />
-<script type="text/javascript"> 
-var cities = [
-<? $i=1;if(is_array($allcities = get_allcities()))foreach($allcities as $k =>$v){?>
-<? if($i > 1) echo ',';?>{ name1: "<?=$v[cityid]?>",name: "<?=$v[directory]?>", to: "<?=$v[cityname]?>" }
-<? $i=$i+1;}?>
-];
-$(function() {
-$('#cityid').autocomplete(cities, {
-max: 400, //ÁÐ±íÀïµÄÌõÄ¿Êý 
-minChars: 0, //×Ô¶¯Íê³É¼¤»îÖ®Ç°ÌîÈëµÄ×îÐ¡×Ö·û 
-width: 166, //ÌáÊ¾µÄ¿í¶È£¬Òç³öÒþ²Ø 
-scrollHeight: 300, //ÌáÊ¾µÄ¸ß¶È£¬Òç³öÏÔÊ¾¹ö¶¯Ìõ 
-matchContains: true, //°üº¬Æ¥Åä£¬¾ÍÊÇdata²ÎÊýÀïµÄÊý¾Ý£¬ÊÇ·ñÖ»Òª°üº¬ÎÄ±¾¿òÀïµÄÊý¾Ý¾ÍÏÔÊ¾ 
-autoFill: false, //×Ô¶¯Ìî³ä 
-formatItem: function(row, i, max) { 
-return row.to; 
-}, 
-formatMatch: function(row, i, max) { 
-return row.name1 + row.name + row.to; 
-}, 
-formatResult: function(row) { 
-return row.name1; 
-} 
-});
-});
+<script type="text/javascript" src="<?=$mymps_global[SiteUrl]?>/template/default/js/jquery.autocomplete.min.js"></script> 
+
+<link rel="stylesheet" href="<?=$mymps_global[SiteUrl]?>/template/default/css/jquery.autocomplete.css" />
+
+<script type="text/javascript"> 
+
+var cities = [
+
+<? $i=1;if(is_array($allcities = get_allcities()))foreach($allcities as $k =>$v){?>
+
+<? if($i > 1) echo ',';?>{ name1: "<?=$v[cityid]?>",name: "<?=$v[directory]?>", to: "<?=$v[cityname]?>" }
+
+<? $i=$i+1;}?>
+
+];
+
+$(function() {
+
+$('#cityid').autocomplete(cities, {
+
+max: 400, //ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ 
+
+minChars: 0, //ï¿½Ô¶ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ö·ï¿½ 
+
+width: 166, //ï¿½ï¿½Ê¾ï¿½Ä¿ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+
+scrollHeight: 300, //ï¿½ï¿½Ê¾ï¿½Ä¸ß¶È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+
+matchContains: true, //ï¿½ï¿½Æ¥ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½dataï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½Ç·ï¿½Ö»Òªï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½Ê¾ 
+
+autoFill: false, //ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ 
+
+formatItem: function(row, i, max) { 
+
+return row.to; 
+
+}, 
+
+formatMatch: function(row, i, max) { 
+
+return row.name1 + row.name + row.to; 
+
+}, 
+
+formatResult: function(row) { 
+
+return row.name1; 
+
+} 
+
+});
+
+});
+
 </script>

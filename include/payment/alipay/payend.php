@@ -1,91 +1,181 @@
-<?php
-define('IN_MYMPS', true);
-define('IN_ADMIN',true);
-define('CURSCRIPT','payend');
-
-require_once dirname(__FILE__).'/../../../include/global.php';
-require_once MYMPS_DATA.'/config.php';
-require_once MYMPS_DATA.'/config.db.php';
-require_once MYMPS_INC.'/db.class.php';
-require_once MYMPS_INC."/member.class.php";
-if(!$member_log->chk_in()) write_msg("",$mymps_global['SiteUrl']."/".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
-
-$editor=1;
-
-//¶©µ¥ºÅ
-/*if(!mgetcookie('checkpaysession')){
-	write_msg('·Ç·¨²Ù×÷£¡','olmsg');
-}else{
-	msetcookie("checkpaysession","",0);
-}*/
-
-//²Ù×÷ÊÂ¼þ
-$pay_type = mgetcookie('pay_type');
-/*
-if($pay_type=='PayToMoney')//½ð±Ò³äÖµ
-{
-	
-}else{
-	write_msg('ÄúÀ´×ÔµÄÁ´½Ó²»´æÔÚ','olmsg');
-}*/
-
-$paytype='alipay';
-$payr=$db->getRow("SELECT * FROM {$db_mymps}payapi WHERE paytype='$paytype'");
-$bargainor_id=$payr['payuser'];//ÉÌ»§ºÅ
-$key=$payr['paykey'];//ÃÜÔ¿
-
-$seller_email=$payr['payemail'];//Âô¼ÒÖ§¸¶±¦ÕÊ»§
-
-//----------------------------------------------·µ»ØÐÅÏ¢
-
-if(!empty($_POST)){
-	foreach($_POST as $key => $data){
-		$_GET[$key]=$data;
-	}
-}
-
-$get_seller_email=rawurldecode($_GET['seller_email']);
-
-//Ö§¸¶ÑéÖ¤
-ksort($_GET);
-reset($_GET);
-
-$sign='';
-foreach($_GET AS $key=>$val){
-	if($key!='sign'&&$key!='sign_type'&&$key!='code'){
-		$sign.="$key=$val&";
-	}
-}
-/*
-$sign=md5(substr($sign,0,-1).$paykey);
-
-if($sign!=$_GET['sign']){
-	write_msg('ÑéÖ¤MD5Ç©ÃûÊ§°Ü.','olmsg');
-}
-*/
-
-if($_GET['trade_status']=="TRADE_FINISHED" || $_GET['trade_status']== "TRADE_SUCCESS" || $_GET['trade_status'] == 'WAIT_BUYER_CONFIRM_GOODS'|| $_GET['trade_status'] == 'WAIT_SELLER_SEND_GOODS'){
-	include MYMPS_INC.'/pay.fun.php';
-	
-	$orderid=$_GET['trade_no'];	//Ö§¸¶¶©µ¥
-	$ddno=$_GET['out_trade_no'];	//ÍøÕ¾µÄ¶©µ¥ºÅ
-	$money=$_GET['total_fee'];
-	
-	if($_GET['trade_status']=="TRADE_FINISHED"){
-		$paybz='Payment completed';
-	} elseif($_GET['trade_status']=="TRADE_SUCCESS"){
-		$paybz='Successfully paid';
-	} elseif($_GET['trade_status']=="WAIT_BUYER_CONFIRM_GOODS"){
-		$paybz='Confirming payment';
-	} elseif($_GET['trade_status']=="WAIT_SELLER_SEND_GOODS"){
-		$paybz='Successfully recharged';
-	}
-
-	UpdatePayRecord($ddno,$paybz);//ÐÞ¸ÄÖ§¸¶×´Ì¬
-	write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
-	//PayApiPayMoney($money,$paybz,$orderid,$uid,$s_uid,$paytype);
-}
-
-is_object($db) && $db -> Close();
-$mymps_global = NULL;
+<?php
+
+define('IN_MYMPS', true);
+
+define('IN_ADMIN',true);
+
+define('CURSCRIPT','payend');
+
+
+
+require_once dirname(__FILE__).'/../../../include/global.php';
+
+require_once MYMPS_DATA.'/config.php';
+
+require_once MYMPS_DATA.'/config.db.php';
+
+require_once MYMPS_INC.'/db.class.php';
+
+require_once MYMPS_INC."/member.class.php";
+
+if(!$member_log->chk_in()) write_msg("",$mymps_global['SiteUrl']."/".$mymps_global['cfg_member_logfile']."?url=".urlencode(GetUrl()));
+
+
+
+$editor=1;
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+/*if(!mgetcookie('checkpaysession')){
+
+	write_msg('ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}else{
+
+	msetcookie("checkpaysession","",0);
+
+}*/
+
+
+
+//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+
+$pay_type = mgetcookie('pay_type');
+
+/*
+
+if($pay_type=='PayToMoney')//ï¿½ï¿½Ò³ï¿½Öµ
+
+{
+
+	
+
+}else{
+
+	write_msg('ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½','olmsg');
+
+}*/
+
+
+
+$paytype='alipay';
+
+$payr=$db->getRow("SELECT * FROM {$db_mymps}payapi WHERE paytype='$paytype'");
+
+$bargainor_id=$payr['payuser'];//ï¿½Ì»ï¿½ï¿½ï¿½
+
+$key=$payr['paykey'];//ï¿½ï¿½Ô¿
+
+
+
+$seller_email=$payr['payemail'];//ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½
+
+
+
+//----------------------------------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+
+
+
+if(!empty($_POST)){
+
+	foreach($_POST as $key => $data){
+
+		$_GET[$key]=$data;
+
+	}
+
+}
+
+
+
+$get_seller_email=rawurldecode($_GET['seller_email']);
+
+
+
+//Ö§ï¿½ï¿½ï¿½ï¿½Ö¤
+
+ksort($_GET);
+
+reset($_GET);
+
+
+
+$sign='';
+
+foreach($_GET AS $key=>$val){
+
+	if($key!='sign'&&$key!='sign_type'&&$key!='code'){
+
+		$sign.="$key=$val&";
+
+	}
+
+}
+
+/*
+
+$sign=md5(substr($sign,0,-1).$paykey);
+
+
+
+if($sign!=$_GET['sign']){
+
+	write_msg('ï¿½ï¿½Ö¤MD5Ç©ï¿½ï¿½Ê§ï¿½ï¿½.','olmsg');
+
+}
+
+*/
+
+
+
+if($_GET['trade_status']=="TRADE_FINISHED" || $_GET['trade_status']== "TRADE_SUCCESS" || $_GET['trade_status'] == 'WAIT_BUYER_CONFIRM_GOODS'|| $_GET['trade_status'] == 'WAIT_SELLER_SEND_GOODS'){
+
+	include MYMPS_INC.'/pay.fun.php';
+
+	
+
+	$orderid=$_GET['trade_no'];	//Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	$ddno=$_GET['out_trade_no'];	//ï¿½ï¿½Õ¾ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½
+
+	$money=$_GET['total_fee'];
+
+	
+
+	if($_GET['trade_status']=="TRADE_FINISHED"){
+
+		$paybz='Payment completed';
+
+	} elseif($_GET['trade_status']=="TRADE_SUCCESS"){
+
+		$paybz='Successfully paid';
+
+	} elseif($_GET['trade_status']=="WAIT_BUYER_CONFIRM_GOODS"){
+
+		$paybz='Confirming payment';
+
+	} elseif($_GET['trade_status']=="WAIT_SELLER_SEND_GOODS"){
+
+		$paybz='Successfully recharged';
+
+	}
+
+
+
+	UpdatePayRecord($ddno,$paybz);//ï¿½Þ¸ï¿½Ö§ï¿½ï¿½×´Ì¬
+
+	write_msg("You have successfully charged ".($money*$mymps_global['cfg_coin_fee'])." coins into your account",$mymps_global['SiteUrl']."/member/index.php?m=pay&ac=record");
+
+	//PayApiPayMoney($money,$paybz,$orderid,$uid,$s_uid,$paytype);
+
+}
+
+
+
+is_object($db) && $db -> Close();
+
+$mymps_global = NULL;
+
 ?>
