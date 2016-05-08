@@ -21,8 +21,8 @@
 <!--XXXXXX-->
 <meta charset="UTF-8" />
     <title>Find a route using Geolocation and Google Maps API</title>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
       function calculateRoute(from, to) {
         // Center initialized to Naples, Italy
@@ -223,7 +223,7 @@
 			<!---XXXXXXXXXXXXXXXXXXXXXXX-->
 						<div class="hd">Find the route</div>
 	  <br />
-	<form action="http://maps.google.com/maps" method="get" target="_blank">
+	<form action="https://maps.google.com/maps" method="get" target="_blank">
 		<label for="saddr">From:</label>
 		  <input type="text" id="from" name="saddr" required="required" placeholder="My current address" size="60" />
 		  <a id="from-link" href="#">Get Current Position</a>

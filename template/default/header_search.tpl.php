@@ -1,4 +1,4 @@
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 
 <script>
 var Lat, Lon;

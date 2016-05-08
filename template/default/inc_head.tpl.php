@@ -6,8 +6,8 @@
 		$data11='Welcom,'.$s_uid.' &nbsp;<a href="'.$mymps_global['SiteUrl'].'/member/index.php">MemberCenter</a> <a href="'.$mymps_global[SiteUrl].'/'.$mymps_global['cfg_member_logfile'].'?mod=out&url='.$url.'" >Logout</a> ';
 ?>
 
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 <script>
 var Lat, Lon;
@@ -274,7 +274,7 @@ function checkCookie() {
 
 
 function checkLoginBeforeClose() {
-// window.open("http://www.ezi2u.com.my/member/index.php");
+// window.open("https://www.ezi2u.com.my/member/index.php");
 
    //var curSite = window.location.href;
    //alert("clientX =" + window.event.clientX + "clientY =" + window.event.clientX);
@@ -285,12 +285,12 @@ function checkLoginBeforeClose() {
 
 
 
-    if((curSite == "http://www.ezi2u.com.my/") || (curSite == "http://ezi2u.com.my/"))
+    if((curSite == "https://www.ezi2u.com.my/") || (curSite == "http://ezi2u.com.my/"))
   // if(window.event.clientX < 0 && window.event.clientY <0)
  //if(window.event.clientX <= 0 || window.event.clientY <= 0)
  if((curClientX >= 0) && (curClientX >= 0))
  {
-		window.open("http://www.ezi2u.com.my/member.php?mod=out&amp;url=");
+		window.open("https://www.ezi2u.com.my/member.php?mod=out&amp;url=");
  }
 	
 //	return "logout"
@@ -349,7 +349,7 @@ function wireUpEvents() {
   
         //$member_log->out('noredirect');
 
-        window.open("http://www.ezi2u.com.my/member.php?mod=out&amp;url=");
+        window.open("https://www.ezi2u.com.my/member.php?mod=out&amp;url=");
  
         return leave_message;
       }
@@ -420,9 +420,9 @@ $(document).ready(function() {
 </div>
 <div class="clear"></div>
 <div class="logosearchtel">
-	<!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¿ªÊ¼-->
+	<!--¶¥²¿ºá·ù¹ã¸æ¿ªÊ¼-->
 	<div id="ad_topbanner"></div>
-	<!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
+	<!--¶¥²¿ºá·ù¹ã¸æ½áÊø-->
 			
 
     <!--<div class="weblogo"><a href="<?=$city[domain]?>" onclick="javascript:getLocation('<?=$city[cityname]?>')"><img src="<?=$mymps_global[SiteUrl]?><?=$mymps_global[SiteLogo]?>" title="<?=$mymps_global[SiteName]?>" border="0"/></a></div>-->

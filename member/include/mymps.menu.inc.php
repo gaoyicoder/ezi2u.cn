@@ -2,7 +2,11 @@
 !defined('IN_MYMPS') && die('FORBIDDEN');
 
 $member_menu = array();
-$member_menu['user']['info']		= 'Posts';
+if($if_corp == 1) {
+    $member_menu['user']['info'] = 'Posts';
+} else {
+    $member_menu['user']['payment'] = 'Vouchers';
+}
 //$member_menu['user']['pay']			= 'Coin';
 if($if_corp == 1){
 	$member_menu['corp']['avatar']	= 'Avatar';

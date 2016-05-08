@@ -25,8 +25,8 @@
 <!--XXXXXX-->
 <meta charset="UTF-8" />
     <title>Find a route using Geolocation and Google Maps API</title>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -54,6 +54,63 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
+
+
+function loadImage(/*demo, */addrsss, mappoint) {
+		//console.log( demo );
+			console.log( address );
+			console.log( mappoint );
+		
+	var address2;
+	
+	address2 = document.getElementById(addrsss).value;
+	
+	console.log( address2 );
+	
+       var geocoder = new google.maps.Geocoder();
+
+       geocoder.geocode
+       (
+          {'address': address2 }, 
+             
+          function (results, status) 
+          {
+				//console.log( '=========' );
+				
+				console.log( results );
+				console.log( status );
+				
+                if (status == google.maps.GeocoderStatus.OK) 
+                {
+                   lat2 = results[0].geometry.location.lat();
+                   lon2 = results[0].geometry.location.lng();
+
+					 //  console.log(address2);
+					 //  console.log(lat2 + " " + lon2);
+               
+                 //  var x = document.getElementById(demo);
+
+                 //  x.innerHTML = "lat:" + lat2 + "  lon:" + lon2;
+
+                   console.log("lat:" + lat2 + "  lon:" + lon2);
+				   
+				   document.getElementById(mappoint).value = lat2 + "," + lon2;
+                } 
+                else 
+                {
+					console.log("Not available");
+				//	var x = document.getElementById(v);
+				//	x.innerHTML = "Not available";
+					document.getElementById(mappoint).value = "";
+					
+					var messageToShow;
+					messageToShow = "Please input right format of address in order to get its geocode correctly. Thanks.\n"	
+					alert(messageToShow);
+                }
+           }
+        );
+}
+
 
     </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaMnzM70m2N3hZ_lG6rJ_8oMhFy99lRR8&signed_in=true&callback=initMap"
@@ -103,6 +160,10 @@ function geocodeAddress(geocoder, resultsMap) {
 
 <body class="<?=$mymps_global[cfg_tpl_dir]?>" onload="<?=$onload?>">
 <? include mymps_tpl('inc_head_post');?>
+
+<!--<button onclick="loadImage('demo', 'address', 'mappoint')">Get lat and Lot</button>
+<p id="demo" type="text">Lat and Lot</p>-->
+	
 <div class="body1000">
 	<div class="clear15"></div>
 	<div class="wrapper" id="main">
@@ -184,7 +245,7 @@ function geocodeAddress(geocoder, resultsMap) {
 			<div class="publish-detail-item">
 				<?=$v[value]?> <span id="<?=$v[title]?>"></span>
 			</div>
-		</div> ß
+		</div>
 		<? }?>
 		<? if($post[upload_img]){?>
 		<div class="p-line">
@@ -218,9 +279,8 @@ function geocodeAddress(geocoder, resultsMap) {
 				<input name="web_address" type="text" id="address" class="input input-large" value="<?=$post[web_address]?>" require="true" datatype="limit" msg="Please enter address"/>
 			</div>
 			<label class="thislabel">ex: Jalan 6/38A, 51200 (Street, zipcode)</label>
-
-          	</div>
-
+        </div>
+		
 	<div class="p-line">
                 <label class="p-label"><span class="red required">*</span>           </label>
 				<div class="publish-detail-item">
@@ -231,13 +291,19 @@ function geocodeAddress(geocoder, resultsMap) {
 		<div class="clearfix"></div>
 		
 			 <!-- <input id="address" type="textbox" value="Sydney, NSW">-->
+			   <input name="markmap" type="button" value="*Get Geocode" class="mappoint" onclick="loadImage('address', 'mappoint')">
+	     <input id="mappoint" type="text" maxlength="50" name="mappoint" class="input input-small" value="<?=$post[mappoint]?>" />
+	
+	    <br />
+		<br />
+		<br />
       <input id="submit" type="button" value="Check Address">
 	  <div id="map" class="relative"></div>
 		  <br />
-		  
-		  
+ 	  
 		<div class="p-line">
-			<label class="p-label"><span class="red required">*</span>  Phone Number: </label>
+  
+			<label class="p-label"><span class="red required">*</span>Phone Number:</label>
 			<div class="publish-detail-item">
 				<input name="tel" type="text" class="input input-large" value="<?=$post[mobile]?>" datatype="limit" require="true" msg="Please enter the correct Phone Number:">
 			</div>
@@ -293,7 +359,7 @@ function geocodeAddress(geocoder, resultsMap) {
 			</div>
 		</div>
 		<? }?>
-	
+		
 		<p class='p-submit'>
 		<input type="submit" id="fabu" class="fabu1" value="Post Now" ct="submit" onclick="return AllInputCheck();"/>
 		</p>
